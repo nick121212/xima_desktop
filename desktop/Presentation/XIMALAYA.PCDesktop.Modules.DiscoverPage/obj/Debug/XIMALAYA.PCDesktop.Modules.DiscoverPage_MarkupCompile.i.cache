@@ -4,7 +4,7 @@
 library
 C#
 .cs
-E:\FENGXIAO\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\
 XIMALAYA.PCDesktop.Modules.DiscoverPage
 none
 false
@@ -13,8 +13,8 @@ DEBUG;TRACE
 2-665247139
 
 121954757954
-24-307680086
+24907204086
 Views\CategoryDetailView.xaml;Views\DiscoverView.xaml;
 
-True
+False
 

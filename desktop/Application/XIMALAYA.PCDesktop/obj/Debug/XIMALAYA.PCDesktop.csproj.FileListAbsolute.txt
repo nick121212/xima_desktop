@@ -140,3 +140,6 @@ E:\FENGXIAO\ximalaya_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XI
 E:\FENGXIAO\ximalaya_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.g.resources
 E:\FENGXIAO\ximalaya_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.Properties.Resources.resources
 E:\FENGXIAO\ximalaya_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.csproj.GenerateResource.Cache
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.exe.config
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.exe
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.pdb
