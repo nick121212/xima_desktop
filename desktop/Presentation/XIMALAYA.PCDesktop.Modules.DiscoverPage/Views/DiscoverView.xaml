@@ -12,8 +12,6 @@
              HorizontalAlignment="Center">
 
     <ScrollViewer x:Name="mainScroll" 
-                  ScrollViewer.PanningDeceleration="0.0001"
-                  ScrollViewer.PanningRatio="5"
                   HorizontalScrollBarVisibility="Auto" 
                   VerticalScrollBarVisibility="Disabled">
         <Grid Margin="50 20" VerticalAlignment="Center">

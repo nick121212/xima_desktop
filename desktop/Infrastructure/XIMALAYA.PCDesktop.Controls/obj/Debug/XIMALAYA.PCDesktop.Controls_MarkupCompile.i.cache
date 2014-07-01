@@ -16,5 +16,5 @@ DEBUG;TRACE
 20-1385697414
 Styles\Checkbox.xaml;Styles\MetroList.xaml;Styles\Listbox.xaml;Themes\Generic.xaml;Themes\PathButton.xaml;Themes\MetroSlider.xaml;
 
-False
+True
 

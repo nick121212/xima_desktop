@@ -44,16 +44,21 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage.Views
 
         private void mainScroll_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-            int d = e.Delta;
-            if (d < 0)
+            double offset = mainScroll.HorizontalOffset - (e.Delta * 6 / 6);
+            if (offset < 0)
             {
-                this.mainScroll.LineRight();
+                mainScroll.ScrollToHorizontalOffset(0);
+            }
+            else if (offset > mainScroll.ExtentWidth)
+            {
+                mainScroll.ScrollToHorizontalOffset(mainScroll.ExtentHeight);
             }
             else
             {
-                this.mainScroll.LineLeft();
+                mainScroll.ScrollToHorizontalOffset(offset);
             }
-        }
 
+            e.Handled = true;
+        }
     }
 }

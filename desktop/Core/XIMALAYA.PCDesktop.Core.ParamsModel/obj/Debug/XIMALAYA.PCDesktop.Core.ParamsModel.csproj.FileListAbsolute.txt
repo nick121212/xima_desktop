@@ -28,3 +28,9 @@ E:\FENGXIAO\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Core.ParamsModel.p
 E:\FENGXIAO\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.ParamsModel\obj\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.csprojResolveAssemblyReference.cache
 E:\FENGXIAO\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.ParamsModel\obj\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.dll
 E:\FENGXIAO\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.ParamsModel\obj\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.ParamsModel.XML
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.ParamsModel.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.ParamsModel.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.ParamsModel\obj\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.ParamsModel\obj\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.ParamsModel\obj\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.pdb
