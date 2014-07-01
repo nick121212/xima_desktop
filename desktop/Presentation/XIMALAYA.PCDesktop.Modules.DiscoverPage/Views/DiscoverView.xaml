@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="XIMALAYA.PCDesktop.Modules.DiscoverPage.Views.DiscoverView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:MControls="http://ximalaya.com/xaml/controls"
+             xmlns:cal="http://www.codeplex.com/prism"
+             xmlns:local="clr-namespace:XIMALAYA.PCDesktop.Modules.DiscoverPage"
+             xmlns:tools="clr-namespace:XIMALAYA.PCDesktop.Tools;assembly=XIMALAYA.PCDesktop.Tools"
+             mc:Ignorable="d" 
+             HorizontalAlignment="Center">
+
+    <ScrollViewer x:Name="mainScroll" 
+                  ScrollViewer.PanningDeceleration="0.0001"
+                  ScrollViewer.PanningRatio="5"
+                  HorizontalScrollBarVisibility="Auto" 
+                  VerticalScrollBarVisibility="Disabled">
+        <Grid Margin="50 20" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Header="焦点图" VerticalAlignment="Top" Padding="0" Width="1002" BorderBrush="Transparent">
+                <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
+                         Height="500"
+                         Margin="0"
+                         Padding="0"
+                         Background="Transparent"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         FocusVisualStyle="{x:Null}"
+                         ItemContainerStyle="{StaticResource MetroFocusImageStyle}"
+                         ItemsSource="{Binding FocusImageList}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <MControls:TilePanel TileHeight="5" 
+                                                 TileWidth="5" 
+                                                 TileMargin="2" 
+                                                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
+                                                 Background="Transparent"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </GroupBox>
+            <GroupBox Width="304" 
+                      Height="500"
+                      Header="分类列表"
+                      VerticalAlignment="Top" 
+                      Grid.Column="1"
+                      Padding="0" 
+                      BorderBrush="Transparent">
+                <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
+                         Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Height}"
+                         Background="Transparent"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         ItemContainerStyle="{StaticResource MetroCategoryStyle}"
+                         ItemsSource="{x:Static local:DiscoverViewModel.CategoryList}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <MControls:TilePanel TileHeight="5" 
+                                                 TileWidth="5" 
+                                                 TileMargin="0 3"
+                                                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </GroupBox>
+
+            <!--<ItemsControl Grid.Column="2" 
+                          ItemsSource="{Binding HotSoundsCategories}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Height="500" Margin="0" Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>-->
+            <ListBox Grid.Column="2" 
+                     Width="Auto"
+                     Background="Transparent"
+                     ItemContainerStyle="{StaticResource MetroHotSoundsStyle}"
+                     ItemsSource="{Binding HotSoundsCategories}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Height="500" VerticalAlignment="Top" Margin="0" Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+
+            <!--<GroupBox Header="专题列表"
+                  Grid.Column="1" 
+                  Style="{StaticResource CleanGroupBoxStyleKey}">
+            <ListBox Width="320"
+                     Background="Transparent"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     ItemContainerStyle="{StaticResource SubjectListStyle1}"
+                     ItemsSource="{Binding SubjectList}">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <MControls:TilePanel TileHeight="10" 
+                                             TileWidth="10" 
+                                             TileMargin="3" 
+                                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                             Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=Width}"
+                                             Background="Transparent"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </GroupBox>-->
+
+
+        </Grid>
+    </ScrollViewer>
+</UserControl>

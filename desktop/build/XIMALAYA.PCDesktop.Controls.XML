@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XIMALAYA.PCDesktop.Controls</name>
+    </assembly>
+    <members>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarNextPath">
+            <summary>
+            下一首
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarPrevPath">
+            <summary>
+            上一首
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarPlayPath">
+            <summary>
+            播放按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarPausePath">
+            <summary>
+            暂停按钮
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.MetroSlider">
+            <summary>
+            进度条控件
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.IsReverseProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.ThumbForegroundProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.ThumbBackgroundProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.TrackBackgroundFrontProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.TrackBackgroundBackProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.DurationProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.TotalTimeSpanProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.TotalBuffTimeSpanProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.ProcessProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.BuffWidthProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.MetroSlider.OnTimeTotalChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.MetroSlider.OnProcessChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="dependencyObject"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.IsReverse">
+            <summary>
+            滑块是否相反
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.ThumbForeground">
+            <summary>
+            ThumbForeground
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.ThumbBackground">
+            <summary>
+            ThumbBackground
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.TrackBackgroundFront">
+            <summary>
+            TrackBackgroundFront
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.TrackBackgroundBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.Duration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.TotalTimeSpan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.TotalBuffTimeSpan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.Process">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.BuffWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.PathButton">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.StretchProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.FillProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.IconDataProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.IconDataCheckedProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.IconWidthProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.ShowBackgroundProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.IconHeightProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.Stretch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.Fill">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IconData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IconDataChecked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IconWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.ShowBackground">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IconHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.TilePanel">
+            <summary>
+            TilePanel 
+            瀑布流布局
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.TileHeightProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.TileWidthProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.GetWidthPix(System.Windows.DependencyObject)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.SetWidthPix(System.Windows.DependencyObject,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.WidthPixProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.GetHeightPix(System.Windows.DependencyObject)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.SetHeightPix(System.Windows.DependencyObject,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.HeightPixProperty">
+            <summary>
+            高度比例
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.OrientationProperty">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.TileMarginProperty">
+            <summary>
+            Tile之间的间距
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="finalSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="constraint"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.Orientation">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.MinHeightPix">
+            <summary>
+            最小的高度比例
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.MinWidthPix">
+            <summary>
+            最小的宽度比例
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TotalCellCount">
+            <summary>
+            元素占用的横向格子总数
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TotalRowCount">
+            <summary>
+            元素占用的纵向格子总数
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.LeftPix">
+            <summary>
+            排列完后剩下没有使用的格子数
+            计算最终的高度或宽度使用
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileMargin">
+            <summary>
+            Tile之间的间距
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.RotationManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.RotationManager.GetAngle(System.Windows.DependencyObject)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.RotationManager.SetAngle(System.Windows.DependencyObject,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.RotationManager.AngleProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.RotationManager.OnAngleChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>

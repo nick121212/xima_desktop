@@ -1,0 +1,15 @@
+F:\fengxiao\新建文件夹\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.csprojResolveAssemblyReference.cache
+F:\fengxiao\新建文件夹\desktop\build\XIMALAYA.PCDesktop.Core.Data.dll
+F:\fengxiao\新建文件夹\desktop\build\XIMALAYA.PCDesktop.Core.Data.pdb
+F:\fengxiao\新建文件夹\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.dll
+F:\fengxiao\新建文件夹\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.pdb
+D:\喜马拉雅\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Data.dll
+D:\喜马拉雅\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Data.pdb
+D:\喜马拉雅\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.dll
+D:\喜马拉雅\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.pdb
+F:\fengxiao\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.csprojResolveAssemblyReference.cache
+F:\fengxiao\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Data.dll
+F:\fengxiao\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Data.pdb
+F:\fengxiao\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.dll
+F:\fengxiao\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Data\obj\Debug\XIMALAYA.PCDesktop.Core.Data.pdb

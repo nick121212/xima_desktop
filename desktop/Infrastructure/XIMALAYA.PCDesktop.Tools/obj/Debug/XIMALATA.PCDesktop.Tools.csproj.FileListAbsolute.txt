@@ -1,0 +1,4 @@
+F:\fengxiao\desktop\build\XIMALATA.PCDesktop.Tools.dll
+F:\fengxiao\desktop\build\XIMALATA.PCDesktop.Tools.pdb
+F:\fengxiao\desktop\Infrastructure\XIMALATA.PCDesktop.Tools\obj\Debug\XIMALATA.PCDesktop.Tools.dll
+F:\fengxiao\desktop\Infrastructure\XIMALATA.PCDesktop.Tools\obj\Debug\XIMALATA.PCDesktop.Tools.pdb

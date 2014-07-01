@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FluentJson</name>
+    </assembly>
+    <members>
+        <member name="T:FluentJson.Exceptions.JsonException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FluentJson.Exceptions.JsonException.MalformedJson">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:FluentJson.JsonTokenType.Unknown">
+            <summary>
+            Internal usage
+            </summary>
+        </member>
+        <member name="F:FluentJson.JsonTokenType.Undefined">
+            <summary>
+            Default type
+            </summary>
+        </member>
+        <member name="T:FluentJson.JsonToken">
+            <summary>
+            Represents a json token as defined in http://tools.ietf.org/html/rfc4627
+            </summary>
+        </member>
+        <member name="M:FluentJson.JsonToken.#ctor(System.String)">
+            <summary>
+            Constructs a json token from the given utf string.
+            </summary>
+            <param name="utf"></param>
+        </member>
+        <member name="M:FluentJson.JsonToken.#ctor(System.String,FluentJson.JsonTokenType)">
+            <summary>
+            Construct a json token from the given utf string and manually assigns the token type.
+            </summary>
+            <param name="utf"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:FluentJson.JsonToken.TryAppend(System.Char)">
+            <summary>
+            Some tokens (string / number) can be of a variable length, this method tries to expand this token by appending the given char.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonToken.IsValid">
+            <summary>
+            Sees to it that this token is valid.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonToken.Value``1">
+            <summary>
+            Returns the actual .NET value for this token.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonToken.Value(System.Type)">
+            <summary>
+            Returns the actual .NET value for this token.
+            </summary>
+            <param name="expectedType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonToken.Parse(System.Object)">
+            <summary>
+            Parses the given object to a json token.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonToken.Parse(System.Object,FluentJson.JsonTokenType)">
+            <summary>
+            Parses the given object to a json token. If the parsed token does not match the expected type,
+            an exception will be thrown.
+            </summary>
+            <param name="value"></param>
+            <param name="expectedType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:FluentJson.JsonToken.Type">
+            <summary>
+            The type of token.
+            </summary>
+        </member>
+        <member name="P:FluentJson.JsonToken.Length">
+            <summary>
+            The number of characters that make up this token.
+            </summary>
+        </member>
+        <member name="T:FluentJson.JsonTokenSequence">
+            <summary>
+            Represents a sequence of json tokens.
+            </summary>
+        </member>
+        <member name="M:FluentJson.JsonTokenSequence.#ctor">
+            <summary>
+            Constructs an empty token sequence.
+            </summary>
+        </member>
+        <member name="M:FluentJson.JsonTokenSequence.#ctor(System.String)">
+            <summary>
+            Constructs and populates the token sequence.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:FluentJson.JsonTokenSequence.#ctor(FluentJson.JsonToken[])">
+            <summary>
+            Constructs and populates the token sequence.
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:FluentJson.JsonTokenSequence.Peek">
+            <summary>
+            Looks ahead in the remaining sequence and returns a (partial) json token.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonTokenSequence.Pop">
+            <summary>
+            Returns the first token in this sequence and moves forward.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonTokenSequence.ToString">
+            <summary>
+            Returns the string representation of this token sequence.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.JsonTokenSequence.ToTidyString">
+            <summary>
+            Returns a json string formatted to improve human readability.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:FluentJson.JsonTokenSequence.TokenAvailable">
+            <summary>
+            Indicates if a token is available for reading.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.Context">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.Context.Process">
+            <summary>
+            The process providing this context.
+            </summary>
+        </member>
+        <member name="M:FluentJson.Processing.DecodingContext.#ctor(FluentJson.Processing.Process,FluentJson.JsonTokenSequence,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <param name="value"></param>
+            <param name="knownType"></param>
+        </member>
+        <member name="P:FluentJson.Processing.DecodingContext.Value">
+            <summary>
+            Decoded value.
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.DecodingContext.KnownType">
+            <summary>
+            Available strong type, otherwise null
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.DecodingContext.Input">
+            <summary>
+            Json token sequence to read from.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.DecodingInstruction">
+            <summary>
+            Abstract class for an decoding instruction. Implementations can direct the process.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.DoDecode">
+            <summary>
+            Tells the process to decode the given sequence.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.ProvideNextNode">
+            <summary>
+            Tells the process to use the given Node as the next in chain.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.DecodingProcess`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:FluentJson.Processing.Process">
+            <summary>
+            Base class for both the EncodingProcess and DecodingProcess class.
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.Process.References">
+            <summary>
+            The reference store used while encoding or decoding.
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.Process.RequiresReferencing">
+            <summary>
+            Indicates if any of the configured mappings requires referencing.
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.Process.IsParallel">
+            <summary>
+            Indicates if parallel processing is desired.
+            </summary>
+        </member>
+        <member name="M:FluentJson.Processing.DecodingProcess`1.Decode(System.String)">
+            <summary>
+            Decodes the given json string to an object of type T.
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentJson.Processing.EncodingContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FluentJson.Processing.EncodingContext.#ctor(FluentJson.Processing.Process,System.Object,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <param name="value"></param>
+            <param name="knownType"></param>
+        </member>
+        <member name="P:FluentJson.Processing.EncodingContext.Value">
+            <summary>
+            Value to encode.
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.EncodingContext.KnownType">
+            <summary>
+            Available strong type, otherwise null.
+            </summary>
+        </member>
+        <member name="P:FluentJson.Processing.EncodingContext.Output">
+            <summary>
+            Json token sequence for writing output to.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.EncodingInstruction">
+            <summary>
+            Abstract class for an encoding instruction. Implementations can direct the process.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.DoEncode">
+            <summary>
+            Tells the process to encode the given value.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.DoParallelEncode">
+            <summary>
+            Tells the process to do a async encode for the given value.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.SyncParallelEncode">
+            <summary>
+            Tells the process to synchronize all currently async encoding taksks.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.ContextInvalidated">
+            <summary>
+            Tells the process that the current encoding context is invalid.
+            </summary>
+        </member>
+        <member name="T:FluentJson.Processing.IDecodingNode">
+            <summary>
+            Forms part of an decoding chain.
+            </summary>
+        </member>
+        <member name="M:FluentJson.Processing.IDecodingNode.ExecuteDecode(FluentJson.Processing.DecodingContext)">
+            <summary>
+            Implementations can perform decoding routines upon the given context here.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentJson.Processing.IEncodingNode">
+            <summary>
+            Forms part of on an encoding chain.
+            </summary>
+        </member>
+        <member name="M:FluentJson.Processing.IEncodingNode.ExecuteEncode(FluentJson.Processing.EncodingContext)">
+            <summary>
+            Implementations can perform encoding routines upon the given context here.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentJson.Configuration.JsonDecodingConfiguration`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:FluentJson.Configuration.JsonConfiguration`1">
+            <summary>
+            Configuration for both encoding and decoding.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonConfiguration`1.AutoGenerate">
+            <summary>
+            Automatically generates a configuration for the current type.
+            </summary>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonConfiguration`1.GetMapping``1">
+            <summary>
+            Derives this configuration from an existing configuration.
+            </summary>
+            <param name="configuration">The configuration to derive from.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonConfiguration`1.DeriveFrom(FluentJson.Configuration.JsonConfiguration{`0})">
+            <summary>
+            Derives this configuration from an existing configuration.
+            </summary>
+            <param name="configuration">The configuration to derive from.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonConfiguration`1.WithMapping(FluentJson.Mapping.JsonTypeMappingBase)">
+            <summary>
+            Returns a mapping expression for the root type.
+            </summary>
+            <param name="expression">The object mapping expression.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonConfiguration`1.MapType``1(System.Action{FluentJson.Mapping.JsonTypeMapping{``0}})">
+            <summary>
+            Returns a mapping expression for the type TObject.
+            </summary>
+            <typeparam name="TObject">Type to map.</typeparam>
+            <param name="expression">The object mapping expression.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonConfiguration`1.UseParallelProcessing(System.Boolean)">
+            <summary>
+            Enable or disable parallel processing.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonDecodingConfiguration`1.MapType``1(System.Action{FluentJson.Mapping.JsonTypeMapping{``0}})">
+            <summary>
+            Returns a mapping expression for the type TObject.
+            </summary>
+            <typeparam name="TObject">Type to map.</typeparam>
+            <param name="expression">The object mapping expression.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonDecodingConfiguration`1.UsePluginPoint(System.Func{System.Object,System.Object})">
+            <summary>
+            Acts as a plugin point for adding custom logic to the decoding process.
+            </summary>
+            <param name="plugin">The delegate to call just after a json token has been decoded to a value.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonDecodingConfiguration`1.DeriveFrom(FluentJson.Configuration.JsonConfiguration{`0})">
+            <summary>
+            Derives this configuration from an existing configuration.
+            </summary>
+            <param name="configuration">The configuration to derive from.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonDecodingConfiguration`1.AutoGenerate">
+            <summary>
+            Automatically generates a configuration for the current type.
+            </summary>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonEncodingConfiguration`1.UseTidy(System.Boolean)">
+            <summary>
+            Enables or disables tidy encoding.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonEncodingConfiguration`1.MapType``1(System.Action{FluentJson.Mapping.JsonTypeMapping{``0}})">
+            <summary>
+            Returns a mapping expression for the type TObject.
+            </summary>
+            <typeparam name="TType">Type to map.</typeparam>
+            <param name="expression">The object mapping expression.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonEncodingConfiguration`1.UsePluginPoint(System.Func{System.Object,System.Object})">
+            <summary>
+            Acts as a plugin point for adding custom logic to the encoding process.
+            </summary>
+            <param name="plugin">The delegate to call just before encoding a value to a json token.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonEncodingConfiguration`1.DeriveFrom(FluentJson.Configuration.JsonConfiguration{`0})">
+            <summary>
+            Derives this configuration from an existing configuration.
+            </summary>
+            <param name="configuration">The configuration to derive from.</param>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="M:FluentJson.Configuration.JsonEncodingConfiguration`1.AutoGenerate">
+            <summary>
+            Automatically generates a configuration for the current type.
+            </summary>
+            <returns>The configuration.</returns>
+        </member>
+        <member name="T:FluentJson.Processing.EncodingProcess`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:FluentJson.Processing.EncodingProcess`1.Encode(`0)">
+            <summary>
+            Encodes the given object to a json string.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Processing.EncodingProcess`1._buildExecutionQueue(FluentJson.Processing.EncodingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentJson.Helpers.TypeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FluentJson.Helpers.TypeHelper.IsThreatableAs(System.Type,System.Type)">
+            <summary>
+            Sees if the given type is threatable as another type.
+            </summary>
+            <param name="type">Type to check.</param>
+            <param name="asType">Type to be threated as.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Helpers.TypeHelper.IsBasic(System.Type)">
+            <summary>
+            Sees if the given type is a basic type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Helpers.TypeHelper.IsNumerical(System.Type)">
+            <summary>
+            Sees if the given type is numerical. Decimals do not count as a number.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Helpers.TypeHelper.IsList(System.Type)">
+            <summary>
+            Sees if the given type is a list.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Helpers.TypeHelper.IsDictionary(System.Type)">
+            <summary>
+            Sees if the given is a dictionary.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Helpers.TypeHelper.IsGeneric(System.Type)">
+            <summary>
+            Sees if the given type is a generic type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Helpers.TypeHelper.IsParallelBeneficial(System.Type)">
+            <summary>
+            Sees if the given type is a primitive type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FluentJson.Json">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:FluentJson.Json.Encode(System.Object)">
+            <summary>
+            Encodes any value to a json string.
+            </summary>
+            <param name="value">Value to encode.</param>
+            <returns>A json string.</returns>
+        </member>
+        <member name="M:FluentJson.Json.EncodeType``1(``0)">
+            <summary>
+            Encodes a value of type T to a json string. Type T will be automatically mapped as best as possible.
+            </summary>
+            <param name="value">Value to encode.</param>
+            <returns>A json string.</returns>
+        </member>
+        <member name="M:FluentJson.Json.EncoderFor``1(System.Action{FluentJson.Configuration.JsonEncodingConfiguration{``0}})">
+            <summary>
+            Returns a json encoder for the specified configuration.
+            </summary>
+            <typeparam name="T">Type to encode.</typeparam>
+            <param name="expression">Configuration expression.</param>
+            <returns>An encoder for type T.</returns>
+        </member>
+        <member name="M:FluentJson.Json.EncoderFor``1">
+            <summary>
+            Returns a json encoder for the specified type. Type T will be automatically mapped as best as possible.
+            </summary>
+            <typeparam name="T">Type to encode.</typeparam>
+            <returns>An encoder for type T.</returns>
+        </member>
+        <member name="M:FluentJson.Json.Decode(System.String)">
+            <summary>
+            Decodes a json string.
+            </summary>
+            <param name="json">Json string to decode.</param>
+            <returns>The decoded value.</returns>
+        </member>
+        <member name="M:FluentJson.Json.DecodeType``1(System.String)">
+            <summary>
+            Decodes a json string to type T. Type T will be automatically mapped as best as possible.
+            </summary>
+            <param name="json">Json string to decode.</param>
+            <returns>The decoded value.</returns>
+        </member>
+        <member name="M:FluentJson.Json.DecoderFor``1(System.Action{FluentJson.Configuration.JsonDecodingConfiguration{``0}})">
+            <summary>
+             Returns a json decoder for the specified configuration.
+            </summary>
+            <typeparam name="T">Type to decode.</typeparam>
+            <param name="expression">Configuration expression.</param>
+            <returns>A decoder for type T.</returns>
+        </member>
+        <member name="M:FluentJson.Json.DecoderFor``1">
+            <summary>
+             Returns a json decoder for the specified configuration. Type T will be automatically mapped as best as possible.
+            </summary>
+            <typeparam name="T">Type to decode.</typeparam>
+            <returns>A decoder for type T.</returns>
+        </member>
+        <member name="M:FluentJson.Json.ConfigurationFor``1">
+            <summary>
+            Returns an empty base configuration for the specified type T.
+            </summary>
+            <typeparam name="T">Type to create configuration for.</typeparam>
+            <returns>A configuration for type T.</returns>
+        </member>
+        <member name="M:FluentJson.Json.EncodingConfigurationFor``1">
+            <summary>
+            Returns an empty encoding configuration for the specified type T.
+            </summary>
+            <typeparam name="T">Type to create configuration for.</typeparam>
+            <returns>A configuration for type T.</returns>
+        </member>
+        <member name="M:FluentJson.Json.DecodingConfigurationFor``1">
+            <summary>
+            Returns an empty decoding configuration for the specified type T.
+            </summary>
+            <typeparam name="T">Type to create configuration for.</typeparam>
+            <returns>A configuration for type T.</returns>
+        </member>
+        <member name="T:FluentJson.JsonEncoder`1">
+            <summary>
+            Defines a json encoder for type T.
+            </summary>
+            <typeparam name="T">Type to encode.</typeparam>
+        </member>
+        <member name="M:FluentJson.JsonEncoder`1.Encode(`0)">
+            <summary>
+            Encodes a value to a json string.
+            </summary>
+            <param name="value">Value of type T to encode.</param>
+            <returns>A json string.</returns>
+        </member>
+        <member name="T:FluentJson.JsonDecoder`1">
+            <summary>
+            Defines a json decoder for type T.
+            </summary>
+            <typeparam name="T">Type to decode.</typeparam>
+        </member>
+        <member name="M:FluentJson.JsonDecoder`1.Decode(System.String)">
+            <summary>
+            Decodes a json string.
+            </summary>
+            <param name="json">Json string to decode.</param>
+            <returns>The decoded value of type T.</returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonFieldMapping`1.To(System.String)">
+            <summary>
+            Maps this field to the specified json field.
+            </summary>
+            <param name="jsonField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonFieldMapping`1.DecodeAs``1(System.Linq.Expressions.Expression{System.Func{``0,`0}})">
+            <summary>
+            Decode this field as a different type by suplying a conversion expression.
+            </summary>
+            <typeparam name="TDecode"></typeparam>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonFieldMapping`1.EncodeAs``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Encode this field as a different type by suplying a conversion expression.
+            </summary>
+            <typeparam name="TEncode"></typeparam>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonTypeMapping`1.UseReferencing(System.Boolean)">
+            <summary>
+            Enables or disables support for referencing multiple occurences to an instance of this type.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonTypeMapping`1.AllFields">
+            <summary>
+            Maps all fields automatically, except any excluded fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonTypeMapping`1.Field(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Maps the given field.
+            </summary>
+            <param name="fieldExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonTypeMapping`1.FieldTo(System.Linq.Expressions.Expression{System.Func{`0,System.Object}},System.String)">
+            <summary>
+            Maps the given field and allows for specifying a json field name.
+            </summary>
+            <param name="fieldExpression"></param>
+            <param name="jsonObjectField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonTypeMapping`1.Field``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Action{FluentJson.Mapping.JsonFieldMapping{``0}})">
+            <summary>
+            Maps the given field and allows for custom field mapping expressions.
+            </summary>
+            <typeparam name="TField"></typeparam>
+            <param name="fieldExpression"></param>
+            <param name="mappingExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Mapping.JsonTypeMapping`1.ExceptField(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            Will prevent the given field from being mapped.
+            </summary>
+            <param name="fieldExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="F:FluentJson.Processing.ReferenceStore._to">
+            <summary>
+            Get reference by object
+            </summary>
+        </member>
+        <member name="F:FluentJson.Processing.ReferenceStore._from">
+            <summary>
+            Get object from reference
+            </summary>
+        </member>
+        <member name="M:FluentJson.Processing.ReferenceStore.FollowReference(System.Double)">
+            <summary>
+            Returns the object the given reference points to.
+            </summary>
+            <param name="reference"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Processing.ReferenceStore.HasReferenceTo(System.Object)">
+            <summary>
+            Indicates wether this store contains a reference to the given object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Processing.ReferenceStore.GetReferenceTo(System.Object)">
+            <summary>
+            Returns the reference value for the given object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FluentJson.Processing.ReferenceStore.Reference(System.Object)">
+            <summary>
+            Creates a reference for the given object.
+            </summary>
+            <param name="value"></param>
+        </member>
+    </members>
+</doc>

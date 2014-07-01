@@ -1,0 +1,10 @@
+F:\fengxiao\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.Category.XML
+F:\fengxiao\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.Category.dll
+F:\fengxiao\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.Category.pdb
+F:\fengxiao\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Category\obj\Debug\XIMALAYA.PCDesktop.Modules.Category.dll
+F:\fengxiao\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Category\obj\Debug\XIMALAYA.PCDesktop.Modules.Category.pdb
+F:\fengxiao\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Category\obj\Debug\XIMALAYA.PCDesktop.Modules.Category.csprojResolveAssemblyReference.cache
+F:\fengxiao\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Category\obj\Debug\Views\CategoryDetailView.baml
+F:\fengxiao\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Category\obj\Debug\Views\CategoryDetailView.g.cs
+F:\fengxiao\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Category\obj\Debug\XIMALAYA.PCDesktop.Modules.Category_MarkupCompile.cache
+F:\fengxiao\ximalaya_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Category\obj\Debug\XIMALAYA.PCDesktop.Modules.Category.g.resources

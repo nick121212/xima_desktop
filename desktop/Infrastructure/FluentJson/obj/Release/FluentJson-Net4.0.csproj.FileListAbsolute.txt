@@ -1,0 +1,5 @@
+C:\Users\nick.ZDJT\Desktop\fluent-json-0.7.0-src\fluent-json-0.7.0-src\FluentJson\bin-Net4.0\Release\FluentJson.dll
+C:\Users\nick.ZDJT\Desktop\fluent-json-0.7.0-src\fluent-json-0.7.0-src\FluentJson\bin-Net4.0\Release\FluentJson.pdb
+C:\Users\nick.ZDJT\Desktop\fluent-json-0.7.0-src\fluent-json-0.7.0-src\FluentJson\obj\Release\FluentJson-Net4.0.csprojResolveAssemblyReference.cache
+C:\Users\nick.ZDJT\Desktop\fluent-json-0.7.0-src\fluent-json-0.7.0-src\FluentJson\obj\Release\FluentJson.dll
+C:\Users\nick.ZDJT\Desktop\fluent-json-0.7.0-src\fluent-json-0.7.0-src\FluentJson\obj\Release\FluentJson.pdb
