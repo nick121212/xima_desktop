@@ -77,6 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\MyToggleButton.cs" />
     <Compile Include="PathData.cs" />
     <Compile Include="Controls\MetroSlider.cs" />
     <Compile Include="Controls\PathButton.cs" />
@@ -106,6 +107,10 @@
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MyToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\PathButton.xaml">
       <Generator>MSBuild:Compile</Generator>

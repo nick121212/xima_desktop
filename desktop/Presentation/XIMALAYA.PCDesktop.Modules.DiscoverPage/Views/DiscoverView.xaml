@@ -14,14 +14,21 @@
     <ScrollViewer x:Name="mainScroll" 
                   HorizontalScrollBarVisibility="Auto" 
                   VerticalScrollBarVisibility="Disabled">
-        <Grid Margin="50 20" VerticalAlignment="Center">
+        <Grid Margin="0 20" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <GroupBox Header="焦点图" VerticalAlignment="Top" Padding="0" Width="1002" BorderBrush="Transparent">
+            <GroupBox VerticalAlignment="Top" 
+                      Padding="0" 
+                      Margin="20 0"
+                      Header=" "
+                      HeaderStringFormat=""
+                      Width="1002" 
+                      Background="Transparent" 
+                      BorderBrush="Transparent">
                 <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
                          Height="500"
                          Margin="0"
@@ -45,10 +52,12 @@
             </GroupBox>
             <GroupBox Width="304" 
                       Height="500"
-                      Header="分类列表"
+                      Header=" "
                       VerticalAlignment="Top" 
                       Grid.Column="1"
                       Padding="0" 
+                      Margin="20 0"
+                      Background="Transparent"
                       BorderBrush="Transparent">
                 <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
                          Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Height}"
@@ -67,14 +76,6 @@
                 </ListBox>
             </GroupBox>
 
-            <!--<ItemsControl Grid.Column="2" 
-                          ItemsSource="{Binding HotSoundsCategories}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Height="500" Margin="0" Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-            </ItemsControl>-->
             <ListBox Grid.Column="2" 
                      Width="Auto"
                      Background="Transparent"

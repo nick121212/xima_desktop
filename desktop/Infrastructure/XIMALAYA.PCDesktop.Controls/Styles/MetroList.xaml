@@ -208,7 +208,9 @@
         <GroupBox Width="202" 
                   Padding="0"
                   Height="500"
+                  Margin="20 0"
                   Header="{Binding Title}"
+                  Background="Transparent"
                   BorderBrush="Transparent">
             <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
                      Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Height}"
