@@ -23,14 +23,14 @@
 
         <ListBox ItemsSource="{Binding TagDataList}" 
                  Grid.Row="1"
-                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 Padding="20"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                  ItemContainerStyle="{StaticResource TagListStyle}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel Margin="10" 
-                                           Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=ActualWidth}"
-                                           Orientation="Horizontal" 
-                                           IsItemsHost="True"/>
+                    <WrapPanel Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=ActualWidth}"
+                               Orientation="Horizontal" 
+                               IsItemsHost="True"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>

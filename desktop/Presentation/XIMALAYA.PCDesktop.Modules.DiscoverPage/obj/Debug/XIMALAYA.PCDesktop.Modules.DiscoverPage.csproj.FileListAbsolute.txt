@@ -104,3 +104,5 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDeskto
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.csproj.GenerateResource.Cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.dll
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.DiscoverPage.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.DiscoverPage.pdb

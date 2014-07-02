@@ -38,17 +38,13 @@
         </StackPanel>
 
         <ListBox ItemsSource="{Binding Albums}" 
-                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                 VirtualizingStackPanel.IsVirtualizing="True" 
-                 VirtualizingStackPanel.VirtualizationMode="Standard"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                  Grid.Row="2"
                  ItemContainerStyle="{StaticResource AlbumListStyle}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
 
-                    <WrapPanel ScrollViewer.VerticalScrollBarVisibility="Visible"
-                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                               Background="Transparent"
+                    <WrapPanel Background="Transparent"
                                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=ActualWidth}"
                                Orientation="Horizontal" 
                                IsItemsHost="True"/>
