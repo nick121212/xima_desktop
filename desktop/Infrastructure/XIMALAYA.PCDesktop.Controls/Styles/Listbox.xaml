@@ -10,7 +10,7 @@
     <converter:StringToBoolConverter x:Key="StringToBoolConverter"/>
     <!--converters end-->
 
-    <Style TargetType="MControls:MyToggleButton" x:Key="MetroMyToggleBuggon" BasedOn="{StaticResource {x:Type MControls:MyToggleButton}}">
+    <Style TargetType="MControls:MyToggleButton" x:Key="MetroMyToggleBuggon" BasedOn="{StaticResource {x:Type MControls:MyRadioButton}}">
         <Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
         <Setter Property="IconFill" Value="Black" />
         <Setter Property="SuperScriptSize" Value="50"/>
@@ -20,18 +20,17 @@
 
     <DataTemplate x:Key="TagItemTemplate" DataType="{x:Type ListBoxItem}">
 
-        <MControls:MyToggleButton Background="Transparent"
-                                  Width="180" 
-                                  Height="180"
-                                  Margin="5"
-                                  IconMargin="6"
-                                  IconData="{Binding Submit,Source={x:Static MControls:PathData.Instance}}"
-                                  Style="{StaticResource MetroMyToggleBuggon}"
-                                  CommandParameter="{Binding TagName}"
-                                  Command="{Binding Path=DataContext.ShowSoundListForTagCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}">
-            
-            
-            <MControls:MyToggleButton.Content>
+        <MControls:MyRadioButton Background="Transparent"
+                                 Width="180" 
+                                 Height="180"
+                                 Margin="5"
+                                 IconMargin="6"
+                                 GroupName="tabGroup"
+                                 IconData="{Binding Submit,Source={x:Static MControls:PathData.Instance}}"
+                                 Style="{StaticResource MetroMyToggleBuggon}"
+                                 CommandParameter="{Binding TagName}"
+                                 Command="{Binding Path=DataContext.ShowSoundListForTagCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}">
+            <MControls:MyRadioButton.Content>
                 <Border BorderThickness="1" BorderBrush="{DynamicResource ControlBorderBrush}">
                     <Grid Margin="0">
                         <Grid.RowDefinitions>
@@ -43,8 +42,8 @@
                         <Label Grid.Row="1" HorizontalAlignment="Center" Content="{Binding TagName}" />
                     </Grid>
                 </Border>
-            </MControls:MyToggleButton.Content>
-        </MControls:MyToggleButton>
+            </MControls:MyRadioButton.Content>
+        </MControls:MyRadioButton>
     </DataTemplate>
     <Style x:Key="TagListStyle" TargetType="{x:Type ListBoxItem}">
         <Setter Property="ContentTemplate" Value="{StaticResource TagItemTemplate}"/>

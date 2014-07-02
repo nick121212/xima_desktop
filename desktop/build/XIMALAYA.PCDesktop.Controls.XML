@@ -4,6 +4,71 @@
         <name>XIMALAYA.PCDesktop.Controls</name>
     </assembly>
     <members>
+        <member name="T:XIMALAYA.PCDesktop.Controls.MyRadioButton">
+            <summary>
+            带角标的toggle按钮
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyRadioButton.SuperScriptSizeProperty">
+            <summary>
+            角标的尺寸
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconDataProperty">
+            <summary>
+            图标的path
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconWidthProperty">
+            <summary>
+            图标的宽度
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconHeightProperty">
+            <summary>
+            图标的高度
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconMarginProperty">
+            <summary>
+            图标margin值
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconFillProperty">
+            <summary>
+            图标的填充色
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.SuperScriptSize">
+            <summary>
+            角标的尺寸
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconData">
+            <summary>
+            图标的path
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconWidth">
+            <summary>
+            图表的宽度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconHeight">
+            <summary>
+            图标的高度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconMargin">
+            <summary>
+            图标margin值
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconFill">
+            <summary>
+            图标的填充色
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.MyToggleButton">
             <summary>
             带角标的toggle按钮
@@ -442,6 +507,36 @@
             </summary>
             <param name="obj"></param>
             <param name="e"></param>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
         </member>
     </members>
 </doc>
