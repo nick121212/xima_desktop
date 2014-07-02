@@ -38,3 +38,11 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Mo
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.g.resources
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.AlbumListModule.XML
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\Views\AlbumView.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\Views\AlbumView.g.cs
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule_MarkupCompile.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.g.resources
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.pdb

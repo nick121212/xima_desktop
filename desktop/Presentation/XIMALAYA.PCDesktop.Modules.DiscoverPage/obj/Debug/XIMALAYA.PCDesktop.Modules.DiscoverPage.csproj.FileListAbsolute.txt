@@ -92,3 +92,15 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Mo
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.csproj.GenerateResource.Cache
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\Views\CategoryDetailView.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\Views\CategoryDetailView.g.cs
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\Views\DiscoverView.g.cs
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage_MarkupCompile.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage_MarkupCompile.lref
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\Views\DiscoverView.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.g.resources
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.Properties.Resources.resources
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.csproj.GenerateResource.Cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.DiscoverPage\obj\Debug\XIMALAYA.PCDesktop.Modules.DiscoverPage.pdb

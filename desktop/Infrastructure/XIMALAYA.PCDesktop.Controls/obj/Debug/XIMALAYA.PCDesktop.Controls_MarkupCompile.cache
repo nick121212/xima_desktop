@@ -4,7 +4,7 @@
 library
 C#
 .cs
-E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\
 XIMALAYA.PCDesktop.Controls
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 81276936454
 
 9-1797190414
-20-1385697414
+201735825904
 Styles\Checkbox.xaml;Styles\MetroList.xaml;Styles\Listbox.xaml;Themes\Generic.xaml;Themes\MyRadioButton.xaml;Themes\MyToggleButton.xaml;Themes\PathButton.xaml;Themes\MetroSlider.xaml;
 
 False

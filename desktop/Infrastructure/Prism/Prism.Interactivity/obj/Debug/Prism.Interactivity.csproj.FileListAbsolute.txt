@@ -49,3 +49,9 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\Microsoft.Practices.Prism.In
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism.Interactivity\obj\Debug\Prism.Interactivity.csprojResolveAssemblyReference.cache
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism.Interactivity\obj\Debug\Microsoft.Practices.Prism.Interactivity.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism.Interactivity\obj\Debug\Microsoft.Practices.Prism.Interactivity.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\Microsoft.Practices.Prism.Interactivity.XML
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\Microsoft.Practices.Prism.Interactivity.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\Microsoft.Practices.Prism.Interactivity.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism.Interactivity\obj\Debug\Prism.Interactivity.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism.Interactivity\obj\Debug\Microsoft.Practices.Prism.Interactivity.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism.Interactivity\obj\Debug\Microsoft.Practices.Prism.Interactivity.pdb

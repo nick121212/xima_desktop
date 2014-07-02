@@ -67,3 +67,13 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Tools.Pla
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools.Player\obj\Debug\XIMALAYA.PCDesktop.Tools.Player.csprojResolveAssemblyReference.cache
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools.Player\obj\Debug\XIMALAYA.PCDesktop.Tools.Player.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools.Player\obj\Debug\XIMALAYA.PCDesktop.Tools.Player.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\Bass.Net.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\Bass.Net.xml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\x64\bass.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\x86\bass.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Tools.Player.XML
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Tools.Player.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Tools.Player.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools.Player\obj\Debug\XIMALAYA.PCDesktop.Tools.Player.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools.Player\obj\Debug\XIMALAYA.PCDesktop.Tools.Player.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools.Player\obj\Debug\XIMALAYA.PCDesktop.Tools.Player.pdb

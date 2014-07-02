@@ -30,3 +30,8 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Events.pd
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Events\obj\Debug\XIMALAYA.PCDesktop.Events.csprojResolveAssemblyReference.cache
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Events\obj\Debug\XIMALAYA.PCDesktop.Events.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Events\obj\Debug\XIMALAYA.PCDesktop.Events.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Events.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Events.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Events\obj\Debug\XIMALAYA.PCDesktop.Events.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Events\obj\Debug\XIMALAYA.PCDesktop.Events.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Events\obj\Debug\XIMALAYA.PCDesktop.Events.pdb

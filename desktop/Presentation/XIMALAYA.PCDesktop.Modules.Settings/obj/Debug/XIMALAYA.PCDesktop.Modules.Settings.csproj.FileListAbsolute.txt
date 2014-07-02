@@ -106,3 +106,12 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Mo
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings.g.resources
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.Settings.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.Settings.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\Views\AppearanceView.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\Views\AppearanceView.g.cs
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings_MarkupCompile.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings.g.resources
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.Settings\obj\Debug\XIMALAYA.PCDesktop.Modules.Settings.pdb

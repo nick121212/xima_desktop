@@ -10,7 +10,7 @@
     <converter:StringToBoolConverter x:Key="StringToBoolConverter"/>
     <!--converters end-->
 
-    <Style TargetType="MControls:MyToggleButton" x:Key="MetroMyToggleBuggon" BasedOn="{StaticResource {x:Type MControls:MyRadioButton}}">
+    <Style TargetType="MControls:MyRadioButton" x:Key="MetroMyToggleBuggon" BasedOn="{StaticResource {x:Type MControls:MyRadioButton}}">
         <Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
         <Setter Property="IconFill" Value="Black" />
         <Setter Property="SuperScriptSize" Value="50"/>
@@ -28,20 +28,19 @@
                                  GroupName="tabGroup"
                                  IconData="{Binding Submit,Source={x:Static MControls:PathData.Instance}}"
                                  Style="{StaticResource MetroMyToggleBuggon}"
+                                 BorderThickness="1"
                                  CommandParameter="{Binding TagName}"
                                  Command="{Binding Path=DataContext.ShowSoundListForTagCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}">
             <MControls:MyRadioButton.Content>
-                <Border BorderThickness="1" BorderBrush="{DynamicResource ControlBorderBrush}">
-                    <Grid Margin="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="30"/>
-                        </Grid.RowDefinitions>
-                        <Image Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>
-                        <Image Width="180" Height="160" Stretch="Fill" Source="{Binding CoverPath}" />
-                        <Label Grid.Row="1" HorizontalAlignment="Center" Content="{Binding TagName}" />
-                    </Grid>
-                </Border>
+                <Grid Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Image Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>
+                    <Image Width="180" Height="160" Stretch="Fill" Source="{Binding CoverPath}" />
+                    <Label Grid.Row="1" HorizontalAlignment="Center" Content="{Binding TagName}" />
+                </Grid>
             </MControls:MyRadioButton.Content>
         </MControls:MyRadioButton>
     </DataTemplate>

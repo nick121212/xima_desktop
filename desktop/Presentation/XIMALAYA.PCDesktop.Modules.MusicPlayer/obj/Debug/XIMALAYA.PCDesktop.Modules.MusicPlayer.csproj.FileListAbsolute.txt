@@ -69,3 +69,14 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Mo
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer.g.resources
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.MusicPlayer.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Modules.MusicPlayer.pdb
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\Views\MusicPlayerView1.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\Views\MusicPlayerView.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\Views\MusicPlayerView1.g.cs
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\Views\MusicPlayerView.g.cs
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer_MarkupCompile.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer.g.resources
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer.dll
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.MusicPlayer\obj\Debug\XIMALAYA.PCDesktop.Modules.MusicPlayer.pdb
