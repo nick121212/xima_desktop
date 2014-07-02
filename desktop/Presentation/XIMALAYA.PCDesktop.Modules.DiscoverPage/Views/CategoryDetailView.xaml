@@ -27,12 +27,10 @@
                  ItemContainerStyle="{StaticResource TagListStyle}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <VirtualizingStackPanel Margin="10" 
-                                            Width="300"
-                                            Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=ActualWidth}"
-                                            Orientation="Horizontal" 
-                                            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                                            IsItemsHost="True"/>
+                    <WrapPanel Margin="10" 
+                                           Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=ActualWidth}"
+                                           Orientation="Horizontal" 
+                                           IsItemsHost="True"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListBox>

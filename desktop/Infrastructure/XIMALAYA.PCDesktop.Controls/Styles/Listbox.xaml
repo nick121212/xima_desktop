@@ -7,39 +7,46 @@
 
     <!--converters start-->
     <converter:LongToDateConverter x:Key="LongToDateConverter"/>
+    <converter:StringToBoolConverter x:Key="StringToBoolConverter"/>
     <!--converters end-->
 
-    
+    <Style TargetType="MControls:MyToggleButton" x:Key="MetroMyToggleBuggon" BasedOn="{StaticResource {x:Type MControls:MyToggleButton}}">
+        <Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
+        <Setter Property="IconFill" Value="Black" />
+        <Setter Property="SuperScriptSize" Value="50"/>
+    </Style>
+
     <!--标签列表 start-->
-    <ControlTemplate x:Key="TagTemplate" TargetType="{x:Type ListBoxItem}">
-        <ContentPresenter/>
-    </ControlTemplate>
+
     <DataTemplate x:Key="TagItemTemplate" DataType="{x:Type ListBoxItem}">
-        <Controls:Tile Background="Transparent" 
-                       Width="180" 
-                       Height="180"
-                       Margin="5"
-                       CommandParameter="{Binding TagName}"
-                       Command="{Binding Path=DataContext.ShowSoundListForTagCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}">
-            <Controls:Tile.Template>
-                <ControlTemplate>
-                    <Border BorderThickness="1" BorderBrush="{DynamicResource ControlBorderBrush}">
-                        <Grid Margin="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="30"/>
-                            </Grid.RowDefinitions>
-                            <Image Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>
-                            <Image Width="180" Height="160" Stretch="Fill" Source="{Binding CoverPath}" />
-                            <Label Grid.Row="1" HorizontalAlignment="Center" Content="{Binding TagName}" />
-                        </Grid>
-                    </Border>
-                </ControlTemplate>
-            </Controls:Tile.Template>
-        </Controls:Tile>
+
+        <MControls:MyToggleButton Background="Transparent"
+                                  Width="180" 
+                                  Height="180"
+                                  Margin="5"
+                                  IconMargin="6"
+                                  IconData="{Binding Submit,Source={x:Static MControls:PathData.Instance}}"
+                                  Style="{StaticResource MetroMyToggleBuggon}"
+                                  CommandParameter="{Binding TagName}"
+                                  Command="{Binding Path=DataContext.ShowSoundListForTagCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}">
+            
+            
+            <MControls:MyToggleButton.Content>
+                <Border BorderThickness="1" BorderBrush="{DynamicResource ControlBorderBrush}">
+                    <Grid Margin="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Image Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>
+                        <Image Width="180" Height="160" Stretch="Fill" Source="{Binding CoverPath}" />
+                        <Label Grid.Row="1" HorizontalAlignment="Center" Content="{Binding TagName}" />
+                    </Grid>
+                </Border>
+            </MControls:MyToggleButton.Content>
+        </MControls:MyToggleButton>
     </DataTemplate>
     <Style x:Key="TagListStyle" TargetType="{x:Type ListBoxItem}">
-        <Setter Property="Template" Value="{StaticResource TagTemplate}"/>
         <Setter Property="ContentTemplate" Value="{StaticResource TagItemTemplate}"/>
     </Style>
     <!--标签列表 end-->
@@ -104,7 +111,6 @@
     </DataTemplate>
     <Style x:Key="AlbumListStyle" TargetType="{x:Type ListBoxItem}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Template" Value="{StaticResource TagTemplate}"/>
         <Setter Property="ContentTemplate" Value="{StaticResource AlbumItemTemplate}"/>
     </Style>
     <!--专辑列表 end-->
@@ -144,7 +150,6 @@
     </DataTemplate>
     <Style x:Key="SoundListStyle" TargetType="{x:Type ListBoxItem}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Template" Value="{StaticResource TagTemplate}"/>
         <Setter Property="ContentTemplate" Value="{StaticResource SoundItemTemplate}"/>
     </Style>
     <!--声音列表 end-->

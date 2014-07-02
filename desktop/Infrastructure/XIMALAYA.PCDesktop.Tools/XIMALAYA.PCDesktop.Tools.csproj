@@ -79,6 +79,7 @@
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Command\Commands.cs" />
     <Compile Include="Command\Player.cs" />
+    <Compile Include="Converter\StringToBoolConverter.cs" />
     <Compile Include="Converter\LongToDateConverter.cs" />
     <Compile Include="Extension\TypeExtensions.cs" />
     <Compile Include="FlyoutVisible.cs" />

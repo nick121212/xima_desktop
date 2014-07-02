@@ -51,6 +51,14 @@ namespace XIMALAYA.PCDesktop.Controls
             }
         }
 
+        public Geometry Submit
+        {
+            get
+            {
+                return Geometry.Parse("F1M574.042,314.611L533.8,344.398 522.251,328.798 515.235,333.988 526.786,349.593 526.782,349.596 531.978,356.603 579.235,321.622 574.042,314.611z");
+            }
+        }
+
         private PathData() { }
     }
 }

@@ -29,7 +29,7 @@
                     <VisualState x:Name="Checked">
                         <Storyboard>
                             <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="IconDataPath" Storyboard.TargetProperty="Opacity" To="1" />
-                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="0.5" />
+                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="1" />
                             <ThicknessAnimation Duration="0:0:0.2" Storyboard.TargetName="Background" Storyboard.TargetProperty="BorderThickness" To="5" />
                         </Storyboard>
                     </VisualState>
@@ -55,18 +55,6 @@
                     BorderBrush="{TemplateBinding BorderBrush}">
                 <Grid Background="{TemplateBinding Background}">
                     <!--<Border Opacity="1" BorderThickness="0" BorderBrush="Red"  x:Name="BackgroundAnimation" />-->
-                    <Path x:Name="IconDataPath" 
-                          VerticalAlignment="Top"
-                          HorizontalAlignment="Right" 
-                          Opacity="0"
-                          Data="{TemplateBinding IconData}" 
-                          Fill="{TemplateBinding IconFill}" 
-                          Width="{TemplateBinding IconWidth}"
-                          Height="{TemplateBinding IconHeight}"
-                          Stretch="Fill"
-                          Margin="{TemplateBinding IconMargin}"
-                          UseLayoutRounding="False">
-                    </Path>
 
                     <Rectangle x:Name="BackgroundGradient"
                                Fill="{TemplateBinding BorderBrush}"
@@ -86,7 +74,21 @@
                         </Rectangle.RenderTransform>
                     </Rectangle>
 
+                    <Path x:Name="IconDataPath" 
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Right" 
+                          Opacity="0"
+                          Data="{TemplateBinding IconData}" 
+                          Fill="{TemplateBinding IconFill}" 
+                          Width="{TemplateBinding IconWidth}"
+                          Height="{TemplateBinding IconHeight}"
+                          Stretch="Fill"
+                          Margin="{TemplateBinding IconMargin}"
+                          UseLayoutRounding="False">
+                    </Path>
+
                     <ContentPresenter x:Name="contentPresenter"
+                                      Panel.ZIndex="-1"
                                       Content="{TemplateBinding Content}"
                                       ContentTemplate="{TemplateBinding ContentTemplate}"
                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
@@ -104,4 +106,11 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
+
+    <Style TargetType="local:MyToggleButton" x:Key="MetroMyToggleBuggon1" BasedOn="{StaticResource {x:Type local:MyToggleButton}}">
+        <Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
+        <Setter Property="IconFill" Value="{DynamicResource AccentColorBrush4}" />
+        <Setter Property="SuperScriptSize" Value="50"/>
+    </Style>
+
 </ResourceDictionary>
