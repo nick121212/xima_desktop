@@ -44,3 +44,8 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\FluentJson.pdb
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\FluentJson.XML
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\FluentJson\obj\Debug\FluentJson.dll
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\FluentJson\obj\Debug\FluentJson.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\FluentJson.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\FluentJson.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\FluentJson.XML
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\FluentJson\obj\Debug\FluentJson.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\FluentJson\obj\Debug\FluentJson.pdb

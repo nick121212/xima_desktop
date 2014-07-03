@@ -13,6 +13,7 @@
                       MinWidth="960"
                       Width="1050"
                       Height="750"
+                      FontFamily="微软雅黑"
                       WindowStartupLocation="CenterScreen">
     <!--Icon="icon_16.ico"-->
 

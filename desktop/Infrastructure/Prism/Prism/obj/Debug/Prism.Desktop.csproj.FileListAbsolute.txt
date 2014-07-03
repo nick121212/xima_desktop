@@ -71,3 +71,11 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism\obj
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Prism.Desktop.csproj.GenerateResource.Cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Microsoft.Practices.Prism.dll
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Microsoft.Practices.Prism.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\Microsoft.Practices.Prism.XML
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\Microsoft.Practices.Prism.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\Microsoft.Practices.Prism.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Prism.Desktop.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Microsoft.Practices.Prism.Properties.Resources.resources
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Prism.Desktop.csproj.GenerateResource.Cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Microsoft.Practices.Prism.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\Prism\Prism\obj\Debug\Microsoft.Practices.Prism.pdb

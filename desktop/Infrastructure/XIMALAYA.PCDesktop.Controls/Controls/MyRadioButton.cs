@@ -98,17 +98,5 @@ namespace XIMALAYA.PCDesktop.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MyRadioButton), new FrameworkPropertyMetadata(typeof(MyRadioButton)));
         }
-
-        public MyRadioButton()
-        {
-            //this.SizeChanged += MyRadioButton_SizeChanged;
-        }
-
-        void MyRadioButton_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            double w = this.Width > this.Height ? this.Height : this.Width;
-
-            this.SuperScriptSize = w / 2;
-        }
     }
 }

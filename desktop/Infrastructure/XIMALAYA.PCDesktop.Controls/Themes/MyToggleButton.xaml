@@ -109,8 +109,8 @@
 
     <Style TargetType="local:MyToggleButton" x:Key="MetroMyToggleBuggon1" BasedOn="{StaticResource {x:Type local:MyToggleButton}}">
         <Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
-        <Setter Property="IconFill" Value="{DynamicResource AccentColorBrush4}" />
-        <Setter Property="SuperScriptSize" Value="50"/>
+        <Setter Property="local:MyRadioButton.IconFill" Value="{DynamicResource AccentColorBrush4}" />
+        <Setter Property="local:MyRadioButton.SuperScriptSize" Value="50"/>
     </Style>
 
 </ResourceDictionary>

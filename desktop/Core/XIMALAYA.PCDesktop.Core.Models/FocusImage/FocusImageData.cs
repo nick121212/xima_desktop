@@ -24,9 +24,9 @@ namespace XIMALAYA.PCDesktop.Core.Models.FocusImage
             : base()
         {
             this.doAddMap(() => this.ID, "id");
-            this.doAddMap(() => this.ShortTitle, "short_title");
+            this.doAddMap(() => this.ShortTitle, "shortTitle");
             this.doAddMap(() => this.TrackId, "trackId");
-            this.doAddMap(() => this.LongTitle, "long_title");
+            this.doAddMap(() => this.LongTitle, "longTitle");
             this.doAddMap(() => this.Type, "type");
             this.doAddMap(() => this.Uid, "uid");
             this.doAddMap(() => this.Pic, "pic");

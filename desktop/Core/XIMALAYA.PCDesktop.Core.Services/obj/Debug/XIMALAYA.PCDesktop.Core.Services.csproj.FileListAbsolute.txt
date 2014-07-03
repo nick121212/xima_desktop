@@ -38,3 +38,8 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Services\obj\Debug\XIMALAYA.PCDesktop.Core.Services.csprojResolveAssemblyReference.cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Services\obj\Debug\XIMALAYA.PCDesktop.Core.Services.dll
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Services\obj\Debug\XIMALAYA.PCDesktop.Core.Services.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Services.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Services.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Services\obj\Debug\XIMALAYA.PCDesktop.Core.Services.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Services\obj\Debug\XIMALAYA.PCDesktop.Core.Services.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Services\obj\Debug\XIMALAYA.PCDesktop.Core.Services.pdb

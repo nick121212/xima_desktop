@@ -26,3 +26,8 @@ E:\FENGXIAO\ximalaya_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Models.pdb
 E:\FENGXIAO\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Models\obj\Debug\XIMALAYA.PCDesktop.Core.Models.csprojResolveAssemblyReference.cache
 E:\FENGXIAO\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Models\obj\Debug\XIMALAYA.PCDesktop.Core.Models.dll
 E:\FENGXIAO\ximalaya_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Models\obj\Debug\XIMALAYA.PCDesktop.Core.Models.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Models.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Core.Models.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Models\obj\Debug\XIMALAYA.PCDesktop.Core.Models.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Models\obj\Debug\XIMALAYA.PCDesktop.Core.Models.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Core\XIMALAYA.PCDesktop.Core.Models\obj\Debug\XIMALAYA.PCDesktop.Core.Models.pdb

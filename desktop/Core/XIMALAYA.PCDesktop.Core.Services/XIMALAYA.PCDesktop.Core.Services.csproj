@@ -70,11 +70,13 @@
     <Compile Include="Impl\CategoryTagService.cs" />
     <Compile Include="Impl\CategoryService.cs" />
     <Compile Include="Impl\AlbumInfoService.cs" />
+    <Compile Include="Impl\SubjectsService.cs" />
     <Compile Include="Impl\SuperExploreIndexService.cs" />
     <Compile Include="ICategoryService.cs" />
     <Compile Include="IAlbumInfoService.cs" />
     <Compile Include="IFocusImageService.cs" />
     <Compile Include="IHotSoundsService.cs" />
+    <Compile Include="ISubjectsService.cs" />
     <Compile Include="ISuperExploreIndex.cs" />
     <Compile Include="Impl\ServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

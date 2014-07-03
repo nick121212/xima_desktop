@@ -106,20 +106,19 @@ namespace XIMALAYA.PCDesktop.Controls
         /// </summary>
         public static readonly DependencyProperty IconHeightProperty =
             DependencyProperty.Register("IconHeight", typeof(double), typeof(PathButton), new PropertyMetadata(0D));
-
-        
-
+        /// <summary>
+        /// 不支持切换
+        /// </summary>
         public bool IsSingle
         {
             get { return (bool)GetValue(IsSingleProperty); }
             set { SetValue(IsSingleProperty, value); }
         }
-
-        // Using a DependencyProperty as the backing store for IsSingle.  This enables animation, styling, binding, etc...
+        /// <summary>
+        /// 不支持切换
+        /// </summary>
         public static readonly DependencyProperty IsSingleProperty =
             DependencyProperty.Register("IsSingle", typeof(bool), typeof(PathButton), new PropertyMetadata(false));
-
-
     
     }
 }

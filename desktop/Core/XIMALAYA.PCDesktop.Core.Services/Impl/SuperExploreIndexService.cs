@@ -57,7 +57,6 @@ namespace XIMALAYA.PCDesktop.Core.Services
             this.Act = act;
             this.Decoder = Json.DecoderFor<SuperExploreIndexResult>(config => config.DeriveFrom(result.Config));
 
-            //"device=pc&picVersion=7"
             this.Responsitory.Fetch(WellKnownUrl.SuperExploreIndex, param.ToString(), GetDataCallBack);
         }
     }

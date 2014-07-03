@@ -71,7 +71,6 @@
                         </Storyboard>
                     </BeginStoryboard>
                 </Trigger.EnterActions>
-                <!-- some out fading -->
                 <Trigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>

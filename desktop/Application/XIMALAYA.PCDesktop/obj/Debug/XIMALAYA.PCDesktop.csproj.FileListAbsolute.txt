@@ -168,3 +168,17 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Application\XIMALAYA.PCDesktop
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.g.resources
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.Properties.Resources.resources
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.csproj.GenerateResource.Cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.exe.config
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.exe
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.exe
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\Shell.baml
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\App.baml
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\Shell.g.cs
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\App.g.cs
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop_MarkupCompile.cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.g.resources
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.Properties.Resources.resources
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Application\XIMALAYA.PCDesktop\obj\Debug\XIMALAYA.PCDesktop.csproj.GenerateResource.Cache

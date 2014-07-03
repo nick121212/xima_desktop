@@ -24,4 +24,5 @@
         <Setter Property="Background" Value="{DynamicResource AccentColorBrush2}"/>
         <Setter Property="Template" Value="{StaticResource MetroRadioButtonTemplate}" />
     </Style>
+    
 </ResourceDictionary>

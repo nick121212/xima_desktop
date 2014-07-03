@@ -104,36 +104,6 @@
             图标的填充色
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.SuperScriptSize">
-            <summary>
-            角标的尺寸
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconData">
-            <summary>
-            图标的path
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconWidth">
-            <summary>
-            图表的宽度
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconHeight">
-            <summary>
-            图标的高度
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconMargin">
-            <summary>
-            图标margin值
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconFill">
-            <summary>
-            图标的填充色
-            </summary>
-        </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarNextPath">
             <summary>
             下一首
@@ -313,6 +283,11 @@
             
             </summary>
         </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.IsSingleProperty">
+            <summary>
+            不支持切换
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.Stretch">
             <summary>
             
@@ -348,6 +323,11 @@
             
             </summary>
         </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IsSingle">
+            <summary>
+            不支持切换
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.TilePanel">
             <summary>
             TilePanel 
@@ -356,12 +336,12 @@
         </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.TileHeightProperty">
             <summary>
-            
+            容器内元素的高度
             </summary>
         </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.TileWidthProperty">
             <summary>
-            
+            容器内元素的宽度
             </summary>
         </member>
         <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.GetWidthPix(System.Windows.DependencyObject)">
@@ -380,7 +360,7 @@
         </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.WidthPixProperty">
             <summary>
-            
+            元素的宽度比例，相对于TileWidth
             </summary>
         </member>
         <member name="M:XIMALAYA.PCDesktop.Controls.TilePanel.GetHeightPix(System.Windows.DependencyObject)">
@@ -399,12 +379,17 @@
         </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.HeightPixProperty">
             <summary>
-            高度比例
+            元素的高度比例，相对于TileHeight
             </summary>
         </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.OrientationProperty">
             <summary>
-            方向
+            排列方向
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.TileCountProperty">
+            <summary>
+            格子数量
             </summary>
         </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.TilePanel.TileMarginProperty">
@@ -428,17 +413,27 @@
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileHeight">
             <summary>
-            
+            容器内元素的高度
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileWidth">
             <summary>
-            
+            容器内元素的宽度
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.Orientation">
             <summary>
-            方向
+            排列方向
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileCount">
+            <summary>
+            格子数量
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileMargin">
+            <summary>
+            Tile之间的间距
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.MinHeightPix">
@@ -449,27 +444,6 @@
         <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.MinWidthPix">
             <summary>
             最小的宽度比例
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TotalCellCount">
-            <summary>
-            元素占用的横向格子总数
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TotalRowCount">
-            <summary>
-            元素占用的纵向格子总数
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.LeftPix">
-            <summary>
-            排列完后剩下没有使用的格子数
-            计算最终的高度或宽度使用
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.TilePanel.TileMargin">
-            <summary>
-            Tile之间的间距
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel">

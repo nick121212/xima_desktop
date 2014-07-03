@@ -62,3 +62,10 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesk
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools\obj\Debug\XIMALAYA.PCDesktop.Tools.g.resources
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools\obj\Debug\XIMALAYA.PCDesktop.Tools.dll
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools\obj\Debug\XIMALAYA.PCDesktop.Tools.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Tools.XML
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Tools.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Tools.pdb
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools\obj\Debug\XIMALAYA.PCDesktop.Tools.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools\obj\Debug\XIMALAYA.PCDesktop.Tools.g.resources
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools\obj\Debug\XIMALAYA.PCDesktop.Tools.dll
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Tools\obj\Debug\XIMALAYA.PCDesktop.Tools.pdb

@@ -4,17 +4,17 @@
 library
 C#
 .cs
-D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\
 XIMALAYA.PCDesktop.Controls
 none
 false
 DEBUG;TRACE
 
-81276936454
+18176052139
 
-13-1641045234
-201735825904
-Styles\Checkbox.xaml;Styles\MetroList.xaml;Styles\Listbox.xaml;Themes\Generic.xaml;Themes\MyRadioButton.xaml;Themes\MyToggleButton.xaml;Themes\PathButton.xaml;Themes\MetroSlider.xaml;
+13-1700959508
+201250521824
+Styles\Checkbox.xaml;Styles\Converter.xaml;Styles\GroupBox.xaml;Styles\ListBoxItem.SubjectList.xaml;Styles\ListBoxItem.CategoryList.xaml;Styles\ListBoxItem.HotSoundList.xaml;Styles\ListBoxItem.SoundList.xaml;Styles\ListBoxItem.AlbumList.xaml;Styles\ListBoxItem.Common.xaml;Styles\ListBoxItem.FocusImageList.xaml;Styles\ListBoxItem.TagList.xaml;Styles\ListBoxItem.xaml;Styles\MyRadioButton.xaml;Themes\Generic.xaml;Themes\MyRadioButton.xaml;Themes\MyToggleButton.xaml;Themes\PathButton.xaml;Themes\MetroSlider.xaml;
 
 True
 

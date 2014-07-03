@@ -11,6 +11,9 @@ using XIMALAYA.PCDesktop.Core.ParamsModel;
 using XIMALAYA.PCDesktop.Core.Services;
 using XIMALAYA.PCDesktop.Events;
 using XIMALAYA.PCDesktop.Tools.Untils;
+using MahApps.Metro.Controls.Dialogs;
+using MahApps.Metro.Controls;
+using XIMALAYA.PCDesktop.Core.Models.Album;
 
 namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
 {
@@ -19,73 +22,67 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
     {
         #region fields
 
-        private ObservableCollection<FocusImageData> _FocusImageList = null;
-        private ObservableCollection<SubjectData> _SubjectList = null;
-        private static ObservableCollection<CategoryData> _CategoryList = null;
+        private string _SubjectModuleTitle;
 
         #endregion
 
         #region Properties
 
+        /// <summary>
+        /// 焦点图服务
+        /// </summary>
         [Import]
         private IFocusImageService FocusImageService { get; set; }
+        /// <summary>
+        /// 发现也整合接口，没用
+        /// </summary>
         [Import]
         private ISuperExploreIndex SuperExploreIndex { get; set; }
+        /// <summary>
+        /// 分类接口服务
+        /// </summary>
         [Import]
         private ICategoryService CategoryService { get; set; }
-
+        /// <summary>
+        /// 热门声音服务
+        /// </summary>
         [Import]
         private IHotSoundsService HotSoundsService { get; set; }
-
+        /// <summary>
+        /// 今日焦点的title
+        /// </summary>
+        public string SubjectModuleTitle
+        {
+            get { return _SubjectModuleTitle; }
+            set
+            {
+                if (value != _SubjectModuleTitle)
+                {
+                    _SubjectModuleTitle = value;
+                    this.RaisePropertyChanged(() => this.SubjectModuleTitle);
+                }
+            }
+        }
         /// <summary>
         /// 焦点图列表
         /// </summary>
-        public ObservableCollection<FocusImageData> FocusImageList
-        {
-            get { return _FocusImageList; }
-            private set
-            {
-                if (value != _FocusImageList)
-                {
-                    _FocusImageList = value;
-                    this.RaisePropertyChanged(() => this.FocusImageList);
-                }
-            }
-        }
+        public ObservableCollection<FocusImageData> FocusImageList { get; set; }
         /// <summary>
         /// 分类列表
         /// </summary>
-        public static ObservableCollection<CategoryData> CategoryList
-        {
-            get { return _CategoryList; }
-            private set
-            {
-                if (value != _CategoryList)
-                {
-                    _CategoryList = value;
-                    //this.RaisePropertyChanged(() => this.CategoryList);
-                }
-            }
-        }
+        public static ObservableCollection<CategoryData> CategoryList { get; set; }
         /// <summary>
         /// 今日热点
         /// </summary>
-        public ObservableCollection<SubjectData> SubjectList
-        {
-            get { return _SubjectList; }
-            private set
-            {
-                if (value != _SubjectList)
-                {
-                    _SubjectList = value;
-                    //this.RaisePropertyChanged(() => this.SubjectList);
-                }
-            }
-        }
+        public ObservableCollection<SubjectData> SubjectList { get; set; }
         /// <summary>
         /// 热门声音所在的分类
         /// </summary>
         public ObservableCollection<CategoryData> HotSoundsCategories { get; set; }
+        /// <summary>
+        /// 推荐专辑
+        /// </summary>
+        public ObservableCollection<AlbumData> AlbumList { get; set; }
 
         #endregion
 
@@ -102,16 +99,14 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
 
         private void GetFocusImageDataAction()
         {
-            if (this.FocusImageService != null)
-            {
-                this.FocusImageService.GetData(this.GetExporeIndexData, new SuperExploreParam
-                {
-                    Device = DeviceType.pc,
-                    PicVersion = 7
-                });
-            }
-        }
+            if (SuperExploreIndex == null) throw new ArgumentNullException();
 
+            this.SuperExploreIndex.GetData(this.GetExporeIndexData, new SuperExploreParam
+            {
+                Device = DeviceType.pc,
+                PicVersion = 7
+            });
+        }
         private void GetCategoryListAction()
         {
             this.CategoryService.GetData<CategoryParam>(new Action<object>(categories =>
@@ -131,26 +126,39 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                 Scale = 2
             });
         }
-
         private void GetExporeIndexData(object result)
         {
-            FocusImageResult superData = result as FocusImageResult;
+            var superData = result as SuperExploreIndexResult;
 
-            if (superData != null && superData.Ret == 0)
+            if (superData == null) throw new ArgumentNullException();
+
+            if (superData.Ret == 0)
             {
                 Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                 {
                     int index = 0;
-                    foreach (FocusImageData fi in superData.List)
+                    foreach (FocusImageData fi in superData.FocusImages.List)
                     {
                         fi.IsFirst = index == 0;
                         index++;
                         this.FocusImageList.Add(fi);
                     }
-                }));
+                    this.SubjectModuleTitle = superData.Subjects.ModuleTitle;
+                    foreach (var sd in superData.Subjects.List)
+                    {
+                        this.SubjectList.Add(sd);
+                    }
+                    foreach (var album in superData.Albums.List)
+                    {
+                        this.AlbumList.Add(album);
+                    }
+                }), System.Windows.Threading.DispatcherPriority.Background, null);
+            }
+            else
+            {
+                DialogManager.ShowMessageAsync(Application.Current.MainWindow as MetroWindow, "喜马拉雅", superData.Message);
             }
         }
-
         private void GetHotSoundsAction()
         {
             if (this.HotSoundsService != null)
@@ -168,7 +176,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                                 this.HotSoundsCategories.Add(cate);
                             }
                         }));
-                        
+
                     }
                 }, new BaseParam
                 {
@@ -176,7 +184,6 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                 });
             }
         }
-
         public void Initialize()
         {
             this.GetFocusImageDataAction();
@@ -194,6 +201,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             this.FocusImageList = new ObservableCollection<FocusImageData>();
             this.SubjectList = new ObservableCollection<SubjectData>();
             this.HotSoundsCategories = new ObservableCollection<CategoryData>();
+            this.AlbumList = new ObservableCollection<AlbumData>();
 
             //点击分类命令
             this.ShowCategoryDetailCommand = new DelegateCommand<string>(new Action<string>(cateName =>

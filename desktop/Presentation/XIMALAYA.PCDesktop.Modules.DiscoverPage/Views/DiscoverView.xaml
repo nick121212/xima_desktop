@@ -19,20 +19,15 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <GroupBox VerticalAlignment="Top" 
-                      Padding="0" 
-                      Margin="20 0"
-                      Header=" "
-                      HeaderStringFormat=""
-                      Width="1002" 
-                      Background="Transparent" 
-                      BorderBrush="Transparent">
+            <!--焦点图-->
+            <GroupBox Header=" "
+                               Style="{StaticResource MyMetroGroupBox}"
+                               Width="Auto" >
                 <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
-                         Height="500"
-                         Margin="0"
-                         Padding="0"
                          Background="Transparent"
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                          FocusVisualStyle="{x:Null}"
@@ -41,24 +36,19 @@
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <MControls:TilePanel TileHeight="5" 
-                                                 TileWidth="5" 
-                                                 TileMargin="2" 
-                                                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                                                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
-                                                 Background="Transparent"/>
+                                                              TileWidth="5" 
+                                                              TileCount="198"
+                                                              TileMargin="2" 
+                                                              ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
                 </ListBox>
             </GroupBox>
+            <!--分类列表-->
             <GroupBox Width="304" 
-                      Height="500"
-                      Header=" "
-                      VerticalAlignment="Top" 
-                      Grid.Column="1"
-                      Padding="0" 
-                      Margin="20 0"
-                      Background="Transparent"
-                      BorderBrush="Transparent">
+                               Header=" "
+                               Style="{StaticResource MyMetroGroupBox}"
+                               Grid.Column="1">
                 <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
                          Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Height}"
                          Background="Transparent"
@@ -68,48 +58,66 @@
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <MControls:TilePanel TileHeight="5" 
-                                                 TileWidth="5" 
-                                                 TileMargin="0 3"
-                                                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"/>
+                                                              TileWidth="5" 
+                                                              TileMargin="0 3"
+                                                              TileCount="60"
+                                                              Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
                 </ListBox>
             </GroupBox>
-
-            <ListBox Grid.Column="2" 
+            <!--专题列表-->
+            <GroupBox Header="{Binding SubjectModuleTitle}"
+                               Width="306"
+                               Style="{StaticResource MyMetroGroupBox}"
+                               Grid.Column="2" >
+                <ListBox Background="Transparent"
+                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                               ItemContainerStyle="{StaticResource MetroSubjectListStyle}" 
+                               ItemsSource="{Binding SubjectList}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <MControls:TilePanel TileHeight="10" 
+                                                              TileWidth="10" 
+                                                              TileMargin="0 2"
+                                                              TileCount="30"
+                                                              Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </GroupBox>
+            <!--推荐专辑-->
+            <GroupBox Header="推荐专辑"
+                               Width="445"
+                               Style="{StaticResource MyMetroGroupBox}"
+                               Grid.Column="3" >
+                <ListBox Background="Transparent"
+                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                               ItemContainerStyle="{StaticResource MetroAlbumListStyle}" 
+                               ItemsSource="{Binding AlbumList}">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <MControls:TilePanel TileHeight="10" 
+                                                              TileWidth="10" 
+                                                              TileMargin="1 3"
+                                                              TileCount="44"
+                                                              Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </GroupBox>
+            <!--热门声音-->
+            <ListBox Grid.Column="4" 
                      Width="Auto"
                      Background="Transparent"
                      ItemContainerStyle="{StaticResource MetroHotSoundsStyle}"
                      ItemsSource="{Binding HotSoundsCategories}">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel Height="500" VerticalAlignment="Top" Margin="0" Orientation="Horizontal"/>
+                        <WrapPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
             </ListBox>
-
-            <!--<GroupBox Header="专题列表"
-                  Grid.Column="1" 
-                  Style="{StaticResource CleanGroupBoxStyleKey}">
-            <ListBox Width="320"
-                     Background="Transparent"
-                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                     ItemContainerStyle="{StaticResource SubjectListStyle1}"
-                     ItemsSource="{Binding SubjectList}">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <MControls:TilePanel TileHeight="10" 
-                                             TileWidth="10" 
-                                             TileMargin="3" 
-                                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                                             Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=Width}"
-                                             Background="Transparent"/>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-            </ListBox>
-        </GroupBox>-->
-
-
         </Grid>
     </ScrollViewer>
 </UserControl>
