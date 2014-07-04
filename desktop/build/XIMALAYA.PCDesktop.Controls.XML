@@ -4,6 +4,87 @@
         <name>XIMALAYA.PCDesktop.Controls</name>
     </assembly>
     <members>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measure the children
+            </summary>
+            <param name="availableSize">Size available</param>
+            <returns>Size desired</returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arrange the children
+            </summary>
+            <param name="finalSize">Size available</param>
+            <returns>Size used</returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.CleanUpItems(System.Int32,System.Int32)">
+            <summary>
+            Revirtualize items that are no longer visible
+            </summary>
+            <param name="minDesiredGenerated">first item index that should be visible</param>
+            <param name="maxDesiredGenerated">last item index that should be visible</param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)">
+            <summary>
+            When items are removed, remove the corresponding UI if necessary
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.CalculateExtent(System.Windows.Size,System.Int32)">
+            <summary>
+            Calculate the extent of the view based on the available size
+            </summary>
+            <param name="availableSize">available size</param>
+            <param name="itemCount">number of data items</param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.GetVisibleRange(System.Int32@,System.Int32@)">
+            <summary>
+            Get the range of children that are visible
+            </summary>
+            <param name="firstVisibleItemIndex">The item index of the first visible item</param>
+            <param name="lastVisibleItemIndex">The item index of the last visible item</param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.GetChildSize">
+            <summary>
+            Get the size of the children. We assume they are all the same
+            </summary>
+            <returns>The size</returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.ArrangeChild(System.Int32,System.Windows.UIElement,System.Windows.Size)">
+            <summary>
+            Position a child
+            </summary>
+            <param name="itemIndex">The data item index of the child</param>
+            <param name="child">The element to position</param>
+            <param name="finalSize">The size of the panel</param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.CalculateChildrenPerRow(System.Windows.Size)">
+            <summary>
+            Helper function for tiling layout
+            </summary>
+            <param name="availableSize">Size available</param>
+            <returns></returns>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.ImageDecoder">
+            <summary>
+            图片加载器
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.ImageQueue">
+            <summary>
+            图片下载队列
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.ImageQueue.Queue(System.Windows.Controls.Image,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="img"></param>
+            <param name="url"></param>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.MyRadioButton">
             <summary>
             带角标的toggle按钮

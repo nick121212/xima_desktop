@@ -22,7 +22,9 @@
                         <Image VerticalAlignment="Top" 
                                Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
                                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-                               Source="{Binding CoverPathBig}" Stretch="Fill" />
+							   MControls:ImageDecoder.DefaultSource="banner.png"
+							   MControls:ImageDecoder.Source="{Binding CoverPathBig}"
+                               Stretch="Fill" />
                         <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content=" " Background="Black" Opacity="0.5" />
                         <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" Margin="0 3" Content="{Binding Title}" />
                     </Grid>
@@ -49,12 +51,6 @@
         <Setter Property="MControls:TilePanel.HeightPix" Value="15"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
         <Setter Property="ContentTemplate" Value="{StaticResource MetroSubjectItemTemplate}"/>
-        <!--<Style.Triggers>
-            <DataTrigger Binding="{Binding IsFirst}" Value="True">
-                <Setter Property="MControls:TilePanel.WidthPix" Value="132"/>
-                <Setter Property="MControls:TilePanel.HeightPix" Value="60"/>
-            </DataTrigger>
-        </Style.Triggers>-->
     </Style>
 
 </ResourceDictionary>

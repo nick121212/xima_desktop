@@ -124,7 +124,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                             this.TagDataList.Add(new TagData
                             {
                                 CategoryId = 0,
-                                CoverPath = "/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tagdefault.jpg",
+                                CoverPath = "pack://application:,,,/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tagall.jpg",
                                 TagName = "全部"
                             });
                             foreach (var tag in tagResult.List)

@@ -27,8 +27,11 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <Image Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>
-                    <Image Width="180" Height="160" Stretch="Fill" Source="{Binding CoverPath}" />
+                    <Image Width="180" 
+						   Height="160" 
+						   Stretch="Fill" 
+						   MControls:ImageDecoder.DefaultSource="tag.jpg"
+						   MControls:ImageDecoder.Source="{Binding CoverPath}" />
                     <Label Grid.Row="1" HorizontalAlignment="Center" Content="{Binding TagName}" />
                 </Grid>
             </MControls:MyRadioButton.Content>

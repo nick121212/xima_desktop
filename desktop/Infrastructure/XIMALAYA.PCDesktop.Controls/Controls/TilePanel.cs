@@ -75,7 +75,7 @@ namespace XIMALAYA.PCDesktop.Controls
         /// <param name="value"></param>
         public static void SetWidthPix(DependencyObject obj, int value)
         {
-            if (value > 0 && value < 2)
+            if (value > 0)
             {
                 obj.SetValue(WidthPixProperty, value);
             }
@@ -101,7 +101,7 @@ namespace XIMALAYA.PCDesktop.Controls
         /// <param name="value"></param>
         public static void SetHeightPix(DependencyObject obj, int value)
         {
-            if (value > 0 && value < 2)
+            if (value > 0 )
             {
                 obj.SetValue(HeightPixProperty, value);
             }
@@ -352,7 +352,7 @@ namespace XIMALAYA.PCDesktop.Controls
                 child.VerticalAlignment = System.Windows.VerticalAlignment.Top;
 
                 child.Width = this.TileWidth * childWidthPix + (child.Margin.Left + child.Margin.Right) * ((childWidthPix - this.MinWidthPix) / this.MinWidthPix);
-                child.Height = this.TileWidth * childHeightPix + (child.Margin.Top + child.Margin.Bottom) * ((childHeightPix - this.MinHeightPix) / this.MinHeightPix);
+                child.Height = this.TileHeight * childHeightPix + (child.Margin.Top + child.Margin.Bottom) * ((childHeightPix - this.MinHeightPix) / this.MinHeightPix);
 
                 maxRowCount += childWidthPix * childHeightPix;
 

@@ -29,8 +29,13 @@
                                         <RowDefinition Height="60"/>
                                     </Grid.RowDefinitions>
 
-                                    <Image ToolTip="{Binding Title}" Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>
-                                    <Image ToolTip="{Binding Title}" Width="180" Height="180" Stretch="Fill" Source="{Binding AlbumCoverUrl290}" />
+                                    <!--<Image ToolTip="{Binding Title}" Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>-->
+                                    <Image ToolTip="{Binding Title}" 
+										   Width="180" 
+										   Height="180" 
+										   MControls:ImageDecoder.DefaultSource="track.jpg"
+										   MControls:ImageDecoder.Source="{Binding AlbumCoverUrl290}"
+										   Stretch="Fill"  />
                                     <WrapPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                                         <TextBlock ToolTip="{Binding Title}" Width="180" TextWrapping="NoWrap" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding Title}" />
                                         <TextBlock Width="180" TextWrapping="WrapWithOverflow" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding LastUptrackDate,Converter={StaticResource LongToDateConverter}}" />
@@ -83,7 +88,10 @@
                               CommandParameter="{Binding AlbumID}">
             <Controls:Tile.Content>
                 <Grid>
-                    <Image ToolTip="{Binding Title}" Stretch="Fill" Source="{Binding AlbumCoverUrl290}" />
+                    <Image ToolTip="{Binding Title}" 
+						   MControls:ImageDecoder.DefaultSource="track.jpg"
+						   MControls:ImageDecoder.Source="{Binding AlbumCoverUrl290}"
+						   Stretch="Fill" />
                     <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content=" " Background="Black" Opacity="0.5" />
                     <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" Margin="0 3" Content="{Binding Title}" />
                 </Grid>
@@ -92,8 +100,8 @@
     </DataTemplate>
     <Style x:Key="MetroAlbumListStyle" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="MControls:TilePanel.WidthPix" Value="22"/>
-        <Setter Property="MControls:TilePanel.HeightPix" Value="23"/>
+        <Setter Property="MControls:TilePanel.WidthPix" Value="45"/>
+        <Setter Property="MControls:TilePanel.HeightPix" Value="45"/>
         <Setter Property="ContentTemplate" Value="{StaticResource MetroAlbumItemTemplate}"/>
     </Style>
 

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:params="http://ximalaya.com/xaml/params"
-             xmlns:mControls="http://ximalaya.com/xaml/controls"
+             xmlns:MControls="http://ximalaya.com/xaml/controls"
              xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls">
 
     <UserControl.Resources>
@@ -43,18 +43,12 @@
                  ItemContainerStyle="{StaticResource AlbumListStyle}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-
                     <WrapPanel Background="Transparent"
                                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=ActualWidth}"
                                Orientation="Horizontal" 
                                IsItemsHost="True"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
-            <ListBox.CacheMode>
-                <BitmapCache EnableClearType="False" 
-                             RenderAtScale="1" 
-                             SnapsToDevicePixels="False"/>
-            </ListBox.CacheMode>
         </ListBox>
 
     </Grid>

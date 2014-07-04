@@ -5,40 +5,42 @@
                                  xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
                                  xmlns:MControls="clr-namespace:XIMALAYA.PCDesktop.Controls">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/Converter.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/ListBoxItem.Common.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/GroupBox.xaml" />
-    </ResourceDictionary.MergedDictionaries>
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/Converter.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/ListBoxItem.Common.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/GroupBox.xaml" />
+	</ResourceDictionary.MergedDictionaries>
 
-        <!--热门声音start-->
+	<!--热门声音start-->
 
-    <DataTemplate x:Key="MetroHotSoundsItem1Template" DataType="{x:Type ListBoxItem}">
-        <Controls:Tile Padding="0" 
+	<DataTemplate x:Key="MetroHotSoundsItem1Template" DataType="{x:Type ListBoxItem}">
+		<Controls:Tile Padding="0" 
                        Margin="0"
                        Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
                        Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}">
-            <Controls:Tile.Template>
-                <ControlTemplate>
-                    <Grid Background="#FFE4E4E6" Margin="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="30"/>
-                        </Grid.RowDefinitions>
+			<Controls:Tile.Template>
+				<ControlTemplate>
+					<Grid Background="{DynamicResource AccentColorBrush4}" MControls:ImageDecoder.DefaultSource="track.jpg">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"/>
+							<RowDefinition Height="30"/>
+						</Grid.RowDefinitions>
 
-                        <Image VerticalAlignment="Center" 
+						<Image VerticalAlignment="Center" 
                                Grid.RowSpan="2"
                                Margin="5"
                                Height="60"
                                Width="60"
-                               Source="{Binding CoverWebSmall}" Stretch="Fill" />
+							   MControls:ImageDecoder.DefaultSource="track.jpg"
+							   MControls:ImageDecoder.Source="{Binding CoverWebSmall}"
+                               Stretch="Fill" />
 
-                        <TextBlock Grid.Row="0" Grid.Column="1" Foreground="Black" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Title}"/>
-                        <Path Grid.Row="1" Grid.Column="1"
+						<TextBlock Grid.Row="0" Grid.Column="1" Foreground="{DynamicResource BlackBrush}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Title}"/>
+						<Path Grid.Row="1" Grid.Column="1"
                               Data="{Binding ToolbarPlayPath, Source={x:Static MControls:PathData.Instance}}" 
                               Stretch="Uniform" 
                               Fill="{DynamicResource AccentColorBrush}" 
@@ -47,58 +49,53 @@
                               Width="10" 
                               Height="10" 
                               UseLayoutRounding="True"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Foreground="Black" Margin="15 0 0 0" Text="{Binding PlayCount}"/>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="Button.IsPressed" Value="True">
-                            <Setter Property="RenderTransform">
-                                <Setter.Value>
-                                    <ScaleTransform ScaleX="0.98"
+						<TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Foreground="{DynamicResource BlackBrush}" Margin="15 0 0 0" Text="{Binding PlayCount}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="Button.IsPressed" Value="True">
+							<Setter Property="RenderTransform">
+								<Setter.Value>
+									<ScaleTransform ScaleX="0.98"
                                 ScaleY="0.98"
                                 CenterX="0.5"
                                 CenterY="0.5" />
-                                </Setter.Value>
-                            </Setter>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Controls:Tile.Template>
-        </Controls:Tile>
-    </DataTemplate>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Controls:Tile.Template>
+		</Controls:Tile>
+	</DataTemplate>
 
-    <Style x:Key="MetroHotSounds1Style" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
-        <Setter Property="ContentTemplate" Value="{StaticResource MetroHotSoundsItem1Template}"/>
-        <Setter Property="MControls:TilePanel.WidthPix" Value="40"/>
-        <Setter Property="MControls:TilePanel.HeightPix" Value="15"/>
-    </Style>
+	<Style x:Key="MetroHotSounds1Style" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
+		<Setter Property="ContentTemplate" Value="{StaticResource MetroHotSoundsItem1Template}"/>
+		<Setter Property="MControls:TilePanel.WidthPix" Value="1"/>
+		<Setter Property="MControls:TilePanel.HeightPix" Value="1"/>
+	</Style>
 
-    <DataTemplate x:Key="MetroHotSoundsItemTemplate" DataType="{x:Type ListBoxItem}">
-        <GroupBox Width="202" 
-                           Style="{StaticResource MyMetroGroupBox}"
-                           Header="{Binding Title}">
-            <ListBox Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"
-                     Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Height}"
-                     Background="Transparent"
-                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+	<DataTemplate x:Key="MetroHotSoundsItemTemplate" DataType="{x:Type ListBoxItem}">
+		<GroupBox Style="{StaticResource MyMetroGroupBox}"
+                  Header="{Binding Title}">
+			<ListBox Background="Transparent"
                      ItemContainerStyle="{StaticResource MetroHotSounds1Style}"
                      ItemsSource="{Binding Sounds}">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <MControls:TilePanel TileHeight="5" 
-                                                          TileWidth="5" 
-                                                          TileCount="40"
-                                                          TileMargin="0 1"
-                                                          Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=GroupBox}, Path=Width}"/>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-            </ListBox>
-        </GroupBox>
-    </DataTemplate>
+				<ListBox.ItemsPanel>
+					<ItemsPanelTemplate>
+						<MControls:TilePanel TileHeight="73" 
+                                             TileWidth="200" 
+                                             TileCount="1"
+                                             TileMargin="2"/>
+					</ItemsPanelTemplate>
+				</ListBox.ItemsPanel>
+			</ListBox>
+		</GroupBox>
+	</DataTemplate>
 
-    <Style x:Key="MetroHotSoundsStyle" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
-        <Setter Property="ContentTemplate" Value="{StaticResource MetroHotSoundsItemTemplate}"/>
-    </Style>
+	<Style x:Key="MetroHotSoundsStyle" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
+		<Setter Property="ContentTemplate" Value="{StaticResource MetroHotSoundsItemTemplate}"/>
+	</Style>
 
-    <!--热门声音end-->
-    
+	<!--热门声音end-->
+
 </ResourceDictionary>

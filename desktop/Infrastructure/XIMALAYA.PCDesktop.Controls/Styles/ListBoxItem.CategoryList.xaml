@@ -11,17 +11,13 @@
     </ResourceDictionary.MergedDictionaries>
 
     <DataTemplate x:Key="MetroCategoryItemTemplate" DataType="{x:Type ListBoxItem}">
-        <Controls:Tile Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-                       Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
+        <Controls:Tile Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=Width}"
+                       Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=Height}"
                        Command="{Binding Path=DataContext.ShowCategoryDetailCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}"
-                       CommandParameter="{Binding Name}"
-                       Padding="0"
-                       Margin="0"
-                       Background="Transparent">
+                       CommandParameter="{Binding Name}">
             <Controls:Tile.Template>
                 <ControlTemplate>
-                    <Grid Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-                          Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}">
+                    <Grid>
                         <Border Visibility="Hidden" x:Name="background" CornerRadius="30" BorderThickness="1" Background="{DynamicResource AccentColorBrush}" Opacity="0.8" Width="60" Height="60" VerticalAlignment="Top"/>
                         <Image Width="60" VerticalAlignment="Top" Height="60" Source="{Binding CoverPath}" Stretch="Uniform" />
                         <Label Content="{Binding Title}" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" />
@@ -47,7 +43,6 @@
     <Style x:Key="MetroCategoryStyle" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
         <Setter Property="MControls:TilePanel.WidthPix" Value="15"/>
         <Setter Property="MControls:TilePanel.HeightPix" Value="17"/>
-        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
         <Setter Property="ContentTemplate" Value="{StaticResource MetroCategoryItemTemplate}"/>
     </Style>
 

@@ -23,14 +23,18 @@
                     <Label.Template>
                         <ControlTemplate>
                             <Border BorderThickness="1" Width="180" BorderBrush="{DynamicResource ControlBorderBrush}">
-                                <Grid>
+								<Grid >
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="180"/>
                                         <RowDefinition Height="60"/>
                                     </Grid.RowDefinitions>
 
-                                    <Image ToolTip="{Binding Title}" Width="180" Height="160" Stretch="Fill" Source="/XIMALAYA.PCDesktop.Tools;component/Resources/Images/tag.jpg"/>
-                                    <Image ToolTip="{Binding Title}" Width="180" Height="180" Stretch="Fill" Source="{Binding CoverLarge}" />
+                                    <Image ToolTip="{Binding Title}" 
+										   Width="180" Height="180" 
+										   
+										   MControls:ImageDecoder.Source="{Binding CoverLarge}"
+										   Stretch="Fill" />
+									
                                     <WrapPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                                         <TextBlock ToolTip="{Binding Title}" Width="180" TextWrapping="NoWrap" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding Title}" />
                                     </WrapPanel>

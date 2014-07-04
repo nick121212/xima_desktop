@@ -187,8 +187,10 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
         public void Initialize()
         {
             this.GetFocusImageDataAction();
-            this.GetCategoryListAction();
+            
             this.GetHotSoundsAction();
+
+            this.GetCategoryListAction();
         }
 
         #endregion
