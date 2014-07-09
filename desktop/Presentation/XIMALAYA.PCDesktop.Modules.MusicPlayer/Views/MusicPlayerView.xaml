@@ -45,7 +45,7 @@
             <Slider Margin="10 0"
                     Width="70" 
                     Height="5"
-                    Maximum="5"
+                    Maximum="1"
                     Minimum="0"
                     LargeChange="0.2"
                     SmallChange="0.1"

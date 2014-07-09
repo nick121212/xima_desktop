@@ -106,8 +106,11 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
                     return;
                 }
                 SoundData soundData = SoundCache.Instance[TrackId];
-                this.SoundData = soundData;
-                this.BassEngine.OpenUrlAsync(this.SoundData.PlayUrl64);
+                if (soundData != null)
+                {
+                    this.SoundData = soundData;
+                    this.BassEngine.OpenUrlAsync(this.SoundData.PlayUrl64);
+                }
             });
         }
 

@@ -88,10 +88,10 @@ namespace XIMALAYA.PCDesktop.Cache
         /// <param name="sounds"></param>
         public void SetData(SoundData[] sounds)
         {
-            //foreach (SoundData sound in sounds)
-            //{
-            //    this[sound.TrackId] = sound;
-            //}
+            foreach (SoundData sound in sounds)
+            {
+                this[sound.TrackId] = sound;
+            }
         }
 
         private object DefaultForType(Type targetType)

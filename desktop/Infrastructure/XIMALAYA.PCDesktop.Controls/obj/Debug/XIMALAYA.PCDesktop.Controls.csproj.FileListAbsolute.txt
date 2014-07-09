@@ -124,8 +124,6 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesk
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls_MarkupCompile.cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls_MarkupCompile.lref
-D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MetroList.baml
-D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\Listbox.baml
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\Generic.baml
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyRadioButton.baml
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyToggleButton.baml
@@ -164,3 +162,17 @@ E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\GroupBox.baml
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyImage.baml
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ScrollViewer.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\Converter.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ScrollViewer.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\GroupBox.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.SubjectList.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.CategoryList.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.HotSoundList.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.SoundList.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.AlbumList.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.Common.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.FocusImageList.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.TagList.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyRadioButton.baml
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyImage.baml

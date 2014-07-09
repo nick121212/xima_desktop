@@ -812,3 +812,4 @@ E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\MahApps.Metro\MahA
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\MahApps.Metro\MahApps.Metro\obj\NET45\Debug\Styles\Controls.CheckBox.baml
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\MahApps.Metro\MahApps.Metro\obj\NET45\Debug\Styles\Controls.RadioButton.baml
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\MahApps.Metro\MahApps.Metro\obj\NET45\Debug\MahApps.Metro.g.resources
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\MahApps.Metro\MahApps.Metro\obj\NET45\Debug\Styles\ResourceDictionary1.baml
