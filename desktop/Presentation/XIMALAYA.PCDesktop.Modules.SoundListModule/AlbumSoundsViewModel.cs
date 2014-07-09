@@ -15,6 +15,7 @@ using XIMALAYA.PCDesktop.Events;
 using XIMALAYA.PCDesktop.Modules.SoundListModule.Views;
 using XIMALAYA.PCDesktop.Tools;
 using XIMALAYA.PCDesktop.Tools.Untils;
+using XIMALAYA.PCDesktop.Cache;
 
 namespace XIMALAYA.PCDesktop.Modules.SoundListModule
 {
@@ -40,10 +41,6 @@ namespace XIMALAYA.PCDesktop.Modules.SoundListModule
         /// 专辑下的声音数据
         /// </summary>
         public ObservableCollection<SoundData> Sounds { get; set; }
-        /// <summary>
-        /// 播放command
-        /// </summary>
-        public DelegateCommand<long?> PlayCommand { get; set; }
 
         #endregion
 
@@ -73,30 +70,6 @@ namespace XIMALAYA.PCDesktop.Modules.SoundListModule
         public AlbumSoundsViewModel()
         {
             this.Sounds = new ObservableCollection<SoundData>();
-            this.PlayCommand = new DelegateCommand<long?>(trackID =>
-            {
-                if (trackID == null) throw new ArgumentNullException("trackID");
-                var soundData = this.Sounds.FirstOrDefault(s => s.TrackId == trackID);
-
-                if (soundData.TrackId == trackID)
-                {
-                    this.EventAggregator.GetEvent<ModulesManagerEvent>().Publish(new ModuleInfoArgument()
-                    {
-                        ModuleName = WellKnownModuleNames.MusicPlayerModule,
-                        Action = new Action(() =>
-                        {
-                            this.EventAggregator.GetEvent<PlayerEvent>().Publish(new SoundInfo
-                            {
-                                PicUrl = soundData.SmallLogo,
-                                Title = soundData.Title,
-                                Url = soundData.PlayUrl64,
-                                TrackID = soundData.TrackId
-                            });
-                        })
-                    });
-
-                }
-            });
         }
         /// <summary>
         /// 获取声音数据
@@ -125,6 +98,7 @@ namespace XIMALAYA.PCDesktop.Modules.SoundListModule
                         {
                             foreach (var sound in albumInfoResult.SoundsResult.Sounds)
                             {
+                                SoundCache.Instance[sound.TrackId] = sound;
                                 this.Sounds.Add(sound);
                             }
                         }

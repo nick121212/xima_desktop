@@ -16,7 +16,7 @@
                        Height="220" 
                        Width="180"
                        Margin="5"
-                       Command="{Binding Path=DataContext.PlayCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}"
+                       Command="{Binding PlaySoundCommand,Source={x:Static tools:CommandSingleton.Instance}}"
                        CommandParameter="{Binding TrackId}">
             <Controls:Tile.Content>
                 <Label>
@@ -29,13 +29,12 @@
                                         <RowDefinition Height="60"/>
                                     </Grid.RowDefinitions>
 
-                                    <Image ToolTip="{Binding Title}" 
-										   Width="180" Height="180" 
-										   
-										   MControls:ImageDecoder.Source="{Binding CoverLarge}"
-										   Stretch="Fill" />
-									
-                                    <WrapPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
+									<MControls:MyImage ToolTip="{Binding Title}" 
+													   Width="180" 
+													   Height="180" 
+													   Source="{Binding CoverLarge}"
+													   DefaultSource="track.jpg"/>
+									<WrapPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                                         <TextBlock ToolTip="{Binding Title}" Width="180" TextWrapping="NoWrap" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding Title}" />
                                     </WrapPanel>
                                 </Grid>
@@ -51,65 +50,5 @@
         <Setter Property="ContentTemplate" Value="{StaticResource SoundItemTemplate}"/>
     </Style>
     <!--声音列表 end-->
-
-    <!--热门声音 start-->
-    <DataTemplate x:Key="MetroHotSoundsItem1Template" DataType="{x:Type ListBoxItem}">
-        <Controls:Tile Padding="0" 
-                       Margin="0"
-                       Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
-                       Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}">
-            <Controls:Tile.Template>
-                <ControlTemplate>
-                    <Grid Background="#FFE4E4E6" Margin="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="30"/>
-                        </Grid.RowDefinitions>
-
-                        <Image VerticalAlignment="Center" 
-                               Grid.RowSpan="2"
-                               Margin="5"
-                               Height="60"
-                               Width="60"
-                               Source="{Binding CoverWebSmall}" Stretch="Fill" />
-
-                        <TextBlock Grid.Row="0" Grid.Column="1" Foreground="Black" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Title}"/>
-                        <Path Grid.Row="1" Grid.Column="1"
-                              Data="{Binding ToolbarPlayPath, Source={x:Static MControls:PathData.Instance}}" 
-                              Stretch="Uniform" 
-                              Fill="White" 
-                              HorizontalAlignment="Left"
-                              VerticalAlignment="Center"
-                              Width="10" 
-                              Height="10" 
-                              UseLayoutRounding="True"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Foreground="Black" Margin="15 0 0 0" Text="{Binding PlayCount}"/>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="Button.IsPressed" Value="True">
-                            <Setter Property="RenderTransform">
-                                <Setter.Value>
-                                    <ScaleTransform ScaleX="0.98"
-                                                               ScaleY="0.98"
-                                                               CenterX="0.5"
-                                                               CenterY="0.5" />
-                                </Setter.Value>
-                            </Setter>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Controls:Tile.Template>
-        </Controls:Tile>
-    </DataTemplate>
-    <Style x:Key="MetroHotSounds1Style" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
-        <Setter Property="ContentTemplate" Value="{StaticResource MetroHotSoundsItem1Template}"/>
-        <Setter Property="MControls:TilePanel.WidthPix" Value="40"/>
-        <Setter Property="MControls:TilePanel.HeightPix" Value="15"/>
-    </Style>
-    <!--热门声音 end-->
 
 </ResourceDictionary>

@@ -17,5 +17,9 @@ namespace XIMALAYA.PCDesktop.Tools.Untils
         /// <param name="header"></param>
         /// <returns></returns>
         string GetFlyout(string header);
+        /// <summary>
+        /// 
+        /// </summary>
+        void ShowFlyout();
     }
 }

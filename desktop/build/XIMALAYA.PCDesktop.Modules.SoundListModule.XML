@@ -43,11 +43,6 @@
             专辑下的声音数据
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel.PlayCommand">
-            <summary>
-            播放command
-            </summary>
-        </member>
         <member name="T:XIMALAYA.PCDesktop.Modules.SoundListModule.SoundListModule">
             <summary>
             声音列表模块

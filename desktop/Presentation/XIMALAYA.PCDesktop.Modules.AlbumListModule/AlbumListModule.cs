@@ -64,6 +64,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
         {
             AlbumView albumView = this.Container.GetInstance<AlbumView>();
             string regionName = this.ContainerView.GetFlyout(this.TagEventArgument.TagName);
+            
             if (albumView != null)
             {
                 albumView.AlbumViewModel.DoInit(new CategoryTagAlbums
@@ -80,6 +81,9 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
         }
 
         #endregion
+
+        #region method
+
         /// <summary>
         /// 初始化
         /// </summary>
@@ -97,5 +101,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
 
             //var model = this.Container.GetInstance<AlbumListViewModel>();
         }
+
+        #endregion
     }
 }

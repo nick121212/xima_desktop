@@ -59,9 +59,9 @@
             
             </summary>
         </member>
-        <member name="T:XIMALAYA.PCDesktop.Tools.Command.Player">
+        <member name="T:XIMALAYA.PCDesktop.Tools.CommandSingleton">
             <summary>
-            全局播放器类
+            全局命令
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Singleton`1">
@@ -73,6 +73,21 @@
         <member name="P:XIMALAYA.PCDesktop.Tools.Singleton`1.Instance">
             <summary>
             静态单例属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.CommandSingleton.EventAggregator">
+            <summary>
+            事件管理器
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.CommandSingleton.PlaySoundCommand">
+            <summary>
+            播放命令
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Tools.PlayerSingleton">
+            <summary>
+            全局播放器类
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Converter.StringToBoolConverter">
@@ -268,6 +283,22 @@
             Viewmodel 基类
             </summary>
         </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.GetData(System.Boolean)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="isClear"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.PreNextData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.RegionManager">
             <summary>
             佔位服务
@@ -293,6 +324,16 @@
             是否加载数据中
             </summary>
         </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.IsNextPageVisibled">
+            <summary>
+            分页控件显示
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.NextPageCommand">
+            <summary>
+            下一页分页命令
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory">
             <summary>
             
@@ -304,6 +345,11 @@
             </summary>
             <param name="header"></param>
             <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory.ShowFlyout">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.T4.T4ModelInfo">
             <summary>

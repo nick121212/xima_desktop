@@ -14,6 +14,7 @@ using XIMALAYA.PCDesktop.Tools.Untils;
 using MahApps.Metro.Controls.Dialogs;
 using MahApps.Metro.Controls;
 using XIMALAYA.PCDesktop.Core.Models.Album;
+using XIMALAYA.PCDesktop.Cache;
 
 namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
 {
@@ -112,7 +113,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             this.CategoryService.GetData<CategoryParam>(new Action<object>(categories =>
             {
                 CategoryResult categoryResult = categories as CategoryResult;
-                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                Application.Current.Dispatcher.InvokeAsync(new Action(() =>
                 {
                     foreach (CategoryData cd in categoryResult.List)
                     {
@@ -134,9 +135,10 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
 
             if (superData.Ret == 0)
             {
-                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                Application.Current.Dispatcher.InvokeAsync(new Action(() =>
                 {
                     int index = 0;
+                    this.FocusImageList.Clear();
                     foreach (FocusImageData fi in superData.FocusImages.List)
                     {
                         fi.IsFirst = index == 0;
@@ -152,7 +154,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                     {
                         this.AlbumList.Add(album);
                     }
-                }), System.Windows.Threading.DispatcherPriority.Background, null);
+                }), System.Windows.Threading.DispatcherPriority.Background);
             }
             else
             {
@@ -169,10 +171,11 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
 
                     if (res.Ret == 0)
                     {
-                        Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                        Application.Current.Dispatcher.InvokeAsync(new Action(() =>
                         {
                             foreach (var cate in res.Categories)
                             {
+                                SoundCache.Instance.SetData(cate.Sounds);
                                 this.HotSoundsCategories.Add(cate);
                             }
                         }));
@@ -187,7 +190,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
         public void Initialize()
         {
             this.GetFocusImageDataAction();
-            
+
             this.GetHotSoundsAction();
 
             this.GetCategoryListAction();
@@ -204,6 +207,11 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             this.SubjectList = new ObservableCollection<SubjectData>();
             this.HotSoundsCategories = new ObservableCollection<CategoryData>();
             this.AlbumList = new ObservableCollection<AlbumData>();
+
+            for (int i = 0; i < 6; i++)
+            {
+                this.FocusImageList.Add(new FocusImageData { IsFirst = i == 0 });
+            }
 
             //点击分类命令
             this.ShowCategoryDetailCommand = new DelegateCommand<string>(new Action<string>(cateName =>

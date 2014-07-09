@@ -16,13 +16,12 @@
                        Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}">
             <Controls:Tile.Template>
                 <ControlTemplate>
-					<Grid MControls:ImageDecoder.DefaultSource="banner.png">
-                        <Image VerticalAlignment="Top" Margin="0"
-                               Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
-                               Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-							   MControls:ImageDecoder.DefaultSource="banner.png"
-							   MControls:ImageDecoder.Source="{Binding Pic}"
-                               Stretch="Fill" />
+					<Grid>
+						<MControls:MyImage VerticalAlignment="Top" 
+										   Source="{Binding Pic}"
+										   DefaultSource="banner.png"
+										   Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
+										   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"/>
                         <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content=" " Background="Black" Opacity="0.5" />
                         <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" Margin="0 3" Content="{Binding LongTitle}" />
                     </Grid>

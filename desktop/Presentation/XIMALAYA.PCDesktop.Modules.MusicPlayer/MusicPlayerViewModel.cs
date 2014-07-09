@@ -17,7 +17,9 @@ using XIMALAYA.PCDesktop.Modules.MusicPlayer.Views;
 using XIMALAYA.PCDesktop.Tools.Player;
 using XIMALAYA.PCDesktop.Tools.Untils;
 using Microsoft.Practices.Prism.Modularity;
-using XIMALAYA.PCDesktop.Tools.Command;
+using XIMALAYA.PCDesktop.Cache;
+using XIMALAYA.PCDesktop.Core.Models.Sound;
+using XIMALAYA.PCDesktop.Tools;
 
 namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
 {
@@ -35,21 +37,21 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
 
         #region 属性
 
-        private SoundInfo _SoundInfo;
+        private SoundData _SoundData;
         /// <summary>
         /// 当前播放歌曲信息
         /// </summary>
-        public SoundInfo SoundInfo
+        public SoundData SoundData
         {
             get
             {
-                return _SoundInfo;
+                return _SoundData;
             }
             set
             {
-                if (value == _SoundInfo) return;
-                _SoundInfo = value;
-                this.RaisePropertyChanged(() => this.SoundInfo);
+                if (value == _SoundData) return;
+                _SoundData = value;
+                this.RaisePropertyChanged(() => this.SoundData);
             }
         }
         private bool _ShowSpectrumAnalyzer = false;
@@ -78,7 +80,7 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
         {
             get
             {
-                return Player.Instance;
+                return PlayerSingleton.Instance;
             }
         }
 
@@ -97,14 +99,15 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
                 this.ShowSpectrumAnalyzer = !this.ShowSpectrumAnalyzer;
 
             });
-            this.EventAggregator.GetEvent<PlayerEvent>().Subscribe((soundInfo) =>
+            this.EventAggregator.GetEvent<PlayerEvent>().Subscribe((TrackId) =>
             {
-                if (this.SoundInfo != null && this.SoundInfo.Url == soundInfo.Url)
+                if (this.SoundData != null && this.SoundData.TrackId == TrackId)
                 {
                     return;
                 }
-                this.SoundInfo = soundInfo;
-                this.BassEngine.OpenUrlAsync(this.SoundInfo.Url);
+                SoundData soundData = SoundCache.Instance[TrackId];
+                this.SoundData = soundData;
+                this.BassEngine.OpenUrlAsync(this.SoundData.PlayUrl64);
             });
         }
 

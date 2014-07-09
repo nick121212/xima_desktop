@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Practices.Prism.Commands;
 
 namespace XIMALAYA.PCDesktop.Tools.Untils
 {
@@ -16,9 +17,16 @@ namespace XIMALAYA.PCDesktop.Tools.Untils
     /// Viewmodel 基类
     /// </summary>
     [InheritedExport]
-    public class BaseViewModel : NotificationObject
+    public abstract class BaseViewModel : NotificationObject
     {
+        #region 字段
+
         private bool _IsWaiting;
+        private bool _IsNextPageVisibled;
+
+        #endregion
+
+        #region 属性
 
         /// <summary>
         /// 佔位服务
@@ -60,8 +68,75 @@ namespace XIMALAYA.PCDesktop.Tools.Untils
                 {
                     _IsWaiting = value;
                     this.RaisePropertyChanged(() => this.IsWaiting);
+                    this.NextPageCommand.RaiseCanExecuteChanged();
                 }
             }
         }
+        /// <summary>
+        /// 分页控件显示
+        /// </summary>
+        public bool IsNextPageVisibled
+        {
+            get
+            {
+                return _IsNextPageVisibled;
+            }
+            set
+            {
+                if (value != _IsNextPageVisibled)
+                {
+                    _IsNextPageVisibled = value;
+                    this.RaisePropertyChanged(() => this.IsNextPageVisibled);
+                }
+            }
+        }
+
+        #endregion
+
+        #region 命令
+
+        /// <summary>
+        /// 下一页分页命令
+        /// </summary>
+        public DelegateCommand NextPageCommand { get; set; }
+
+        #endregion
+
+        #region 虚拟方法
+
+        /// <summary>
+        /// 获取数据
+        /// </summary>
+        /// <param name="isClear"></param>
+        protected virtual void GetData(bool isClear)
+        {
+            this.IsWaiting = true;
+            //this.IsNextPageVisibled = false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void PreNextData() { }
+
+        #endregion
+
+        #region 构造函数
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public BaseViewModel()
+        {
+            this.NextPageCommand = new DelegateCommand(() =>
+            {
+                this.PreNextData();
+                this.GetData(false);
+            }, () =>
+            {
+                return !this.IsWaiting;
+            });
+        }
+
+        #endregion
     }
 }

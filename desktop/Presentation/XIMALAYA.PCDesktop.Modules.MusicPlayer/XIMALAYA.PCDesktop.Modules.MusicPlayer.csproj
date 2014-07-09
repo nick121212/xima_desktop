@@ -79,9 +79,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\nick\Downloads\wpfsvl-16372\WPFSoundVisualizationLib\Main\Source\WPFSoundVisualizationLibrary\bin\Debug\WPFSoundVisualizationLib.dll</HintPath>
     </Reference>
+    <Reference Include="XIMALAYA.PCDesktop.Cache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\build\XIMALAYA.PCDesktop.Cache.dll</HintPath>
+    </Reference>
     <Reference Include="XIMALAYA.PCDesktop.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\build\XIMALAYA.PCDesktop.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="XIMALAYA.PCDesktop.Core.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\build\XIMALAYA.PCDesktop.Core.Models.dll</HintPath>
     </Reference>
     <Reference Include="XIMALAYA.PCDesktop.Events, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

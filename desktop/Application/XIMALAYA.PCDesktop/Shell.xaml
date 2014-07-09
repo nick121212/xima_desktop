@@ -15,30 +15,30 @@
                       Height="750"
                       FontFamily="微软雅黑"
                       WindowStartupLocation="CenterScreen">
-    <!--Icon="icon_16.ico"-->
+	<!--Icon="icon_16.ico"-->
 
-    <!--任务栏进度条-->
-    <Controls:MetroWindow.TaskbarItemInfo>
-        <TaskbarItemInfo x:Name="taskBar" 
+	<!--任务栏进度条-->
+	<Controls:MetroWindow.TaskbarItemInfo>
+		<TaskbarItemInfo x:Name="taskBar" 
                          Description="Taskbar Items Sample">
-            <TaskbarItemInfo.ThumbButtonInfos>
-                <ThumbButtonInfoCollection>
-                    <ThumbButtonInfo x:Name="playCommand"
+			<TaskbarItemInfo.ThumbButtonInfos>
+				<ThumbButtonInfoCollection>
+					<ThumbButtonInfo x:Name="playCommand"
                                      DismissWhenClicked="False"
                                      Command="{Binding BassEngine.PlayCommand}"
                                      Description="">
-                    </ThumbButtonInfo>
-                    <ThumbButtonInfo x:Name="progressState"
+					</ThumbButtonInfo>
+					<ThumbButtonInfo x:Name="progressState"
                                      DismissWhenClicked="False"
                                      Description="Change progress state"/>
-                </ThumbButtonInfoCollection>
-            </TaskbarItemInfo.ThumbButtonInfos>
-        </TaskbarItemInfo>
-    </Controls:MetroWindow.TaskbarItemInfo>
-    <!--ICON模板-->
-    <Controls:MetroWindow.IconTemplate>
-        <DataTemplate>
-            <TextBlock ToolTip="{Binding WindowTitle}" TextDecorations="{x:Null}">
+				</ThumbButtonInfoCollection>
+			</TaskbarItemInfo.ThumbButtonInfos>
+		</TaskbarItemInfo>
+	</Controls:MetroWindow.TaskbarItemInfo>
+	<!--ICON模板-->
+	<Controls:MetroWindow.IconTemplate>
+		<DataTemplate>
+			<TextBlock ToolTip="{Binding WindowTitle}" TextDecorations="{x:Null}">
                 <!--<Hyperlink NavigateUri="http://www.ximalaya.com"
                            ToolTip="{Binding WindowTitle}"
                            TextDecorations="{x:Null}">
@@ -54,71 +54,64 @@
                 </Path.RenderTransform>
             </Path>
                 </Hyperlink>-->
-            </TextBlock>
-        </DataTemplate>
-    </Controls:MetroWindow.IconTemplate>
-    <!--窗体级FLYOUT-->
-    <Controls:MetroWindow.Flyouts>
-        <Controls:FlyoutsControl>
-            <Controls:Flyout
+			</TextBlock>
+		</DataTemplate>
+	</Controls:MetroWindow.IconTemplate>
+	<!--窗体级FLYOUT-->
+	<Controls:MetroWindow.Flyouts>
+		<Controls:FlyoutsControl>
+			<Controls:Flyout
                         x:Name="testFlyout"
                         Position="Bottom"  
                         Theme="Adapt"
                         cal:RegionManager.RegionName="{x:Static tools:WellKnownRegionNames.SettingsModuleRegion}"  
                         IsOpen="{Binding Source={x:Static tools:FlyoutVisible.Instance},Path=IsSettingFlyoutShow}"
                         AnimateOnPositionChange="True"/>
-        </Controls:FlyoutsControl>
-    </Controls:MetroWindow.Flyouts>
-    <!--右侧按钮-->
-    <Controls:MetroWindow.RightWindowCommands>
-        <Controls:WindowCommands>
-            <ToggleButton ToolTip="设置" 
+		</Controls:FlyoutsControl>
+	</Controls:MetroWindow.Flyouts>
+	<!--右侧按钮-->
+	<Controls:MetroWindow.RightWindowCommands>
+		<Controls:WindowCommands>
+			<ToggleButton ToolTip="设置" 
                           IsChecked="{Binding Source={x:Static tools:FlyoutVisible.Instance},Path=IsSettingFlyoutShow}">
-                <Path Data="F1M-515.802,331.242C-515.789,329.857,-515.923,328.495,-516.128,327.172L-510.578,322.745C-512.008,317.424,-514.756,312.655,-518.482,308.812L-525.111,311.322C-527.209,309.586,-529.594,308.195,-532.179,307.198L-533.233,300.195C-535.788,299.515 -538.464,299.107 -541.237,299.086 -544.006,299.07 -546.686,299.44 -549.259,300.088L-550.396,307.078C-552.989,308.052,-555.398,309.403,-557.514,311.117L-564.117,308.526C-567.886,312.318,-570.696,317.047,-572.198,322.354L-566.702,326.846C-566.924,328.172 -567.071,329.531 -567.083,330.919 -567.093,332.318 -566.962,333.672 -566.752,335.005L-572.311,339.427C-570.872,344.742,-568.124,349.518,-564.398,353.354L-557.769,350.851C-555.674,352.581,-553.284,353.971,-550.698,354.976L-549.656,361.976C-547.092,362.659 -544.416,363.065 -541.647,363.086 -538.875,363.096 -536.198,362.729 -533.63,362.086L-532.482,355.088C-529.891,354.114,-527.484,352.763,-525.362,351.062L-518.771,353.651C-514.998,349.851,-512.192,345.12,-510.687,339.82L-516.182,335.333C-515.959,333.997,-515.814,332.643,-515.802,331.242z M-541.53,344.336C-548.84,344.292 -554.737,338.318 -554.689,331 -554.641,323.68 -548.673,317.784 -541.354,317.833 -534.035,317.88 -528.139,323.851 -528.187,331.172 -528.235,338.495 -534.205,344.385 -541.53,344.336z" 
+				<Path Data="F1M-515.802,331.242C-515.789,329.857,-515.923,328.495,-516.128,327.172L-510.578,322.745C-512.008,317.424,-514.756,312.655,-518.482,308.812L-525.111,311.322C-527.209,309.586,-529.594,308.195,-532.179,307.198L-533.233,300.195C-535.788,299.515 -538.464,299.107 -541.237,299.086 -544.006,299.07 -546.686,299.44 -549.259,300.088L-550.396,307.078C-552.989,308.052,-555.398,309.403,-557.514,311.117L-564.117,308.526C-567.886,312.318,-570.696,317.047,-572.198,322.354L-566.702,326.846C-566.924,328.172 -567.071,329.531 -567.083,330.919 -567.093,332.318 -566.962,333.672 -566.752,335.005L-572.311,339.427C-570.872,344.742,-568.124,349.518,-564.398,353.354L-557.769,350.851C-555.674,352.581,-553.284,353.971,-550.698,354.976L-549.656,361.976C-547.092,362.659 -544.416,363.065 -541.647,363.086 -538.875,363.096 -536.198,362.729 -533.63,362.086L-532.482,355.088C-529.891,354.114,-527.484,352.763,-525.362,351.062L-518.771,353.651C-514.998,349.851,-512.192,345.12,-510.687,339.82L-516.182,335.333C-515.959,333.997,-515.814,332.643,-515.802,331.242z M-541.53,344.336C-548.84,344.292 -554.737,338.318 -554.689,331 -554.641,323.68 -548.673,317.784 -541.354,317.833 -534.035,317.88 -528.139,323.851 -528.187,331.172 -528.235,338.495 -534.205,344.385 -541.53,344.336z" 
                       Stretch="Uniform" Fill="{DynamicResource BlackColorBrush}" Width="16" Height="16" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <TransformGroup.Children>
-                                <RotateTransform Angle="0" />
-                                <ScaleTransform ScaleX="1" ScaleY="1" />
-                            </TransformGroup.Children>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-            </ToggleButton>
-        </Controls:WindowCommands>
-    </Controls:MetroWindow.RightWindowCommands>
-    <!--内容框架-->
-    <DockPanel>
-        <Grid DockPanel.Dock="Bottom">
-            <ContentControl 
+					<Path.RenderTransform>
+						<TransformGroup>
+							<TransformGroup.Children>
+								<RotateTransform Angle="0" />
+								<ScaleTransform ScaleX="1" ScaleY="1" />
+							</TransformGroup.Children>
+						</TransformGroup>
+					</Path.RenderTransform>
+				</Path>
+			</ToggleButton>
+		</Controls:WindowCommands>
+	</Controls:MetroWindow.RightWindowCommands>
+	<!--内容框架-->
+	<DockPanel>
+
+		<Grid DockPanel.Dock="Bottom" MaxHeight="60">
+			<ContentControl 
                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualWidth}" 
                 Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualHeight}" 
                 cal:RegionManager.RegionName="{x:Static tools:WellKnownRegionNames.MusicPlayerModuleRegion}"/>
-        </Grid>
-        <WrapPanel DockPanel.Dock="Left" 
+		</Grid>
+		<WrapPanel DockPanel.Dock="Left" 
                    Opacity="0.8" 
                    Background="{DynamicResource WhiteColorBrush}">
-            <ContentControl 
+			<ContentControl 
                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualWidth}" 
                 Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualHeight}" 
                 cal:RegionManager.RegionName="{x:Static tools:WellKnownRegionNames.MenusRegion}"/>
-        </WrapPanel>
-        <WrapPanel Orientation="Vertical" 
-                   Background="{DynamicResource WhiteColorBrush}">
-            <Grid>
-                
-                <ContentControl Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualWidth}" 
-                                Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualHeight}" 
-                                cal:RegionManager.RegionName="{x:Static tools:WellKnownRegionNames.DiscoverModuleRegion}"
-                                />
-                <Controls:FlyoutsControl x:Name="ContainerGrid"/>
-                
-                
-            </Grid>
-
-        </WrapPanel>
-    </DockPanel>
+		</WrapPanel>
+		<Grid Background="{DynamicResource WhiteColorBrush}">
+			<ContentControl Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid}, Path=ActualWidth}" 
+                            Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid}, Path=ActualHeight}" 
+                            cal:RegionManager.RegionName="{x:Static tools:WellKnownRegionNames.DiscoverModuleRegion}" />
+			<Controls:FlyoutsControl x:Name="ContainerGrid"/>
+		</Grid>
+	</DockPanel>
 
 </Controls:MetroWindow>
 

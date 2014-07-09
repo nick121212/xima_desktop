@@ -16,10 +16,14 @@
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Controls:MetroProgressBar Grid.Row="1" Foreground="{DynamicResource AccentColorBrush}" Visibility="{Binding IsWaiting,Converter={StaticResource BooleanToVisibility}}" Margin="10" IsIndeterminate="True" />
-
+		<Controls:MetroProgressBar Grid.Row="1" 
+								   Foreground="{DynamicResource AccentColorBrush}"
+								   Margin="0 0 0 2" 
+								   IsIndeterminate="{Binding IsWaiting}" />
+		
         <StackPanel Margin="20 0 0 0"  Orientation="Horizontal" Width="Auto">
             <RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=0}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="0" Content="最火"></RadioButton>
             <RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=1}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="1" Content="最近更新"></RadioButton>
@@ -43,13 +47,26 @@
                  ItemContainerStyle="{StaticResource AlbumListStyle}">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel Background="Transparent"
-                               Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBox}, Path=ActualWidth}"
-                               Orientation="Horizontal" 
-                               IsItemsHost="True"/>
+					<MControls:VirtualizingTilePanel IsItemsHost="True"	  
+													 ItemHeight="230" 
+													 ItemWidth="190"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
-        </ListBox>
+			<ListBox.CacheMode>
+				<BitmapCache EnableClearType="False" 
+                             RenderAtScale="1" 
+                             SnapsToDevicePixels="False"/>
+			</ListBox.CacheMode>
+		</ListBox>
 
-    </Grid>
+		<StackPanel Visibility="{Binding IsNextPageVisibled,Converter={StaticResource BooleanToVisibility}}"
+					Grid.Row="3" 
+					Margin="10">
+			
+			<Button Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=StackPanel}, Path=ActualWidth}"
+				    Command="{Binding NextPageCommand}"
+					Content="下一页" />
+		</StackPanel>
+		
+	</Grid>
 </UserControl>

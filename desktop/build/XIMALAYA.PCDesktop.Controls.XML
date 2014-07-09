@@ -4,69 +4,189 @@
         <name>XIMALAYA.PCDesktop.Controls</name>
     </assembly>
     <members>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.MeasureOverride(System.Windows.Size)">
+        <member name="T:XIMALAYA.PCDesktop.Controls.MyImage">
             <summary>
-            Measure the children
+            图片控件，支持背景默认图
             </summary>
-            <param name="availableSize">Size available</param>
-            <returns>Size desired</returns>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.ArrangeOverride(System.Windows.Size)">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyImage.SourceProperty">
             <summary>
-            Arrange the children
+            图片的路径
             </summary>
-            <param name="finalSize">Size available</param>
-            <returns>Size used</returns>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.CleanUpItems(System.Int32,System.Int32)">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyImage.DefaultSourceProperty">
             <summary>
-            Revirtualize items that are no longer visible
+            图片的默认路径
             </summary>
-            <param name="minDesiredGenerated">first item index that should be visible</param>
-            <param name="maxDesiredGenerated">last item index that should be visible</param>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)">
+        <member name="M:XIMALAYA.PCDesktop.Controls.MyImage.OnApplyTemplate">
             <summary>
-            When items are removed, remove the corresponding UI if necessary
+            
             </summary>
-            <param name="sender"></param>
-            <param name="args"></param>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.CalculateExtent(System.Windows.Size,System.Int32)">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyImage.Source">
             <summary>
-            Calculate the extent of the view based on the available size
+            图片的路径
             </summary>
-            <param name="availableSize">available size</param>
-            <param name="itemCount">number of data items</param>
-            <returns></returns>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.GetVisibleRange(System.Int32@,System.Int32@)">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyImage.DefaultSource">
             <summary>
-            Get the range of children that are visible
+            图片的默认路径
             </summary>
-            <param name="firstVisibleItemIndex">The item index of the first visible item</param>
-            <param name="lastVisibleItemIndex">The item index of the last visible item</param>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.GetChildSize">
+        <member name="T:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel">
             <summary>
-            Get the size of the children. We assume they are all the same
+            虚拟化容器
             </summary>
-            <returns>The size</returns>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.ArrangeChild(System.Int32,System.Windows.UIElement,System.Windows.Size)">
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ItemWidthProperty">
             <summary>
-            Position a child
+            控件的宽度
             </summary>
-            <param name="itemIndex">The data item index of the child</param>
-            <param name="child">The element to position</param>
-            <param name="finalSize">The size of the panel</param>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.Controls.VirtualizingTilePanel.CalculateChildrenPerRow(System.Windows.Size)">
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ItemHeightProperty">
             <summary>
-            Helper function for tiling layout
+            控件的高度
             </summary>
-            <param name="availableSize">Size available</param>
-            <returns></returns>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.Offset">
+            <summary>
+            滚动条偏移
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ViewportSize">
+            <summary>
+            可视区域大小
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ActualSize">
+            <summary>
+            测量出来的尺寸
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.LineDown">
+            <summary>
+            在内容内向下滚动一个逻辑单元。
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.LineUp">
+            <summary>
+            在内容内向上滚动一个逻辑单元。
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.UpdateScrollInfo(System.Windows.Size)">
+            <summary>
+            跟新滚动条
+            </summary>
+            <param name="availableSize"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.CalcActualSize(System.Windows.Size,System.Int32)">
+            <summary>
+            计算可视区域尺寸
+            </summary>
+            <param name="availableSize"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MeasureChild(System.Windows.Size,System.Int32,System.Int32)">
+            <summary>
+            测量子元素布局,生成需要显示的子元素
+            </summary>
+            <param name="availableSize">可用布局尺寸</param>
+            <param name="firstVisibleChildIndex">第一个显示的子元素索引</param>
+            <param name="lastVisibleChildIndex">最后一个显示的子元素索引</param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.CleanUpItems(System.Int32,System.Int32)">
+            <summary>
+            清理不需要显示的子元素
+            </summary>
+            <param name="firstVisibleChildIndex">第一个显示的子元素索引</param>
+            <param name="lastVisibleChildIndex">最后一个显示的子元素索引</param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.DumpGeneratorContent(System.Windows.Size)">
+            <summary>
+            显示数据GeneratorPosition信息
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.RealizeChild(System.Int32)">
+            <summary>
+            实例化子元素
+            </summary>
+            <param name="itemIndex">数据条目索引</param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.VirtualizeChild(System.Int32)">
+            <summary>
+            虚拟化子元素
+            </summary>
+            <param name="itemIndex">数据条目索引</param>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ItemWidth">
+            <summary>
+            控件的宽度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ItemHeight">
+            <summary>
+            控件的高度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.HorizontalChildMaxCount">
+            <summary>
+            可以容下多少列
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.VerticalChildMaxCount">
+            <summary>
+            可以容下多少行
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MinOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.CanHorizontallyScroll">
+            <summary>
+            获取或设置一个值，该值指示能否在水平轴上滚动。
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.CanVerticallyScroll">
+            <summary>
+            获取或设置一个值，该值指示能否在垂直轴上滚动
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ExtentHeight">
+            <summary>
+            获取范围的垂直大小。
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ExtentWidth">
+            <summary>
+            获取范围的水平大小。
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.HorizontalOffset">
+            <summary>
+            获取滚动内容的水平偏移
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.VerticalOffset">
+            <summary>
+            获取滚动内容的垂直偏移。
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ViewportHeight">
+            <summary>
+            获取此内容的视区的垂直大小。
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ViewportWidth">
+            <summary>
+            获取此内容的视区的水平大小。
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ScrollOwner">
+            <summary>
+            获取或设置一个控制滚动行为的 ScrollViewer 元素。
+            </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.ImageDecoder">
             <summary>

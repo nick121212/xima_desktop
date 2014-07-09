@@ -11,7 +11,9 @@
              mc:Ignorable="d" 
              HorizontalAlignment="Center">
 
-	<ScrollViewer x:Name="mainScroll" 
+	<ScrollViewer x:Name="mainScroll"
+				  Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid}, Path=ActualWidth}" 
+				  Style="{StaticResource for_scrollviewer}"
                   HorizontalScrollBarVisibility="Auto" 
                   VerticalScrollBarVisibility="Disabled">
 		<Grid Margin="0 20" VerticalAlignment="Center">
@@ -22,7 +24,6 @@
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
-
 			<!--焦点图-->
 			<GroupBox Header=" "
                       Style="{StaticResource MyMetroGroupBox}"
@@ -112,4 +113,5 @@
 			</ListBox>
 		</Grid>
 	</ScrollViewer>
+	
 </UserControl>

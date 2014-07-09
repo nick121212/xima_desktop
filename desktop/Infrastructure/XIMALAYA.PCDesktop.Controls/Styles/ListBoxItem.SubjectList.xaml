@@ -19,12 +19,17 @@
             <Controls:Tile.Template>
                 <ControlTemplate>
                     <Grid>
-                        <Image VerticalAlignment="Top" 
+                        <!--<Image VerticalAlignment="Top" 
                                Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
                                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
 							   MControls:ImageDecoder.DefaultSource="banner.png"
 							   MControls:ImageDecoder.Source="{Binding CoverPathBig}"
-                               Stretch="Fill" />
+                               Stretch="Fill" />-->
+						<MControls:MyImage VerticalAlignment="Center" 
+										   Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
+										   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
+										   Source="{Binding CoverPathBig}"
+										   DefaultSource="banner.png"/>
                         <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content=" " Background="Black" Opacity="0.5" />
                         <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" Margin="0 3" Content="{Binding Title}" />
                     </Grid>

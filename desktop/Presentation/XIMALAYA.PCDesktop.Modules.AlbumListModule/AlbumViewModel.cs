@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Practices.Prism.Regions;
-using Microsoft.Practices.Prism.ViewModel;
-using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Prism.Commands;
 using XIMALAYA.PCDesktop.Core.Models.Album;
 using XIMALAYA.PCDesktop.Core.Models.Tags;
@@ -16,7 +12,6 @@ using XIMALAYA.PCDesktop.Core.ParamsModel;
 using XIMALAYA.PCDesktop.Core.Services;
 using XIMALAYA.PCDesktop.Modules.AlbumListModule.Views;
 using System.Windows.Threading;
-using Microsoft.Practices.Prism.Events;
 using XIMALAYA.PCDesktop.Events;
 using XIMALAYA.PCDesktop.Tools.Untils;
 
@@ -62,7 +57,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
 
             }
         }
-        
+
         private ConditionAlbumType _Condition;
         /// <summary>
         /// 属性描述
@@ -81,7 +76,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
             }
         }
         /// <summary>
-        /// 
+        /// 排序条件
         /// </summary>
         public DelegateCommand<string> ConditionCommand { get; set; }
 
@@ -120,8 +115,11 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
             {
                 int type = int.Parse(s);
                 this.Condition = (ConditionAlbumType)type;
-                this.Params.Condition = this.Condition;
-                this.GetData(true);
+                if (this.Condition != this.Params.Condition)
+                {
+                    this.Params.Condition = this.Condition;
+                    this.GetData(true);
+                }
             });
             this.ShowAlbumInfoCommand = new DelegateCommand<long?>(albumID =>
             {
@@ -136,11 +134,17 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
             });
             this.StatusList = new List<string>() { "全部", "完结", "连载" };
         }
+
+        protected override void PreNextData()
+        {
+            this.Params.Page += 1;
+        }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="isClear"></param>
-        private void GetData(bool isClear)
+        protected override void GetData(bool isClear)
         {
             if (this.CategoryTagAlbumsService != null)
             {
@@ -149,8 +153,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                     this.Albums.Clear();
                     this.Params.Page = 1;
                 }
-
-                this.IsWaiting = true;
+                base.GetData(isClear);
                 this.CategoryTagAlbumsService.GetData(result =>
                 {
                     TagAlbumsResult tagAlbumsResult = result as TagAlbumsResult;
@@ -163,6 +166,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                             {
                                 this.Albums.Add(album);
                             }
+                            base.IsNextPageVisibled = tagAlbumsResult.MaxPageId > this.Params.Page;
                         }
                     }), DispatcherPriority.Background);
                 }, this.Params);

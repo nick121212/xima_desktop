@@ -482,6 +482,11 @@
             下载进度
             </summary>
         </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.Player.BassEngine.IsAutoPlayed">
+            <summary>
+            第一次加载完数据后，自动播放
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Tools.Player.BassEngine.PlayCommand">
             <summary>
             播放命令

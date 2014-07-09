@@ -50,7 +50,7 @@
         </member>
         <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.ConditionCommand">
             <summary>
-            
+            排序条件
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.Status">

@@ -19,7 +19,7 @@
             <BooleanToVisibilityConverter x:Key="BoolToVisibility"></BooleanToVisibilityConverter>
         </ResourceDictionary>
     </UserControl.Resources>
-    <Grid>
+    <Grid VerticalAlignment="Center" Margin="0 5">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -31,21 +31,21 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <Image Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10 0" Width="32" Height="32" Source="{Binding SoundInfo.PicUrl}"/>
+        <Image Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10 0" Width="32" Height="32" Source="{Binding SoundData.CoverSmall}"/>
         <TextBlock Grid.Column="1" Grid.Row="0"
                    TextWrapping="Wrap"
-                   Text="{Binding SoundInfo.Title}" 
+                   Text="{Binding SoundData.Title}" 
                    VerticalAlignment="Center"/>
         <WrapPanel Orientation="Horizontal"
                    Grid.Row="1"
                    Grid.Column="1">
-            <Button Content="1"></Button>
+            <!--<Button Content="1"></Button>
             <Button Content="2"></Button>
-            <Button Content="3"></Button>
+            <Button Content="3"></Button>-->
             <Slider Margin="10 0"
                     Width="70" 
                     Height="5"
-                    Maximum="1"
+                    Maximum="5"
                     Minimum="0"
                     LargeChange="0.2"
                     SmallChange="0.1"

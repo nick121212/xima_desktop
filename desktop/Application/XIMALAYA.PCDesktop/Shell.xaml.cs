@@ -93,31 +93,51 @@ namespace XIMALAYA.PCDesktop
 
         public int Count { get; set; }
         private Flyout LastFlyout { get; set; }
+        private Flyout CurrentFlyout { get; set; }
 
+
+
+        #region IFlyoutFactory 成员
+
+        /// <summary>
+        /// 显示层
+        /// </summary>
+        public void ShowFlyout()
+        {
+            if (this.CurrentFlyout != null)
+            {
+                this.CurrentFlyout.IsOpen = true;
+            }
+        }
+        /// <summary>
+        /// 新建层
+        /// </summary>
+        /// <param name="header"></param>
+        /// <returns></returns>
         public string GetFlyout(string header)
         {
             string regionName = string.Format("ViewRegionName_{0}", ++this.Count);
-            Flyout flyout = new Flyout();
+
+            this.CurrentFlyout = new Flyout();
             Binding binding = null;
             RelativeSource rs;
 
-            flyout.IsOpen = false;
-            
-            flyout.Theme = FlyoutTheme.Adapt;
-            flyout.Header = header;
-            flyout.AnimateOnPositionChange = true;
+            this.ContainerGrid.Items.Add(this.CurrentFlyout);
+            this.CurrentFlyout.AnimateOnPositionChange = true;
+            this.CurrentFlyout.Theme = FlyoutTheme.Adapt;
+            this.CurrentFlyout.Header = header;
+            this.CurrentFlyout.IsOpen = false;
             rs = new RelativeSource(RelativeSourceMode.FindAncestor);
             rs.AncestorType = typeof(MetroWindow);
             binding = new Binding("ActualWidth");
             binding.RelativeSource = rs;
-            flyout.SetBinding(Flyout.WidthProperty, binding);
-            RegionManager.SetRegionName(flyout, regionName);
-            //Panel.SetZIndex(flyout, this.Count);
-            this.ContainerGrid.Items.Add(flyout);
-            flyout.IsOpenChanged += flyout_IsOpenChanged;
-            flyout.IsOpen = true;
-            flyout.Position = Position.Right;
-            
+            this.CurrentFlyout.SetBinding(Flyout.WidthProperty, binding);
+            RegionManager.SetRegionName(this.CurrentFlyout, regionName);
+            this.CurrentFlyout.ApplyTemplate();
+            this.CurrentFlyout.IsOpenChanged += flyout_IsOpenChanged;
+            this.CurrentFlyout.Position = Position.Right;
+            this.CurrentFlyout.IsOpen = true;
+
             return regionName;
         }
         void flyout_IsOpenChanged(object sender, EventArgs e)
@@ -131,5 +151,7 @@ namespace XIMALAYA.PCDesktop
                 LastFlyout.Content = null;
             }
         }
+
+        #endregion
     }
 }

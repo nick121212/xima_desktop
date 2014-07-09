@@ -162,3 +162,5 @@ E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.FocusImageList.baml
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ListBoxItem.SubjectList.baml
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\GroupBox.baml
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyImage.baml
+E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\ScrollViewer.baml

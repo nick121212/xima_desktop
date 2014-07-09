@@ -106,8 +106,6 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                 this.RegionManager.AddToRegion(regionName, this.CategoryDetailView);
             }
 
-            FlyoutVisible.Instance.IsCategoryListShow = false;
-            FlyoutVisible.Instance.IsCategoryDetailShow = true;
             if (this.CategoryTagService != null)
             {
                 this.IsWaiting = true;

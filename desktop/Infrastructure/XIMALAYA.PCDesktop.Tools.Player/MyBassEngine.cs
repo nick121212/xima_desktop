@@ -280,6 +280,10 @@ namespace XIMALAYA.PCDesktop.Tools.Player
                 }
             }
         }
+        /// <summary>
+        /// 第一次加载完数据后，自动播放
+        /// </summary>
+        public bool IsAutoPlayed { get; set; }
 
         #endregion
 
@@ -382,6 +386,7 @@ namespace XIMALAYA.PCDesktop.Tools.Player
                 {
                     if (this.CurrentSoundUrl == url)
                     {
+                        this.IsAutoPlayed = false;
                         this.ActiveStreamHandle = handle;
                         this.TotalTime = TimeSpan.FromSeconds(Bass.BASS_ChannelBytes2Seconds(this.ActiveStreamHandle, Bass.BASS_ChannelGetLength(ActiveStreamHandle, 0)));
                         info = Bass.BASS_ChannelGetInfo(this.ActiveStreamHandle);
@@ -512,7 +517,7 @@ namespace XIMALAYA.PCDesktop.Tools.Player
 
         #region Constructor
 
-        static BassEngine()
+        private BassEngine()
         {
             Un4seen.Bass.BassNet.Registration("yk000123@sina.com", "2X34201017282922");
 
@@ -525,10 +530,7 @@ namespace XIMALAYA.PCDesktop.Tools.Player
 
             // now load all libs manually
             Un4seen.Bass.Bass.LoadMe(targetPath);
-        }
 
-        private BassEngine()
-        {
             float down;
             Window mainWindow = Application.Current.MainWindow;
             WindowInteropHelper interopHelper = new WindowInteropHelper(mainWindow);
@@ -552,8 +554,9 @@ namespace XIMALAYA.PCDesktop.Tools.Player
                     down = Bass.BASS_StreamGetFilePosition(this.ActiveStreamHandle, BASSStreamFilePosition.BASS_FILEPOS_DOWNLOAD);
                     this.Process = down / this.TotalSize;
                     Debug.WriteLine(down, this.TotalSize.ToString());
-                    if (this.Process > 0)
+                    if (this.Process > 0 && !this.IsAutoPlayed )
                     {
+                        this.IsAutoPlayed = true;
                         this.Play();
                     }
                 }

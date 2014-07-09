@@ -20,6 +20,11 @@
                     <Grid>
                         <Border Visibility="Hidden" x:Name="background" CornerRadius="30" BorderThickness="1" Background="{DynamicResource AccentColorBrush}" Opacity="0.8" Width="60" Height="60" VerticalAlignment="Top"/>
                         <Image Width="60" VerticalAlignment="Top" Height="60" Source="{Binding CoverPath}" Stretch="Uniform" />
+						<!--<MControls:MyImage VerticalAlignment="Top" 
+										   Source="{Binding CoverPath}"
+										   DefaultSource="banner.png"
+										   Height="60"
+										   Width="60"/>-->
                         <Label Content="{Binding Title}" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" />
                     </Grid>
                     <ControlTemplate.Triggers>
