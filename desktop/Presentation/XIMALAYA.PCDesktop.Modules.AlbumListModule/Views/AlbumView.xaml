@@ -57,6 +57,7 @@
 		<MControls:Pagination PageSize="{Binding PageSize}"
 							  Grid.Row="3" 
 							  Margin="3"
+							  IsEnabled="{Binding IsEnable}"
 							  CurrentPage="{Binding CurrentPage,Mode=TwoWay}"
 							  Total="{Binding Total}"/>
 
