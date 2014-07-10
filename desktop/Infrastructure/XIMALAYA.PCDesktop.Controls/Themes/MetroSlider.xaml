@@ -4,7 +4,7 @@
                     xmlns:local="clr-namespace:XIMALAYA.PCDesktop.Controls">
 
     <tools:TimeSpanConverter x:Key="TimeSpanConverter"></tools:TimeSpanConverter>
-    
+
     <Style x:Key="SliderRepeatButtonStyle" TargetType="{x:Type RepeatButton}">
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="IsTabStop" Value="false"/>
@@ -155,7 +155,7 @@
 
     <Style TargetType="{x:Type local:MetroSlider}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
-		<Setter Property="Template" Value="{DynamicResource AccentColorBrush}" />
+        <Setter Property="Template" Value="{StaticResource MetroSliderTemplate}"/>
     </Style>
 
 </ResourceDictionary>

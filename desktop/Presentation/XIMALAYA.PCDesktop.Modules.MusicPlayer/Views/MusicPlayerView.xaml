@@ -68,7 +68,7 @@
                                    Process="{Binding BassEngine.Process}"
                                    Panel.ZIndex="10"
                                    LargeChange="5000"
-                                   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualWidth}"
+                                   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid}, Path=ActualWidth}"
                                    SmallChange="1000">
             </MControls:MetroSlider>
 
@@ -77,7 +77,6 @@
             <sound:SpectrumAnalyzer 
                 x:Name="SpectrumAnalyzer"
                 Opacity="0.5"
-                
                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualWidth}"
                 Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualHeight}">
                 <sound:SpectrumAnalyzer.BarStyle>
