@@ -163,59 +163,98 @@ namespace XIMALAYA.PCDesktop.Controls
         {
             this.SetVerticalOffset(this.VerticalOffset - this.MinOffset);
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public void LineLeft()
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void LineRight()
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="visual"></param>
+        /// <param name="rectangle"></param>
+        /// <returns></returns>
         public Rect MakeVisible(Visual visual, Rect rectangle)
         {
             return new Rect();
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelDown()
         {
             this.SetVerticalOffset(this.VerticalOffset + this.MinOffset);
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelLeft()
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelRight()
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelUp()
         {
             this.SetVerticalOffset(this.VerticalOffset - this.MinOffset);
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageDown()
         {
             this.SetVerticalOffset(this.VerticalOffset + this.MinOffset * 2);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageLeft()
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageRight()
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageUp()
         {
             this.SetVerticalOffset(this.VerticalOffset - this.MinOffset * 2);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="offset"></param>
         public void SetHorizontalOffset(double offset)
         {
             InvalidateMeasure();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="offset"></param>
         public void SetVerticalOffset(double offset)
         {
             if (offset < 0 || this.ViewportSize.Height >= this.ActualSize.Height)
@@ -241,6 +280,11 @@ namespace XIMALAYA.PCDesktop.Controls
 
         #region VirtualizingPanel 方法
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="availableSize"></param>
+        /// <returns></returns>
         protected override Size MeasureOverride(Size availableSize)
         {
             int firstIndex, lastIndex;
@@ -264,7 +308,11 @@ namespace XIMALAYA.PCDesktop.Controls
 
             return availableSize;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="finalSize"></param>
+        /// <returns></returns>
         protected override Size ArrangeOverride(Size finalSize)
         {
             int firstIndex, lastIndex;
@@ -342,6 +390,7 @@ namespace XIMALAYA.PCDesktop.Controls
         /// 计算可视区域尺寸
         /// </summary>
         /// <param name="availableSize"></param>
+        /// <param name="childrenCount"></param>
         private Size CalcActualSize(Size availableSize, int childrenCount)
         {
             //一行多少个元素
@@ -497,6 +546,9 @@ namespace XIMALAYA.PCDesktop.Controls
 
         #region 构造函数
 
+        /// <summary>
+        /// 
+        /// </summary>
         public VirtualizingTilePanel()
         {
             this.RenderTransform = _trans;

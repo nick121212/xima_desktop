@@ -75,7 +75,7 @@ namespace XIMALAYA.PCDesktop.Modules.SoundListModule
         /// 获取声音数据
         /// </summary>
         /// <param name="isClear"></param>
-        private void GetData(bool isClear)
+        protected override void GetData(bool isClear)
         {
             if (this.AlbumInfoService == null) return;
 

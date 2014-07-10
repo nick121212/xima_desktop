@@ -82,9 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\MyImage.cs" />
+    <Compile Include="Controls\Pagination.cs" />
     <Compile Include="Controls\VirtualizingTilePanel.cs" />
-    <Compile Include="Controls\ImageDecoder.cs" />
-    <Compile Include="Controls\ImageQueue.cs" />
     <Compile Include="Controls\MyRadioButton.cs" />
     <Compile Include="Controls\MyToggleButton.cs" />
     <Compile Include="PathData.cs" />
@@ -170,6 +169,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\MyToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Pagination.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

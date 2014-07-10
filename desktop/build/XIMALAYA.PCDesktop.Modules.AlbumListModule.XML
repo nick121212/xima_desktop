@@ -14,6 +14,11 @@
             构造
             </summary>
         </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.PreNextData">
+            <summary>
+            下一页事件之前准备
+            </summary>
+        </member>
         <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.GetData(System.Boolean)">
             <summary>
             
@@ -36,6 +41,16 @@
         <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.CategoryTagAlbumsService">
             <summary>
             标签下的专辑服务
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.StatusList">
+            <summary>
+            状态列表
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.ShowAlbumInfoCommand">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.IsShowStatus">

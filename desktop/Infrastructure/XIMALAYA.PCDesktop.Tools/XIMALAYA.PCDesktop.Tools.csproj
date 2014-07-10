@@ -78,11 +78,11 @@
     <Compile Include="Attributes\ParamConvertAttribute.cs" />
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Command\Commands.cs" />
+    <Compile Include="FlyoutVisible.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Converter\StringToBoolConverter.cs" />
     <Compile Include="Converter\LongToDateConverter.cs" />
     <Compile Include="Extension\TypeExtensions.cs" />
-    <Compile Include="FlyoutVisible.cs" />
     <Compile Include="HttpWebRequestOpt.cs" />
     <Compile Include="Untils\BaseModule.cs" />
     <Compile Include="Untils\BaseViewModel.cs" />

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1006]E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\XIMALAYA.PCDesktop.NUnitTest.dll</TopNode>
+  <SelectedNode>[0-1000]XIMALAYA.PCDesktop.NUnitTest.TestBaseParam</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1006]E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\XIMALAYA.PCDesktop.NUnitTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1007]XIMALAYA" Expanded="true" />
+    <Node UniqueName="[0-1008]XIMALAYA.PCDesktop" Expanded="true" />
+    <Node UniqueName="[0-1009]XIMALAYA.PCDesktop.NUnitTest" Expanded="true" />
+    <Node UniqueName="[0-1002]XIMALAYA.PCDesktop.NUnitTest.NumersFIxture" Expanded="true" />
+    <Node UniqueName="[0-1000]XIMALAYA.PCDesktop.NUnitTest.TestBaseParam" Expanded="true" />
+  </Nodes>
+</VisualState>

@@ -155,7 +155,7 @@
 
     <Style TargetType="{x:Type local:MetroSlider}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
-        <Setter Property="Template" Value="{StaticResource MetroSliderTemplate}"/>
+		<Setter Property="Template" Value="{DynamicResource AccentColorBrush}" />
     </Style>
 
 </ResourceDictionary>

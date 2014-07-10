@@ -34,6 +34,186 @@
             图片的默认路径
             </summary>
         </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.CurrentPageChangedArgs">
+            <summary>
+            当前页码修改事件参数
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.CurrentPageChangedArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            构造
+            </summary>
+            <param name="routedEvent"></param>
+            <param name="source"></param>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.CurrentPageChangedArgs.CurrentPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.CurrentPageChangedArgs.PageSize">
+            <summary>
+            当前页对应的数量
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.CurrentPageChangedHandler">
+            <summary>
+            当前页码修改事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.Pagination">
+            <summary>
+            分页控件
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.CurrnetPageChanedRouteEvent">
+            <summary>
+            路由属性，当前page修改时触发
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.IsShowNextPrevBtnProperty">
+            <summary>
+            是否显示上一页和下一页按钮，这是个依赖属性
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.TotalProperty">
+            <summary>
+            总数量，这是个依赖属性
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.PageSizeProperty">
+            <summary>
+            每页的数量，这是个依赖属性
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.CurrentPageProperty">
+            <summary>
+            当前页码，这是个依赖属性
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.InnerCountProperty">
+            <summary>
+            分页内部用多少个元素，这是个依赖属性
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.OuterCountProperty">
+            <summary>
+            分页外部用多少个元素，这是个依赖属性
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.OnApplyTemplate">
+            <summary>
+            应用模板
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.CalcTotalPage">
+            <summary>
+            计算总页码数
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.ChangePages">
+            <summary>
+            改变当前页码组合
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.OnTotalChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Total变量改变回调
+            </summary>
+            <param name="d"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.OnPageSizeChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            PageSize变量改变回调
+            </summary>
+            <param name="d"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.OnCurrentPageChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            当前页码更改回调
+            </summary>
+            <param name="d"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:XIMALAYA.PCDesktop.Controls.Pagination.CurrnetPageChanedRoute">
+            <summary>
+            当前页码更改事件
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.IsShowNextPrevBtn">
+            <summary>
+            是否显示上一页和下一页按钮，这是个依赖属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.Total">
+            <summary>
+            总数量，这是个依赖属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.PageSize">
+            <summary>
+            每页的数量，这是个依赖属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.CurrentPage">
+            <summary>
+            当前页码，这是个依赖属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.InnerCount">
+            <summary>
+            分页内部用多少个元素，这是个依赖属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.OuterCount">
+            <summary>
+            分页外部用多少个元素，这是个依赖属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.ChangePageCommand">
+            <summary>
+            更改页码命令
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.NextPageCommand">
+            <summary>
+            更改页码命令
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.PrevPageCommand">
+            <summary>
+            更改页码命令
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.StackPanel">
+            <summary>
+            存放页码按钮的容器
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.NextBtn">
+            <summary>
+            下一页按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.PrevBtn">
+            <summary>
+            上一页按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.TotalPage">
+            <summary>
+            根据Total和PageSize计算总共多少页
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel">
             <summary>
             虚拟化容器
@@ -74,6 +254,90 @@
             在内容内向上滚动一个逻辑单元。
             </summary>
         </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.LineLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.LineRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MakeVisible(System.Windows.Media.Visual,System.Windows.Rect)">
+            <summary>
+            
+            </summary>
+            <param name="visual"></param>
+            <param name="rectangle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MouseWheelDown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MouseWheelLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MouseWheelRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MouseWheelUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.PageDown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.PageLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.PageRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.PageUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.SetHorizontalOffset(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="offset"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.SetVerticalOffset(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="offset"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="finalSize"></param>
+            <returns></returns>
+        </member>
         <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.UpdateScrollInfo(System.Windows.Size)">
             <summary>
             跟新滚动条
@@ -85,6 +349,7 @@
             计算可视区域尺寸
             </summary>
             <param name="availableSize"></param>
+            <param name="childrenCount"></param>
         </member>
         <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.MeasureChild(System.Windows.Size,System.Int32,System.Int32)">
             <summary>
@@ -117,6 +382,11 @@
             虚拟化子元素
             </summary>
             <param name="itemIndex">数据条目索引</param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingTilePanel.ItemWidth">
             <summary>
@@ -187,23 +457,6 @@
             <summary>
             获取或设置一个控制滚动行为的 ScrollViewer 元素。
             </summary>
-        </member>
-        <member name="T:XIMALAYA.PCDesktop.Controls.ImageDecoder">
-            <summary>
-            图片加载器
-            </summary>
-        </member>
-        <member name="T:XIMALAYA.PCDesktop.Controls.ImageQueue">
-            <summary>
-            图片下载队列
-            </summary>
-        </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.ImageQueue.Queue(System.Windows.Controls.Image,System.String)">
-            <summary>
-            
-            </summary>
-            <param name="img"></param>
-            <param name="url"></param>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.MyRadioButton">
             <summary>
@@ -305,6 +558,11 @@
             图标的填充色
             </summary>
         </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.PathData">
+            <summary>
+            图片路径
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarNextPath">
             <summary>
             下一首
@@ -323,6 +581,11 @@
         <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarPausePath">
             <summary>
             暂停按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.Submit">
+            <summary>
+            提交按钮
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.MetroSlider">
@@ -375,6 +638,11 @@
             
             </summary>
         </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.CurrentWidthProperty">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.MetroSlider.BuffWidthProperty">
             <summary>
             
@@ -393,6 +661,11 @@
             </summary>
             <param name="dependencyObject"></param>
             <param name="e"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.MetroSlider.#ctor">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.IsReverse">
             <summary>
@@ -440,6 +713,11 @@
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.BuffWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MetroSlider.CurrentWidth">
             <summary>
             
             </summary>
@@ -648,6 +926,212 @@
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ItemHeightProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ItemWidthProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.OrientationProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.SetFirstRowViewItemIndex(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.GetFirstVisibleSection">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.GetFirstVisibleIndex">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.OnItemsChanged(System.Object,System.Windows.Controls.Primitives.ItemsChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.OnInitialized(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            
+            </summary>
+            <param name="finalSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.LineDown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.LineLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.LineRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.LineUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.MakeVisible(System.Windows.Media.Visual,System.Windows.Rect)">
+            <summary>
+            
+            </summary>
+            <param name="visual"></param>
+            <param name="rectangle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.MouseWheelDown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.MouseWheelLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.MouseWheelRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.MouseWheelUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.PageDown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.PageLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.PageRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.PageUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.SetHorizontalOffset(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="offset"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.SetVerticalOffset(System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="offset"></param>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ItemHeight">
+            <summary>
+            元素的高度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ItemWidth">
+            <summary>
+            元素的宽度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.Orientation">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.CanHorizontallyScroll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.CanVerticallyScroll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ExtentHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ExtentWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.HorizontalOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.VerticalOffset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ScrollOwner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ViewportHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.VirtualizingWrapPanel.ViewportWidth">
             <summary>
             
             </summary>

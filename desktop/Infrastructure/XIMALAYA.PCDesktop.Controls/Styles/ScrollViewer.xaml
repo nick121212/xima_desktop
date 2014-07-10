@@ -51,7 +51,7 @@
 		<Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
 		<Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
 		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="Margin"  Value="1"/>
+		<Setter Property="Margin"  Value="1 1 5 1"/>
 		<Setter Property="Width" Value="5"/>
 		<Setter Property="MinWidth"  Value="5"/>
 		<Setter Property="Opacity" Value="0"/>
@@ -83,7 +83,7 @@
 		<Style.Triggers>
 			<Trigger Property="Orientation" Value="Horizontal">
 				<Setter Property="Background" Value="Transparent"/>
-				<Setter Property="Margin" Value="1"/>
+				<Setter Property="Margin" Value="1 1 1 5"/>
 				<Setter Property="Height" Value="5"/>
 				<Setter Property="MinHeight" Value="5"/>
 				<Setter Property="Width" Value="Auto"/>
@@ -189,7 +189,7 @@
 									<DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar"
 													 Storyboard.TargetProperty="Width"
 													 To="7"
-													 Duration="0:0:0.3"/>
+													 Duration="0:0:0.1"/>
 								</Storyboard>
 							</BeginStoryboard>
 						</EventTrigger>
@@ -199,7 +199,7 @@
 									<DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar"
 													 Storyboard.TargetProperty="Width"
 													 To="4"
-													 Duration="0:0:0.3"/>
+													 Duration="0:0:0.1"/>
 								</Storyboard>
 							</BeginStoryboard>
 						</EventTrigger>
@@ -209,7 +209,7 @@
 									<DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar"
 													 Storyboard.TargetProperty="Height"
 													 To="7"
-													 Duration="0:0:0.3"/>
+													 Duration="0:0:0.1"/>
 								</Storyboard>
 							</BeginStoryboard>
 						</EventTrigger>
@@ -219,7 +219,7 @@
 									<DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar"
 													 Storyboard.TargetProperty="Height"
 													 To="4"
-													 Duration="0:0:0.3"/>
+													 Duration="0:0:0.1"/>
 								</Storyboard>
 							</BeginStoryboard>
 						</EventTrigger>

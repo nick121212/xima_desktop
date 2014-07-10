@@ -7,29 +7,29 @@
              xmlns:MControls="http://ximalaya.com/xaml/controls"
              xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls">
 
-    <UserControl.Resources>
-        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
-        <params:ConditaionAlbumTypeToBoolConverter x:Key="ConditaionAlbumTypeToBoolConverter"/>
-    </UserControl.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+	<UserControl.Resources>
+		<BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+		<params:ConditaionAlbumTypeToBoolConverter x:Key="ConditaionAlbumTypeToBoolConverter"/>
+	</UserControl.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"></RowDefinition>
 			<RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+		</Grid.RowDefinitions>
 
 		<Controls:MetroProgressBar Grid.Row="1" 
 								   Foreground="{DynamicResource AccentColorBrush}"
 								   Margin="0 0 0 2" 
 								   IsIndeterminate="{Binding IsWaiting}" />
-		
-        <StackPanel Margin="20 0 0 0"  Orientation="Horizontal" Width="Auto">
-            <RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=0}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="0" Content="最火"></RadioButton>
-            <RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=1}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="1" Content="最近更新"></RadioButton>
-            <RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=2}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="2" Content="经典"></RadioButton>
 
-            <Controls:SplitButton HorizontalContentAlignment="Left"
+		<StackPanel Margin="20 0 0 0"  Orientation="Horizontal" Width="Auto">
+			<RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=0}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="0" Content="最火"></RadioButton>
+			<RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=1}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="1" Content="最近更新"></RadioButton>
+			<RadioButton GroupName="Condition" IsChecked="{Binding Condition,Converter={StaticResource ConditaionAlbumTypeToBoolConverter},ConverterParameter=2}" Style="{DynamicResource MetroRadioButton}" Command="{Binding ConditionCommand}" CommandParameter="2" Content="经典"></RadioButton>
+
+			<Controls:SplitButton HorizontalContentAlignment="Left"
                                   HorizontalAlignment="Center"
                                   VerticalContentAlignment="Center"
                                   Margin="5 0 0 0"
@@ -39,34 +39,34 @@
                                   SelectedIndex="{Binding Status,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                   ItemsSource="{Binding StatusList}"
                                   VerticalAlignment="Center"  />
-        </StackPanel>
+		</StackPanel>
 
-        <ListBox ItemsSource="{Binding Albums}" 
+		<ListBox ItemsSource="{Binding Albums}" 
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                  Grid.Row="2"
                  ItemContainerStyle="{StaticResource AlbumListStyle}">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-					<MControls:VirtualizingTilePanel IsItemsHost="True"	  
-													 ItemHeight="230" 
+			<ListBox.ItemsPanel>
+				<ItemsPanelTemplate>
+					<MControls:VirtualizingTilePanel IsItemsHost="True"
+													 ItemHeight="230"
 													 ItemWidth="190"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-			<ListBox.CacheMode>
-				<BitmapCache EnableClearType="False" 
-                             RenderAtScale="1" 
-                             SnapsToDevicePixels="False"/>
-			</ListBox.CacheMode>
+				</ItemsPanelTemplate>
+			</ListBox.ItemsPanel>
 		</ListBox>
 
-		<StackPanel Visibility="{Binding IsNextPageVisibled,Converter={StaticResource BooleanToVisibility}}"
+		<MControls:Pagination PageSize="{Binding PageSize}"
+							  Grid.Row="3" 
+							  Margin="3"
+							  CurrentPage="{Binding CurrentPage,Mode=TwoWay}"
+							  Total="{Binding Total}"/>
+
+		<!--<StackPanel Visibility="{Binding IsNextPageVisibled,Converter={StaticResource BooleanToVisibility}}"
 					Grid.Row="3" 
 					Margin="10">
-			
 			<Button Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=StackPanel}, Path=ActualWidth}"
 				    Command="{Binding NextPageCommand}"
 					Content="下一页" />
-		</StackPanel>
-		
+		</StackPanel>-->
+
 	</Grid>
 </UserControl>

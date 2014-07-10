@@ -50,6 +50,9 @@ namespace XIMALAYA.PCDesktop.Controls
 
         #region Dependency Properties
 
+        /// <summary>
+        /// 元素的高度
+        /// </summary>
         [TypeConverter(typeof(LengthConverter))]
         public double ItemHeight
         {
@@ -62,7 +65,9 @@ namespace XIMALAYA.PCDesktop.Controls
                 base.SetValue(ItemHeightProperty, value);
             }
         }
-
+        /// <summary>
+        /// 元素的宽度
+        /// </summary>
         [TypeConverter(typeof(LengthConverter))]
         public double ItemWidth
         {
@@ -75,21 +80,35 @@ namespace XIMALAYA.PCDesktop.Controls
                 base.SetValue(ItemWidthProperty, value);
             }
         }
-
+        /// <summary>
+        /// 方向
+        /// </summary>
         public Orientation Orientation
         {
             get { return (Orientation)GetValue(OrientationProperty); }
             set { SetValue(OrientationProperty, value); }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public static readonly DependencyProperty ItemHeightProperty = DependencyProperty.Register("ItemHeight", typeof(double), typeof(VirtualizingWrapPanel), new FrameworkPropertyMetadata(double.PositiveInfinity));
+        /// <summary>
+        /// 
+        /// </summary>
         public static readonly DependencyProperty ItemWidthProperty = DependencyProperty.Register("ItemWidth", typeof(double), typeof(VirtualizingWrapPanel), new FrameworkPropertyMetadata(double.PositiveInfinity));
+        /// <summary>
+        /// 
+        /// </summary>
         public static readonly DependencyProperty OrientationProperty = StackPanel.OrientationProperty.AddOwner(typeof(VirtualizingWrapPanel), new FrameworkPropertyMetadata(Orientation.Horizontal));
 
         #endregion
 
         #region Methods
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="index"></param>
         public void SetFirstRowViewItemIndex(int index)
         {
             SetVerticalOffset((index) / Math.Floor((_viewport.Width) / childSize.Width));
@@ -107,7 +126,10 @@ namespace XIMALAYA.PCDesktop.Controls
                 firstIndex = firstIndexCache;               
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public int GetFirstVisibleSection()
         {
             int section;
@@ -124,7 +146,10 @@ namespace XIMALAYA.PCDesktop.Controls
                 section = maxSection;
             return section;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public int GetFirstVisibleIndex()
         {
             int section = GetFirstVisibleSection();
@@ -390,7 +415,10 @@ namespace XIMALAYA.PCDesktop.Controls
         #endregion
 
         #region Override
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnKeyDown(KeyEventArgs e)
         {
             switch (e.Key)
@@ -416,15 +444,21 @@ namespace XIMALAYA.PCDesktop.Controls
                     break;
             }
         }
-
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         protected override void OnItemsChanged(object sender, ItemsChangedEventArgs args)
         {
             base.OnItemsChanged(sender, args);
             _abstractPanel = null;
             ResetScrollInfo();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnInitialized(EventArgs e)
         {
             this.SizeChanged += new SizeChangedEventHandler(this.Resizing);
@@ -433,7 +467,11 @@ namespace XIMALAYA.PCDesktop.Controls
             _children = InternalChildren;
             _generator = ItemContainerGenerator;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="availableSize"></param>
+        /// <returns></returns>
         protected override Size MeasureOverride(Size availableSize)
         {
             if (_itemsControl == null || _itemsControl.Items.Count == 0)
@@ -539,6 +577,11 @@ namespace XIMALAYA.PCDesktop.Controls
 
             return availableSize;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="finalSize"></param>
+        /// <returns></returns>
         protected override Size ArrangeOverride(Size finalSize)
         {
             if (_children != null)
@@ -557,6 +600,9 @@ namespace XIMALAYA.PCDesktop.Controls
         #region IScrollInfo Members
 
         private bool _canHScroll = false;
+        /// <summary>
+        /// 
+        /// </summary>
         public bool CanHorizontallyScroll
         {
             get { return _canHScroll; }
@@ -564,32 +610,45 @@ namespace XIMALAYA.PCDesktop.Controls
         }
 
         private bool _canVScroll = false;
+        /// <summary>
+        /// 
+        /// </summary>
         public bool CanVerticallyScroll
         {
             get { return _canVScroll; }
             set { _canVScroll = value; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public double ExtentHeight
         {
             get { return _extent.Height; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public double ExtentWidth
         {
             get { return _extent.Width; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public double HorizontalOffset
         {
             get { return _offset.X; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public double VerticalOffset
         {
             get { return _offset.Y; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void LineDown()
         {
             if (Orientation == Orientation.Vertical)
@@ -597,7 +656,9 @@ namespace XIMALAYA.PCDesktop.Controls
             else
                 SetVerticalOffset(VerticalOffset + 1);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void LineLeft()
         {
             if (Orientation == Orientation.Horizontal)
@@ -605,7 +666,9 @@ namespace XIMALAYA.PCDesktop.Controls
             else
                 SetHorizontalOffset(HorizontalOffset - 1);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void LineRight()
         {
             if (Orientation == Orientation.Horizontal)
@@ -613,7 +676,9 @@ namespace XIMALAYA.PCDesktop.Controls
             else
                 SetHorizontalOffset(HorizontalOffset + 1);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void LineUp()
         {
             if (Orientation == Orientation.Vertical)
@@ -621,7 +686,12 @@ namespace XIMALAYA.PCDesktop.Controls
             else
                 SetVerticalOffset(VerticalOffset - 1);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="visual"></param>
+        /// <param name="rectangle"></param>
+        /// <returns></returns>
         public Rect MakeVisible(Visual visual, Rect rectangle)
         {
             var gen = (ItemContainerGenerator)_generator.GetItemContainerGeneratorForPanel(this);
@@ -653,54 +723,76 @@ namespace XIMALAYA.PCDesktop.Controls
             InvalidateMeasure();
             return elementRect;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelDown()
         {
             PageDown();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelLeft()
         {
             PageLeft();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelRight()
         {
             PageRight();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void MouseWheelUp()
         {
             PageUp();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageDown()
         {
             SetVerticalOffset(VerticalOffset + _viewport.Height * 0.8);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageLeft()
         {
             SetHorizontalOffset(HorizontalOffset - _viewport.Width * 0.8);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageRight()
         {
             SetHorizontalOffset(HorizontalOffset + _viewport.Width * 0.8);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void PageUp()
         {
             SetVerticalOffset(VerticalOffset - _viewport.Height * 0.8);
         }
 
         private ScrollViewer _owner;
+        /// <summary>
+        /// 
+        /// </summary>
         public ScrollViewer ScrollOwner
         {
             get { return _owner; }
             set { _owner = value; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="offset"></param>
         public void SetHorizontalOffset(double offset)
         {
             if (offset < 0 || _viewport.Width >= _extent.Width)
@@ -723,7 +815,10 @@ namespace XIMALAYA.PCDesktop.Controls
             InvalidateMeasure();
             firstIndex = GetFirstVisibleIndex();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="offset"></param>
         public void SetVerticalOffset(double offset)
         {
             if (offset < 0 || _viewport.Height >= _extent.Height)
@@ -748,12 +843,16 @@ namespace XIMALAYA.PCDesktop.Controls
             InvalidateMeasure();
             firstIndex = GetFirstVisibleIndex();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public double ViewportHeight
         {
             get { return _viewport.Height; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public double ViewportWidth
         {
             get { return _viewport.Width; }

@@ -159,21 +159,19 @@ namespace XIMALAYA.PCDesktop.Controls
             get { return (double)GetValue(BuffWidthProperty); }
             set { SetValue(BuffWidthProperty, value); }
         }
-
-
-
+        /// <summary>
+        /// 
+        /// </summary>
         public double CurrentWidth
         {
             get { return (double)GetValue(CurrentWidthProperty); }
             set { SetValue(CurrentWidthProperty, value); }
         }
-
-        // Using a DependencyProperty as the backing store for CurrentWidth.  This enables animation, styling, binding, etc...
+        /// <summary>
+        /// 
+        /// </summary>
         public static readonly DependencyProperty CurrentWidthProperty =
             DependencyProperty.Register("CurrentWidth", typeof(double), typeof(MetroSlider), new PropertyMetadata(0D));
-
-
-
 
         /// <summary>
         /// 
@@ -205,6 +203,9 @@ namespace XIMALAYA.PCDesktop.Controls
 
             slider.BuffWidth = slider.ActualWidth * slider.Process;
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public MetroSlider()
         {
             this.SizeChanged += MetroSlider_SizeChanged;

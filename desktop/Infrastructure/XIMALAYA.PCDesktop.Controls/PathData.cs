@@ -8,6 +8,9 @@ using XIMALAYA.PCDesktop.Tools;
 
 namespace XIMALAYA.PCDesktop.Controls
 {
+    /// <summary>
+    /// 图片路径
+    /// </summary>
     public class PathData : Singleton<PathData>
     {
         /// <summary>
@@ -50,7 +53,9 @@ namespace XIMALAYA.PCDesktop.Controls
                 return Geometry.Parse("F1M53,27C54,27 55,27 56,27 56,40.332 56,53.668 56,67 55,67 54,67 53,67 53,53.668 53,40.332 53,27z M38,27C39,27 40,27 41,27 41,40.332 41,53.668 41,67 40,67 39,67 38,67 38,53.668 38,40.332 38,27z");
             }
         }
-
+        /// <summary>
+        /// 提交按钮
+        /// </summary>
         public Geometry Submit
         {
             get

@@ -23,6 +23,9 @@ namespace XIMALAYA.PCDesktop.Tools.Untils
 
         private bool _IsWaiting;
         private bool _IsNextPageVisibled;
+        private long _Total;
+        private int _PageSize;
+        private int _Page;
 
         #endregion
 
@@ -68,8 +71,19 @@ namespace XIMALAYA.PCDesktop.Tools.Untils
                 {
                     _IsWaiting = value;
                     this.RaisePropertyChanged(() => this.IsWaiting);
+                    this.RaisePropertyChanged(() => this.IsEnable);
                     this.NextPageCommand.RaiseCanExecuteChanged();
                 }
+            }
+        }
+        /// <summary>
+        /// 是否可以操作，与IsWaiting相反
+        /// </summary>
+        public bool IsEnable
+        {
+            get
+            {
+                return !this.IsWaiting;
             }
         }
         /// <summary>
@@ -87,6 +101,61 @@ namespace XIMALAYA.PCDesktop.Tools.Untils
                 {
                     _IsNextPageVisibled = value;
                     this.RaisePropertyChanged(() => this.IsNextPageVisibled);
+                }
+            }
+        }
+        /// <summary>
+        /// 数据总量
+        /// </summary>
+        public long Total
+        {
+            get
+            {
+                return _Total;
+            }
+            set
+            {
+                if (value != _Total)
+                {
+                    _Total = value;
+                    this.RaisePropertyChanged(() => this.Total);
+                }
+            }
+        }
+        /// <summary>
+        /// 当前页数量
+        /// </summary>
+        public int PageSize
+        {
+            get
+            {
+                return _PageSize;
+            }
+            set
+            {
+                if (value != _PageSize)
+                {
+                    _PageSize = value;
+                    this.RaisePropertyChanged(() => this.PageSize);
+                }
+            }
+        }
+        /// <summary>
+        /// 当前页码
+        /// </summary>
+        public int CurrentPage
+        {
+            get
+            {
+                return _Page;
+            }
+            set
+            {
+                if (value != _Page)
+                {
+                    _Page = value;
+                    this.GetData(true);
+                    this.RaisePropertyChanged(() => this.CurrentPage);
                 }
             }
         }

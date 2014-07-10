@@ -49,11 +49,6 @@ namespace XIMALAYA.PCDesktop.Controls
         public static readonly DependencyProperty DefaultSourceProperty =
             DependencyProperty.Register("DefaultSource", typeof(string), typeof(MyImage), new PropertyMetadata(string.Empty, OnDefaulImageChanged));
 
-        static MyImage()
-        {
-            
-        }
-
         private static void OnDefaulImageChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ImageBrush ib = new ImageBrush(new BitmapImage(new Uri("pack://application:,,,/XIMALAYA.PCDesktop.Tools;component/Resources/Images/defaults/" + e.NewValue.ToString(), UriKind.RelativeOrAbsolute)));
@@ -70,6 +65,5 @@ namespace XIMALAYA.PCDesktop.Controls
             base.OnApplyTemplate();
             this.Image = GetTemplateChild("PART_Image") as Image;
         }
-
     }
 }

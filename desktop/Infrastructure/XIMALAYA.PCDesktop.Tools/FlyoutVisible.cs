@@ -19,9 +19,6 @@ namespace XIMALAYA.PCDesktop.Tools
         #region fields
 
         private bool _IsSettingFlyoutShow = false;
-        private bool _IsCategoryDetailShow = false;
-        private bool _IsCategoryListShow = false;
-        private bool _IsTagSoundsShow = true;
 
         #endregion
 
@@ -53,61 +50,6 @@ namespace XIMALAYA.PCDesktop.Tools
                 }
             }
         }
-        /// <summary>
-        /// 是否显示分类详情
-        /// </summary>
-        public bool IsCategoryDetailShow
-        {
-            get
-            {
-                return _IsCategoryDetailShow;
-            }
-            set
-            {
-                if (value != _IsCategoryDetailShow)
-                {
-                    _IsCategoryDetailShow = value;
-                    this.RaisePropertyChanged(() => this.IsCategoryDetailShow);
-                }
-            }
-        }
-        /// <summary>
-        /// 是否显示分类列表
-        /// </summary>
-        public bool IsCategoryListShow
-        {
-            get
-            {
-                return _IsCategoryListShow;
-            }
-            set
-            {
-                if (value != _IsCategoryListShow)
-                {
-                    _IsCategoryListShow = value;
-                    this.RaisePropertyChanged(() => this.IsCategoryListShow);
-                }
-            }
-        }
-        /// <summary>
-        /// 是否显示标签下的声音
-        /// </summary>
-        public bool IsTagSoundsShow
-        {
-            get
-            {
-                return _IsTagSoundsShow;
-            }
-            set
-            {
-                if (value != _IsTagSoundsShow)
-                {
-                    _IsTagSoundsShow = value;
-                    this.RaisePropertyChanged(() => this.IsTagSoundsShow);
-                }
-            }
-        }
-        
         /// <summary>
         /// 事件管理器
         /// </summary>

@@ -34,9 +34,13 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
         [Import]
         private ICategoryTagAlbumsService CategoryTagAlbumsService { get; set; }
         private CategoryTagAlbums Params { get; set; }
-
+        /// <summary>
+        /// 状态列表
+        /// </summary>
         public List<String> StatusList { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public DelegateCommand<long?> ShowAlbumInfoCommand { get; set; }
 
         private bool _IsShowStatus;
@@ -134,7 +138,9 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
             });
             this.StatusList = new List<string>() { "全部", "完结", "连载" };
         }
-
+        /// <summary>
+        /// 下一页事件之前准备
+        /// </summary>
         protected override void PreNextData()
         {
             this.Params.Page += 1;
@@ -151,8 +157,10 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                 if (isClear)
                 {
                     this.Albums.Clear();
-                    this.Params.Page = 1;
+                    //this.CurrentPage = 1;
                 }
+
+                this.Params.Page = this.CurrentPage;
                 base.GetData(isClear);
                 this.CategoryTagAlbumsService.GetData(result =>
                 {
@@ -162,6 +170,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                         this.IsWaiting = false;
                         if (tagAlbumsResult.Ret == 0)
                         {
+                            this.Total = tagAlbumsResult.Count;
                             foreach (var album in tagAlbumsResult.List)
                             {
                                 this.Albums.Add(album);
@@ -186,7 +195,9 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                 this.Params = param;
                 this.Condition = this.Params.Condition;
                 this.IsShowStatus = this.Params.Category == "book";
-                this.GetData(true);
+                //this.GetData(true);
+                this.PageSize = (int)this.Params.PerPage;
+                this.CurrentPage = 1;
             }
         }
     }

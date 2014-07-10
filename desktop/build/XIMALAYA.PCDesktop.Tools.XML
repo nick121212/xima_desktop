@@ -85,6 +85,26 @@
             播放命令
             </summary>
         </member>
+        <member name="T:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase">
+            <summary>
+            全局flytou显示属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase.IsSettingFlyoutShow">
+            <summary>
+            显示设置flyout
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase.EventAggregator">
+            <summary>
+            事件管理器
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Tools.FlyoutVisible">
+            <summary>
+            全局单例
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.PlayerSingleton">
             <summary>
             全局播放器类
@@ -195,41 +215,6 @@
             <param name="genericType">泛型类型</param>
             <returns></returns>
         </member>
-        <member name="T:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase">
-            <summary>
-            全局flytou显示属性
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase.IsSettingFlyoutShow">
-            <summary>
-            显示设置flyout
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase.IsCategoryDetailShow">
-            <summary>
-            是否显示分类详情
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase.IsCategoryListShow">
-            <summary>
-            是否显示分类列表
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase.IsTagSoundsShow">
-            <summary>
-            是否显示标签下的声音
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Tools.FlyoutVisibleBase.EventAggregator">
-            <summary>
-            事件管理器
-            </summary>
-        </member>
-        <member name="T:XIMALAYA.PCDesktop.Tools.FlyoutVisible">
-            <summary>
-            全局单例
-            </summary>
-        </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.HttpWebRequestOpt">
             <summary>
             数据操作类
@@ -278,6 +263,11 @@
             cookie
             </summary>
         </member>
+        <member name="T:XIMALAYA.PCDesktop.Tools.Untils.BaseModule">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel">
             <summary>
             Viewmodel 基类
@@ -324,14 +314,44 @@
             是否加载数据中
             </summary>
         </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.IsEnable">
+            <summary>
+            是否可以操作，与IsWaiting相反
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.IsNextPageVisibled">
             <summary>
             分页控件显示
             </summary>
         </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.Total">
+            <summary>
+            数据总量
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.PageSize">
+            <summary>
+            当前页数量
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.CurrentPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Tools.Untils.BaseViewModel.NextPageCommand">
             <summary>
             下一页分页命令
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.BaseModule.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.BaseModule.Dispose">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory">
