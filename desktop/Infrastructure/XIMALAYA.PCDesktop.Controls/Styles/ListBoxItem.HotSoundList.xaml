@@ -6,7 +6,7 @@
                     xmlns:MControls="clr-namespace:XIMALAYA.PCDesktop.Controls">
 
 	<ResourceDictionary.MergedDictionaries>
-		<!--<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/MyToggleButton.xaml" />-->
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/MyToggleButton.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/Converter.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/ListBoxItem.Common.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/GroupBox.xaml" />
@@ -20,10 +20,8 @@
 								  Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
 								  Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
 								  IconData="{Binding Submit,Source={x:Static MControls:PathData.Instance}}"
-								  BorderBrush="{DynamicResource AccentColorBrush}"
+								  Style="{StaticResource MetroMyToggleButton}"
 								  CheckedBorderThickness="1"
-								  IconFill="White"
-								  SuperScriptSize="50"
                                   BorderThickness="0">
 			<MControls:MyToggleButton.Content>
 				<Grid Background="{DynamicResource AccentColorBrush4}"
