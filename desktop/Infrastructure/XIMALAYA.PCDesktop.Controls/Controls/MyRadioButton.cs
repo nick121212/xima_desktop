@@ -7,14 +7,19 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 
 namespace XIMALAYA.PCDesktop.Controls
 {
     /// <summary>
     /// 带角标的toggle按钮
     /// </summary>
+    [TemplatePart(Name = "PART_CheckBorderAnimation", Type = typeof(ThicknessAnimation))]
+    [TemplatePart(Name = "PART_BorderAnimation", Type = typeof(ThicknessAnimation))]
     public class MyRadioButton : RadioButton
     {
+        private ThicknessAnimation BorderAnimation { get; set; }
+        private ThicknessAnimation CheckBorderAnimation { get; set; }
         /// <summary>
         /// 角标的尺寸
         /// </summary>
@@ -93,6 +98,31 @@ namespace XIMALAYA.PCDesktop.Controls
         /// </summary>
         public static readonly DependencyProperty IconFillProperty =
             DependencyProperty.Register("IconFill", typeof(Brush), typeof(MyRadioButton), new PropertyMetadata(new SolidColorBrush()));
+        /// <summary>
+        /// 选中后的边框尺寸
+        /// </summary>
+        public Thickness CheckedBorderThickness
+        {
+            get { return (Thickness)GetValue(CheckedBorderThicknessProperty); }
+            set { SetValue(CheckedBorderThicknessProperty, value); }
+        }
+        /// <summary>
+        /// 选中后的边框尺寸
+        /// </summary>
+        public static readonly DependencyProperty CheckedBorderThicknessProperty =
+            DependencyProperty.Register("CheckedBorderThickness", typeof(Thickness), typeof(MyToggleButton), new PropertyMetadata(new Thickness(1)));
+
+        /// <summary>
+        /// 应用模板
+        /// </summary>
+        public override void OnApplyTemplate()
+        {
+            base.OnApplyTemplate();
+            this.BorderAnimation = GetTemplateChild("PART_BorderAnimation") as ThicknessAnimation;
+            this.CheckBorderAnimation = GetTemplateChild("PART_CheckBorderAnimation") as ThicknessAnimation;
+            this.BorderAnimation.To = this.BorderThickness;
+            this.CheckBorderAnimation.To = this.CheckedBorderThickness;
+        }
 
         static MyRadioButton()
         {

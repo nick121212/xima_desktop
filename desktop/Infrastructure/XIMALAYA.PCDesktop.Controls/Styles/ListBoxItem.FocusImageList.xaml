@@ -22,8 +22,14 @@
 										   DefaultSource="banner.png"
 										   Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
 										   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"/>
-                        <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content=" " Background="Black" Opacity="0.5" />
-                        <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" Margin="0 3" Content="{Binding LongTitle}" />
+                        <!--<Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content=" " Background="Black" Opacity="0.5" />-->
+                        <Label VerticalAlignment="Bottom" 
+							   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
+							   HorizontalAlignment="Center"
+							   Background="#66000000"
+							   Foreground="White" 
+							   Margin="0" 
+							   Content="{Binding LongTitle}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="Button.IsPressed" Value="True">

@@ -25,23 +25,23 @@
                         </Storyboard>
                     </VisualState>
                 </VisualStateGroup>
-                <VisualStateGroup x:Name="CheckStates">
-                    <VisualState x:Name="Checked">
-                        <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="IconDataPath" Storyboard.TargetProperty="Opacity" To="1" />
-                            <DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="1" />
-                            <ThicknessAnimation Duration="0:0:0.2" Storyboard.TargetName="Background" Storyboard.TargetProperty="BorderThickness" To="5" />
-                        </Storyboard>
-                    </VisualState>
-                    <VisualState x:Name="Unchecked">
-                        <Storyboard>
-                            <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetName="IconDataPath" Storyboard.TargetProperty="Opacity" To="0" />
-                            <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="0" />
-                            <ThicknessAnimation Duration="0:0:0.1" Storyboard.TargetName="Background" Storyboard.TargetProperty="BorderThickness" To="{TemplateBinding BorderThickness}" />
-                        </Storyboard>
-                    </VisualState>
-                </VisualStateGroup>
-                <VisualStateGroup x:Name="FocusStates">
+				<VisualStateGroup x:Name="CheckStates">
+					<VisualState x:Name="Checked">
+						<Storyboard>
+							<DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="IconDataPath" Storyboard.TargetProperty="Opacity" To="1" />
+							<DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="0.5" />
+							<ThicknessAnimation x:Name="PART_CheckBorderAnimation" Duration="0:0:0.2" Storyboard.TargetName="Background" Storyboard.TargetProperty="BorderThickness" To="{Binding CheckedBorderThickness,Source={RelativeSource Self}}" />
+						</Storyboard>
+					</VisualState>
+					<VisualState x:Name="Unchecked">
+						<Storyboard>
+							<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetName="IconDataPath" Storyboard.TargetProperty="Opacity" To="0" />
+							<DoubleAnimation Duration="0:0:0.1" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="0" />
+							<ThicknessAnimation x:Name="PART_BorderAnimation" Duration="0:0:0.1" Storyboard.TargetName="Background" Storyboard.TargetProperty="BorderThickness" To="{TemplateBinding BorderThickness}" />
+						</Storyboard>
+					</VisualState>
+				</VisualStateGroup>
+				<VisualStateGroup x:Name="FocusStates">
                     <VisualState x:Name="Focused">
                         <Storyboard>
                             <!--<ThicknessAnimation Duration="0:0:0.1" Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="BorderThickness" To="2" />-->
@@ -105,12 +105,6 @@
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-    </Style>
-
-    <Style TargetType="local:MyRadioButton" x:Key="MetroMyToggleBuggon1" BasedOn="{StaticResource {x:Type local:MyRadioButton}}">
-        <Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
-        <Setter Property="IconFill" Value="{DynamicResource AccentColorBrush4}" />
-        <Setter Property="SuperScriptSize" Value="50"/>
     </Style>
 
 </ResourceDictionary>

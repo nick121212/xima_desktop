@@ -159,6 +159,19 @@ namespace XIMALAYA.PCDesktop.Controls
         /// 分页外部用多少个元素，这是个依赖属性
         /// </summary>
         public static readonly DependencyProperty OuterCountProperty = DependencyProperty.Register("OuterCount", typeof(int), typeof(Pagination), new PropertyMetadata(1, OnCurrentPageChanged));
+        /// <summary>
+        /// 按钮的样式
+        /// </summary>
+        public Style ButtonStyle
+        {
+            get { return (Style)GetValue(ButtonStyleProperty); }
+            set { SetValue(ButtonStyleProperty, value); }
+        }
+        /// <summary>
+        /// 按钮的样式
+        /// </summary>
+        public static readonly DependencyProperty ButtonStyleProperty =
+            DependencyProperty.Register("ButtonStyle", typeof(Style), typeof(Pagination), new PropertyMetadata(null));
 
         #endregion
 
@@ -332,8 +345,17 @@ namespace XIMALAYA.PCDesktop.Controls
                 min -= max - this.TotalPage;
             }
             max = this.TotalPage + 1;
-            this.AddFrontOuter();
-            this.AddSplit();
+
+            if (min > this.OuterCount + 2)
+            {
+                this.AddFrontOuter();
+                this.AddSplit();
+            }
+            else
+            {
+                min = 1;
+            }
+
             for (; min < max; min++)
             {
                 this.AddPageNo(min);
@@ -363,7 +385,6 @@ namespace XIMALAYA.PCDesktop.Controls
             if (min < 0)
             {
                 max -= min;
-                min = 1;
             }
             min = 1;
             for (; min < max; min++)
@@ -421,8 +442,8 @@ namespace XIMALAYA.PCDesktop.Controls
                 Content = pageNo,
                 Command = this.ChangePageCommand,
                 CommandParameter = pageNo,
+                Style = this.ButtonStyle,
                 Background = pageNo == this.CurrentPage ? this.Background : new SolidColorBrush(Colors.Transparent),
-                Margin = this.Margin
             });
         }
         /// <summary>

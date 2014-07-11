@@ -214,7 +214,7 @@ namespace XIMALAYA.PCDesktop.Controls
 
         void MetroSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.CurrentWidth = this.Value / this.Maximum * (this.ActualWidth-10);
+            this.CurrentWidth = this.Value / this.Maximum * (this.ActualWidth - 10);
         }
 
         void MetroSlider_SizeChanged(object sender, SizeChangedEventArgs e)

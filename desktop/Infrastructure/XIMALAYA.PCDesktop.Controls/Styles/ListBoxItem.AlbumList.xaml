@@ -33,7 +33,7 @@
 													   Width="180" 
 													   Height="180" 
 													   Source="{Binding AlbumCoverUrl290}"
-													   DefaultSource="track.jpg"/>
+													   DefaultSource="album.png"/>
                                     <WrapPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
                                         <TextBlock ToolTip="{Binding Title}" Width="180" TextWrapping="NoWrap" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding Title}" />
                                         <TextBlock Width="180" TextWrapping="WrapWithOverflow" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding LastUptrackDate,Converter={StaticResource LongToDateConverter}}" />
@@ -88,10 +88,15 @@
                 <Grid>
 					<MControls:MyImage VerticalAlignment="Center" 
 									   Source="{Binding AlbumCoverUrl290}"
-									   DefaultSource="track.jpg"/>
-                    <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content=" " Background="Black" Opacity="0.5" />
-                    <Label Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" Margin="0 3" Content="{Binding Title}" />
-                </Grid>
+									   DefaultSource="album.png"/>
+					<Label VerticalAlignment="Bottom" 
+							   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
+							   HorizontalAlignment="Center"
+							   Background="#66000000"
+							   Foreground="White" 
+							   Margin="0" 
+							   Content="{Binding Title}" />
+				</Grid>
             </Controls:Tile.Content>
         </Controls:Tile>
     </DataTemplate>

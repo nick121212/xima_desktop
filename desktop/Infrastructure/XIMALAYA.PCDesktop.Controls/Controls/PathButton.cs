@@ -83,6 +83,32 @@ namespace XIMALAYA.PCDesktop.Controls
         /// <summary>
         /// 
         /// </summary>
+        public Thickness IconMargin
+        {
+            get { return (Thickness)GetValue(IconMarginProperty); }
+            set { SetValue(IconMarginProperty, value); }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public static readonly DependencyProperty IconMarginProperty =
+            DependencyProperty.Register("IconMargin", typeof(Thickness), typeof(PathButton), new PropertyMetadata(new Thickness(0)));
+        /// <summary>
+        /// 
+        /// </summary>
+        public Thickness IconCheckedMargin
+        {
+            get { return (Thickness)GetValue(IconCheckedMarginProperty); }
+            set { SetValue(IconCheckedMarginProperty, value); }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public static readonly DependencyProperty IconCheckedMarginProperty =
+            DependencyProperty.Register("IconCheckedMargin", typeof(Thickness), typeof(PathButton), new PropertyMetadata(new Thickness(0)));
+        /// <summary>
+        /// 
+        /// </summary>
         public bool ShowBackground
         {
             get { return (bool)GetValue(ShowBackgroundProperty); }

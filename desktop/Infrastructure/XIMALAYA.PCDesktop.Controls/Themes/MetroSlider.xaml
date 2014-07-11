@@ -127,7 +127,7 @@
                     <Border Width="{TemplateBinding CurrentWidth}" HorizontalAlignment="Left" Background="{DynamicResource AccentColorBrush2}" Opacity="1"/>
                 </Grid>
             </Border>
-            <Track x:Name="PART_Track" Grid.Row="1" VerticalAlignment="Bottom" Height="30">
+            <Track x:Name="PART_Track" Grid.Row="1" VerticalAlignment="Bottom" Height="Auto">
                 <Track.DecreaseRepeatButton>
                     <RepeatButton Background="Transparent" Command="{x:Static Slider.DecreaseLarge}" Style="{StaticResource SliderRepeatButtonStyle}"/>
                 </Track.DecreaseRepeatButton>
@@ -138,10 +138,10 @@
                     <Thumb x:Name="Thumb" Foreground="{TemplateBinding ThumbForeground}" Background="{TemplateBinding ThumbBackground}" Style="{StaticResource HorizontalSliderThumbStyle}"/>
                 </Track.Thumb>
             </Track>
-            <DockPanel Grid.Row="2">
+            <!--<DockPanel Grid.Row="2">
                 <TextBlock DockPanel.Dock="Left" Text="{TemplateBinding TotalTimeSpan,Converter={StaticResource TimeSpanConverter}}" HorizontalAlignment="Left" />
                 <TextBlock DockPanel.Dock="Right" Text="{TemplateBinding Duration,Converter={StaticResource TimeSpanConverter}}" HorizontalAlignment="Right" />
-            </DockPanel>
+            </DockPanel>-->
         </Grid>
         <!--<ControlTemplate.Triggers>
             <Trigger Property="IsReverse" Value="False">

@@ -169,7 +169,7 @@
 								</Storyboard>
 							</BeginStoryboard>
 						</EventTrigger>
-						<EventTrigger RoutedEvent="MouseLeave"	 SourceName="Container">
+						<EventTrigger RoutedEvent="MouseLeave" SourceName="Container">
 							<BeginStoryboard>
 								<Storyboard>
 									<DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar"
