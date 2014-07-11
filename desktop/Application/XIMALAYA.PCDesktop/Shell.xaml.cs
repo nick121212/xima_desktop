@@ -95,8 +95,6 @@ namespace XIMALAYA.PCDesktop
         private Flyout LastFlyout { get; set; }
         private Flyout CurrentFlyout { get; set; }
 
-
-
         #region IFlyoutFactory 成员
 
         /// <summary>
@@ -146,7 +144,11 @@ namespace XIMALAYA.PCDesktop
 
             if (flyout.IsOpen == false)
             {
-                if (LastFlyout != null) this.ContainerGrid.Items.Remove(LastFlyout);
+                if (LastFlyout != null)
+                {
+                    this.ContainerGrid.Items.Remove(LastFlyout);
+                    LastFlyout = null;
+                }
                 LastFlyout = flyout;
                 LastFlyout.Content = null;
             }

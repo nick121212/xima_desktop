@@ -10,3 +10,9 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\XIMALAYA.PCDesktop.Cache\obj\Debug\XIMALAYA.PCDesktop.Cache.csprojResolveAssemblyReference.cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\XIMALAYA.PCDesktop.Cache\obj\Debug\XIMALAYA.PCDesktop.Cache.dll
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\XIMALAYA.PCDesktop.Cache\obj\Debug\XIMALAYA.PCDesktop.Cache.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Cache.XML
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Cache.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Cache.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\XIMALAYA.PCDesktop.Cache\obj\Debug\XIMALAYA.PCDesktop.Cache.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\XIMALAYA.PCDesktop.Cache\obj\Debug\XIMALAYA.PCDesktop.Cache.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\XIMALAYA.PCDesktop.Cache\obj\Debug\XIMALAYA.PCDesktop.Cache.pdb

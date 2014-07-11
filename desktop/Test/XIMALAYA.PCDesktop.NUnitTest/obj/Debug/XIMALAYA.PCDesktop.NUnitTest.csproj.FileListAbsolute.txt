@@ -26,3 +26,17 @@ D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitT
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\obj\Debug\XIMALAYA.PCDesktop.NUnitTest.csprojResolveAssemblyReference.cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\obj\Debug\XIMALAYA.PCDesktop.NUnitTest.dll
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\obj\Debug\XIMALAYA.PCDesktop.NUnitTest.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\XIMALAYA.PCDesktop.NUnitTest.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\XIMALAYA.PCDesktop.NUnitTest.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\Microsoft.Practices.Prism.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\nunit.framework.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\Microsoft.Practices.Prism.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\Microsoft.Practices.Prism.xml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\nunit.framework.xml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\bin\Debug\XIMALAYA.PCDesktop.Core.ParamsModel.xml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\obj\Debug\XIMALAYA.PCDesktop.NUnitTest.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\obj\Debug\XIMALAYA.PCDesktop.NUnitTest.dll
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Test\XIMALAYA.PCDesktop.NUnitTest\obj\Debug\XIMALAYA.PCDesktop.NUnitTest.pdb

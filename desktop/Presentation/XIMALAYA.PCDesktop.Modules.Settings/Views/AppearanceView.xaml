@@ -9,7 +9,7 @@
              d:DesignHeight="300" d:DesignWidth="500">
 
     <Controls:MetroAnimatedSingleRowTabControl TabStripPlacement="Right">
-        <TabItem Header="Appearance" Width="180">
+        <TabItem Header="外观设置" Width="180">
             <ScrollViewer>
                 <StackPanel MinWidth="150">
 

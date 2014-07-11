@@ -32,7 +32,7 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer.Views
 
         void MusicPlayerView_Loaded(object sender, RoutedEventArgs e)
         {
-            //this.SpectrumAnalyzer.RegisterSoundPlayer(this.ViewModel.BassEngine);
+            this.SpectrumAnalyzer.RegisterSoundPlayer(this.ViewModel.BassEngine);
         }
 
         [Import]

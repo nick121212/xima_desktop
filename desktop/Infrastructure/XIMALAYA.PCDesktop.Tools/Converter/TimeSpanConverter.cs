@@ -12,7 +12,7 @@ using System.Windows.Resources;
 namespace XIMALAYA.PCDesktop.Tools.Converter
 {
     /// <summary>
-    /// 时间转换
+    /// 时间转换 毫秒转换时间
     /// </summary>
     [ValueConversion(typeof(double), typeof(string))]
     public class TimeSpanConverter : IValueConverter
@@ -29,11 +29,13 @@ namespace XIMALAYA.PCDesktop.Tools.Converter
         {
             double timeSpan = double.Parse(value.ToString());
 
-            int hour = (int)timeSpan / (1000 * 60 * 24);
+            TimeSpan ts = TimeSpan.FromMilliseconds(timeSpan);
+
+            int hour = ts.Hours;
             //计算分钟,用毫秒总数减去小时乘以(1000*60*24)后,除以(1000*60),再去掉小数点
-            int min = (int)(timeSpan - hour * (1000 * 60 * 24)) / (1000 * 60);
+            int min = ts.Minutes;
             //同上
-            int sec = (int)(timeSpan - hour * (1000 * 60 * 24) - min * (1000 * 60)) / 1000;
+            int sec = ts.Seconds;
             //int msec = (int)timeSpan - hour * (1000 * 60 * 24) - min * (1000 * 60) - sec * 1000;
             //拼接字符串
             string timeString = string.Empty;

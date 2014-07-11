@@ -284,6 +284,23 @@ namespace XIMALAYA.PCDesktop.Tools.Player
         /// 第一次加载完数据后，自动播放
         /// </summary>
         public bool IsAutoPlayed { get; set; }
+        private long _trackID;
+        /// <summary>
+        /// 当前播放的声音ID
+        /// </summary>
+        public long TrackID
+        {
+            get { return _trackID; }
+            set
+            {
+                if (_trackID != value)
+                {
+                    _trackID = value;
+                    this.RaisePropertyChanged(() => this.TrackID);
+                }
+            }
+        }
+
 
         #endregion
 
@@ -554,7 +571,7 @@ namespace XIMALAYA.PCDesktop.Tools.Player
                     down = Bass.BASS_StreamGetFilePosition(this.ActiveStreamHandle, BASSStreamFilePosition.BASS_FILEPOS_DOWNLOAD);
                     this.Process = down / this.TotalSize;
                     Debug.WriteLine(down, this.TotalSize.ToString());
-                    if (this.Process > 0 && !this.IsAutoPlayed )
+                    if (this.Process > 0 && !this.IsAutoPlayed)
                     {
                         this.IsAutoPlayed = true;
                         this.Play();

@@ -110,17 +110,17 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
         }
         private void GetCategoryListAction()
         {
-            this.CategoryService.GetData<CategoryParam>(new Action<object>(categories =>
+            this.CategoryService.GetData(categories =>
             {
                 CategoryResult categoryResult = categories as CategoryResult;
-                Application.Current.Dispatcher.InvokeAsync(new Action(() =>
+                Application.Current.Dispatcher.InvokeAsync(() =>
                 {
                     foreach (CategoryData cd in categoryResult.List)
                     {
                         DiscoverViewModel.CategoryList.Add(cd);
                     }
-                }));
-            }), new CategoryParam
+                });
+            }, new CategoryParam
             {
                 Device = DeviceType.pc,
                 PicVersion = 5,
@@ -132,10 +132,9 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             var superData = result as SuperExploreIndexResult;
 
             if (superData == null) throw new ArgumentNullException();
-
             if (superData.Ret == 0)
             {
-                Application.Current.Dispatcher.InvokeAsync(new Action(() =>
+                Application.Current.Dispatcher.InvokeAsync(() =>
                 {
                     int index = 0;
                     this.FocusImageList.Clear();
@@ -154,7 +153,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                     {
                         this.AlbumList.Add(album);
                     }
-                }), System.Windows.Threading.DispatcherPriority.Background);
+                }, System.Windows.Threading.DispatcherPriority.Background);
             }
             else
             {
@@ -171,14 +170,14 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
 
                     if (res.Ret == 0)
                     {
-                        Application.Current.Dispatcher.InvokeAsync(new Action(() =>
+                        Application.Current.Dispatcher.InvokeAsync(() =>
                         {
                             foreach (var cate in res.Categories)
                             {
                                 SoundCache.Instance.SetData(cate.Sounds);
                                 this.HotSoundsCategories.Add(cate);
                             }
-                        }));
+                        });
 
                     }
                 }, new BaseParam
@@ -214,14 +213,14 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             }
 
             //点击分类命令
-            this.ShowCategoryDetailCommand = new DelegateCommand<string>(new Action<string>(cateName =>
+            this.ShowCategoryDetailCommand = new DelegateCommand<string>(cateName =>
             {
                 //发送事件
-                this.EventAggregator.GetEvent<TagEvent>().Publish(new TagEventArgument()
+                this.EventAggregator.GetEvent<TagEvent>().Publish(new TagEventArgument
                 {
                     TagKey = cateName
                 });
-            }));
+            });
         }
 
         #endregion

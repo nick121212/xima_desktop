@@ -103,6 +103,11 @@
             分页外部用多少个元素，这是个依赖属性
             </summary>
         </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.Pagination.ButtonStyleProperty">
+            <summary>
+            按钮的样式
+            </summary>
+        </member>
         <member name="M:XIMALAYA.PCDesktop.Controls.Pagination.#ctor">
             <summary>
             构造函数
@@ -177,6 +182,11 @@
         <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.OuterCount">
             <summary>
             分页外部用多少个元素，这是个依赖属性
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.ButtonStyle">
+            <summary>
+            按钮的样式
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.Pagination.ChangePageCommand">
@@ -493,6 +503,16 @@
             图标的填充色
             </summary>
         </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyRadioButton.CheckedBorderThicknessProperty">
+            <summary>
+            选中后的边框尺寸
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.MyRadioButton.OnApplyTemplate">
+            <summary>
+            应用模板
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.SuperScriptSize">
             <summary>
             角标的尺寸
@@ -521,6 +541,11 @@
         <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.IconFill">
             <summary>
             图标的填充色
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyRadioButton.CheckedBorderThickness">
+            <summary>
+            选中后的边框尺寸
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.MyToggleButton">
@@ -558,6 +583,51 @@
             图标的填充色
             </summary>
         </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.CheckedBorderThicknessProperty">
+            <summary>
+            选中后的边框尺寸
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.MyToggleButton.OnApplyTemplate">
+            <summary>
+            应用模板
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.SuperScriptSize">
+            <summary>
+            角标的尺寸
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconData">
+            <summary>
+            图标的path
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconWidth">
+            <summary>
+            图表的宽度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconHeight">
+            <summary>
+            图标的高度
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconMargin">
+            <summary>
+            图标margin值
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconFill">
+            <summary>
+            图标的填充色
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.CheckedBorderThickness">
+            <summary>
+            选中后的边框尺寸
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.PathData">
             <summary>
             图片路径
@@ -586,6 +656,11 @@
         <member name="P:XIMALAYA.PCDesktop.Controls.PathData.Submit">
             <summary>
             提交按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.VolumePath">
+            <summary>
+            音量按钮
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.MetroSlider">
@@ -752,6 +827,16 @@
             
             </summary>
         </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.IconMarginProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.IconCheckedMarginProperty">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="F:XIMALAYA.PCDesktop.Controls.PathButton.ShowBackgroundProperty">
             <summary>
             
@@ -788,6 +873,16 @@
             </summary>
         </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IconWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IconMargin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathButton.IconCheckedMargin">
             <summary>
             
             </summary>

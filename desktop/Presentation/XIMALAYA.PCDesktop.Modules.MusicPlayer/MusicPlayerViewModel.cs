@@ -54,7 +54,7 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
                 this.RaisePropertyChanged(() => this.SoundData);
             }
         }
-        private bool _ShowSpectrumAnalyzer = false;
+        private bool _ShowSpectrumAnalyzer = true;
         /// <summary>
         /// 是否显示声音波形
         /// </summary>
@@ -109,6 +109,7 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
                 if (soundData != null)
                 {
                     this.SoundData = soundData;
+                    this.BassEngine.TrackID = this.SoundData.TrackId;
                     this.BassEngine.OpenUrlAsync(this.SoundData.PlayUrl64);
                 }
             });

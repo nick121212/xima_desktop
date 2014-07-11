@@ -78,6 +78,7 @@
     <Compile Include="Attributes\ParamConvertAttribute.cs" />
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Command\Commands.cs" />
+    <Compile Include="Converter\MutiBoolConverter.cs" />
     <Compile Include="FlyoutVisible.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Converter\StringToBoolConverter.cs" />
@@ -139,6 +140,8 @@
     <Resource Include="Resources\Images\defaults\banner.png" />
     <Resource Include="Resources\Images\defaults\person.jpg" />
     <Resource Include="Resources\Images\defaults\track.jpg" />
+    <Resource Include="Resources\Images\defaults\album.png" />
+    <Resource Include="Resources\Images\defaults\person_186.png" />
     <Content Include="Resources\System\toolbar_next_n%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

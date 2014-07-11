@@ -76,7 +76,7 @@ namespace XIMALAYA.PCDesktop.Cache
             {
                 newValue = property.GetValue(newSound);
 
-                if (newValue != this.DefaultForType(newValue.GetType()))
+                if (newValue != null && newValue != this.DefaultForType(newValue.GetType()))
                 {
                     property.SetValue(oldSound, newValue);
                 }

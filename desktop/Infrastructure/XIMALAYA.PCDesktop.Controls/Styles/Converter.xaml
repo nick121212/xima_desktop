@@ -4,5 +4,6 @@
     
     <converter:LongToDateConverter x:Key="LongToDateConverter"/>
     <converter:StringToBoolConverter x:Key="StringToBoolConverter"/>
+	<converter:MutiBoolConverter x:Key="MutiBoolConverter" />
     
 </ResourceDictionary>

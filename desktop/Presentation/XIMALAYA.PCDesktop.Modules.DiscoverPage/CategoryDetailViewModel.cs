@@ -20,7 +20,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
     /// <summary>
     /// 分类详情页面
     /// </summary>
-    [Export(typeof(CategoryDetailViewModel))]
+    [Export]
     public class CategoryDetailViewModel : BaseViewModel
     {
         #region fields
@@ -43,13 +43,13 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                 if (value != _TagDataList)
                 {
                     _TagDataList = value;
-                    //this.RaisePropertyChanged(() => this.TagDataList);
                 }
             }
         }
         /// <summary>
         /// 分类服务
         /// </summary>
+        [Import]
         public ICategoryTagService CategoryTagService { get; set; }
         /// <summary>
         /// 当前分类
@@ -109,7 +109,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             if (this.CategoryTagService != null)
             {
                 this.IsWaiting = true;
-                this.CategoryTagService.GetData<CategoryTagParam>(new Action<object>(result =>
+                this.CategoryTagService.GetData(result =>
                 {
                     Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
@@ -131,7 +131,7 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
                             }
                         }
                     }));
-                }), new CategoryTagParam
+                }, new CategoryTagParam
                 {
                     Category = this.CurrentCategory.Name,
                     Type = TagType.album
@@ -143,20 +143,20 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
 
         #region construction
 
+        public void Initialize()
+        {
+            //点击分类事件
+            this.EventAggregator.GetEvent<TagEvent>().Subscribe(OnTagEventPublish, ThreadOption.UIThread);
+        }
+
         /// <summary>
         /// 构造
         /// </summary>
-        /// <param name="eventAggregator">事件管理器</param>
-        /// <param name="tagService">标签服务</param>
-        [ImportingConstructor]
-        public CategoryDetailViewModel(IEventAggregator eventAggregator, ICategoryTagService tagService)
+        public CategoryDetailViewModel()
         {
-            this.CategoryTagService = tagService;
-            this.EventAggregator = eventAggregator;
             this.TagDataList = new ObservableCollection<TagData>();
 
-            //点击分类事件
-            this.EventAggregator.GetEvent<TagEvent>().Subscribe(OnTagEventPublish, ThreadOption.UIThread);
+
             //点击标签事件
             this.ShowSoundListForTagCommand = new DelegateCommand<string>(tagName =>
             {

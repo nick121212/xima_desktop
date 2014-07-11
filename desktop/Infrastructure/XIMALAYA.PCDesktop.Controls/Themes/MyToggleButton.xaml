@@ -29,7 +29,7 @@
 					<VisualState x:Name="Checked">
 						<Storyboard>
 							<DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="IconDataPath" Storyboard.TargetProperty="Opacity" To="1" />
-							<DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="0.5" />
+							<DoubleAnimation Duration="0:0:0.2" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="Opacity" To="0.8" />
 							<ThicknessAnimation x:Name="PART_CheckBorderAnimation" Duration="0:0:0.2" Storyboard.TargetName="Background" Storyboard.TargetProperty="BorderThickness" To="{Binding CheckedBorderThickness,Source={RelativeSource Self}}" />
 						</Storyboard>
 					</VisualState>
@@ -54,8 +54,6 @@
                     BorderThickness="{TemplateBinding BorderThickness}" 
                     BorderBrush="{TemplateBinding BorderBrush}">
 				<Grid Background="{TemplateBinding Background}">
-					<!--<Border Opacity="1" BorderThickness="0" BorderBrush="Red"  x:Name="BackgroundAnimation" />-->
-
 					<Rectangle x:Name="BackgroundGradient"
                                Fill="{TemplateBinding BorderBrush}"
                                Opacity="0"

@@ -13,13 +13,12 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             if (this.RegionManager.Regions.ContainsRegionWithName(WellKnownRegionNames.DiscoverModuleRegion))
             {
                 var view = this.Container.GetInstance<DiscoverView>();
+                var detailModel = this.Container.GetInstance<CategoryDetailViewModel>();
                 var region = this.RegionManager.Regions[WellKnownRegionNames.DiscoverModuleRegion];
 
-                region.Add(view, WellKnownModuleNames.DiscoverModule);
-
                 view.DiscoverViewModel.Initialize();
-
-                var detailModel = this.Container.GetInstance<CategoryDetailViewModel>();
+                detailModel.Initialize();
+                region.Add(view, WellKnownModuleNames.DiscoverModule);
             }
         }
     }

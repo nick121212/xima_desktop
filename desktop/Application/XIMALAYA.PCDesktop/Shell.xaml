@@ -91,7 +91,7 @@
 	<!--内容框架-->
 	<DockPanel>
 
-		<Grid DockPanel.Dock="Bottom" MaxHeight="60">
+		<Grid DockPanel.Dock="Bottom" MaxHeight="80">
 			<ContentControl 
                 Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualWidth}" 
                 Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=WrapPanel}, Path=ActualHeight}" 

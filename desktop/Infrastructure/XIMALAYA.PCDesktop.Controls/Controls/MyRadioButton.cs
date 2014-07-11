@@ -110,7 +110,7 @@ namespace XIMALAYA.PCDesktop.Controls
         /// 选中后的边框尺寸
         /// </summary>
         public static readonly DependencyProperty CheckedBorderThicknessProperty =
-            DependencyProperty.Register("CheckedBorderThickness", typeof(Thickness), typeof(MyToggleButton), new PropertyMetadata(new Thickness(1)));
+            DependencyProperty.Register("CheckedBorderThickness", typeof(Thickness), typeof(MyRadioButton), new PropertyMetadata(new Thickness(1)));
 
         /// <summary>
         /// 应用模板

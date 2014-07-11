@@ -35,6 +35,16 @@ namespace XIMALAYA.PCDesktop.Core.Services
             {
                 this.Act.BeginInvoke(fr, null, null);
             }
+
+            response.Dispose();
+            responseStream.Dispose();
+            reader.Dispose();
+            result = null;
+            request = null;
+            response = null;
+            responseStream = null;
+            reader = null;
+            GC.Collect(0, GCCollectionMode.Forced);
         }
     }
 }

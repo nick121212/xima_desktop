@@ -12,17 +12,34 @@
 		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/GroupBox.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 
+	
+	
 	<!--热门声音start-->
 
+	<!--Checked="{Binding TrackId,ConverterParameter={Binding TrackID,Source={x:Static tools:PlayerSingleton.Instance}} }"-->
 	<DataTemplate x:Key="MetroHotSoundsItem1Template" DataType="{x:Type ListBoxItem}">
 		<MControls:MyToggleButton Command="{Binding PlaySoundCommand,Source={x:Static tools:CommandSingleton.Instance}}"
 								  CommandParameter="{Binding TrackId}"
 								  Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
 								  Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-								  IconData="{Binding Submit,Source={x:Static MControls:PathData.Instance}}"
+								  IconData="{Binding ToolbarPlayPath,Source={x:Static MControls:PathData.Instance}}"
+								  IconMargin="2"
 								  Style="{StaticResource MetroMyToggleButton}"
-								  CheckedBorderThickness="1"
+								  CheckedBorderThickness="0"
+								  SuperScriptSize="35"
                                   BorderThickness="0">
+			<MControls:MyToggleButton.IsChecked>
+				<MultiBinding Converter="{StaticResource MutiBoolConverter}" Mode="TwoWay">
+					<MultiBinding.Bindings>
+						<Binding Path="TrackId"/>
+						<Binding Path="TrackID" Source="{x:Static tools:PlayerSingleton.Instance}"/>
+						<!--<Binding Path="DataContext.Countries"
+                         RelativeSource="{RelativeSource AncestorType={x:Type Window}}"
+                         Mode="OneWay"/>
+						<Binding Path="Name" Mode="OneWay" />-->
+					</MultiBinding.Bindings>
+				</MultiBinding>
+			</MControls:MyToggleButton.IsChecked>
 			<MControls:MyToggleButton.Content>
 				<Grid Background="{DynamicResource AccentColorBrush4}"
 					  Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
