@@ -4,7 +4,7 @@
         <name>XIMALAYA.PCDesktop.Core.ParamsModel</name>
     </assembly>
     <members>
-        <member name="T:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumInfoParam">
+        <member name="T:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumDetailParam">
             <summary>
             请求专辑下的声音
             </summary>
@@ -36,23 +36,23 @@
             true
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumInfoParam.AlbumID">
+        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumDetailParam.AlbumID">
             <summary>
             专辑ID
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumInfoParam.IsAsc">
+        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumDetailParam.IsAsc">
             <summary>
             排序
             专辑中的声音是否正序显示，默认为正序
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumInfoParam.Page">
+        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumDetailParam.Page">
             <summary>
             分页的页码
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumInfoParam.PerPage">
+        <member name="P:XIMALAYA.PCDesktop.Core.ParamsModel.AlbumDetailParam.PerPage">
             <summary>
             分页每页的数量
             </summary>

@@ -60,13 +60,12 @@
 	<!--窗体级FLYOUT-->
 	<Controls:MetroWindow.Flyouts>
 		<Controls:FlyoutsControl>
-			<Controls:Flyout
-                        x:Name="testFlyout"
-                        Position="Bottom"  
-                        Theme="Adapt"
-                        cal:RegionManager.RegionName="{x:Static tools:WellKnownRegionNames.SettingsModuleRegion}"  
-                        IsOpen="{Binding Source={x:Static tools:FlyoutVisible.Instance},Path=IsSettingFlyoutShow}"
-                        AnimateOnPositionChange="True"/>
+			<Controls:Flyout x:Name="testFlyout"
+                             Position="Bottom"  
+                             Theme="Adapt"
+                             cal:RegionManager.RegionName="{x:Static tools:WellKnownRegionNames.SettingsModuleRegion}"  
+                             IsOpen="{Binding Source={x:Static tools:FlyoutVisible.Instance},Path=IsSettingFlyoutShow}"
+                             AnimateOnPositionChange="True"/>
 		</Controls:FlyoutsControl>
 	</Controls:MetroWindow.Flyouts>
 	<!--右侧按钮-->

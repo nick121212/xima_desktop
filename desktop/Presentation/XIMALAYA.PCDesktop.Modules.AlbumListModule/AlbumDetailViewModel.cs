@@ -111,7 +111,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
         /// <param name="view"></param>
         public void DoInit(long albumID, string regionName, AlbumDetailView view)
         {
-            if (this.RegionManager != null)
+            if (this.RegionManager != null && this.RegionManager.Regions.ContainsRegionWithName(regionName))
             {
                 this.RegionManager.AddToRegion(regionName, view);
                 this.Params = new AlbumDetailParam

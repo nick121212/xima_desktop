@@ -86,7 +86,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
         private void OnAlbumDetailEvent(long albumID)
         {
             var albumDetailView = this.Container.GetInstance<AlbumDetailView>();
-            string regionName = this.ContainerView.GetFlyout(string.Empty);
+            string regionName = this.ContainerView.GetFlyout(string.Empty, 600, null, true);
 
             if (albumDetailView != null)
             {
@@ -118,8 +118,6 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
             {
                 this.OnAlbumDetailEvent(e);
             });
-
-            //var model = this.Container.GetInstance<AlbumListViewModel>();
         }
 
         #endregion

@@ -192,3 +192,4 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyRadioButton.baml
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyToggleButton.baml
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls.csprojResolveAssemblyReference.cache
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyToggleButton.baml

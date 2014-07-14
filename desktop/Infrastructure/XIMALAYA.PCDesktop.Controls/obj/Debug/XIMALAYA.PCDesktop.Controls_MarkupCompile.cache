@@ -4,7 +4,7 @@
 library
 C#
 .cs
-E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\
+D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\
 XIMALAYA.PCDesktop.Controls
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 22-487248988
 
 121066225221
-21-821121127
+21-2011106482
 Styles\Checkbox.xaml;Styles\Converter.xaml;Styles\GroupBox.xaml;Styles\ListBoxItem.SubjectList.xaml;Styles\ListBoxItem.CategoryList.xaml;Styles\ListBoxItem.HotSoundList.xaml;Styles\ListBoxItem.SoundList.xaml;Styles\ListBoxItem.AlbumList.xaml;Styles\ListBoxItem.Common.xaml;Styles\ListBoxItem.FocusImageList.xaml;Styles\ListBoxItem.TagList.xaml;Styles\ListBoxItem.xaml;Styles\MyToggleButton.xaml;Styles\MyRadioButton.xaml;Styles\ScrollViewer.xaml;Themes\Generic.xaml;Themes\MyImage.xaml;Themes\MyRadioButton.xaml;Themes\MyToggleButton.xaml;Themes\Pagination.xaml;Themes\PathButton.xaml;Themes\MetroSlider.xaml;
 
 False

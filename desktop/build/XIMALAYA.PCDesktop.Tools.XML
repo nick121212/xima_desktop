@@ -396,19 +396,38 @@
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory">
             <summary>
-            
+            面板接口
             </summary>
         </member>
         <member name="M:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory.GetFlyout(System.String)">
             <summary>
-            
+            新建面板
             </summary>
             <param name="header"></param>
             <returns></returns>
         </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory.GetFlyout(System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            新建面板
+            </summary>
+            <param name="header"></param>
+            <param name="Width"></param>
+            <param name="Height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory.GetFlyout(System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.Boolean)">
+            <summary>
+            新建面板
+            </summary>
+            <param name="header"></param>
+            <param name="Width"></param>
+            <param name="Height"></param>
+            <param name="isModal"></param>
+            <returns></returns>
+        </member>
         <member name="M:XIMALAYA.PCDesktop.Tools.Untils.IFlyoutFactory.ShowFlyout">
             <summary>
-            
+            显示面板
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.T4.T4ModelInfo">
