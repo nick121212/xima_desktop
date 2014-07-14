@@ -62,9 +62,9 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
 
         private void OnChangeTagEventArgument()
         {
-            AlbumView albumView = this.Container.GetInstance<AlbumView>();
+            var albumView = this.Container.GetInstance<AlbumView>();
             string regionName = this.ContainerView.GetFlyout(this.TagEventArgument.TagName);
-            
+
             if (albumView != null)
             {
                 albumView.AlbumViewModel.DoInit(new CategoryTagAlbums
@@ -77,6 +77,20 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                     PerPage = 20,
                     Status = 0
                 }, regionName, albumView);
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="albumID"></param>
+        private void OnAlbumDetailEvent(long albumID)
+        {
+            var albumDetailView = this.Container.GetInstance<AlbumDetailView>();
+            string regionName = this.ContainerView.GetFlyout(string.Empty);
+
+            if (albumDetailView != null)
+            {
+                albumDetailView.ViewModel.DoInit(albumID, regionName, albumDetailView);
             }
         }
 
@@ -97,6 +111,12 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
             this.EventAggregator.GetEvent<AlbumListEvent<TagEventArgument>>().Subscribe(e =>
             {
                 this.TagEventArgument = e;
+            });
+
+            //标签点击事件，获取专辑数据
+            this.EventAggregator.GetEvent<AlbumDetailEvent<long>>().Subscribe(e =>
+            {
+                this.OnAlbumDetailEvent(e);
             });
 
             //var model = this.Container.GetInstance<AlbumListViewModel>();

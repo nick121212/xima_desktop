@@ -55,19 +55,11 @@
 		</ListBox>
 
 		<MControls:Pagination PageSize="{Binding PageSize}"
+							  HorizontalAlignment="Center"
 							  Grid.Row="3" 
 							  Margin="3"
 							  IsEnabled="{Binding IsEnable}"
 							  CurrentPage="{Binding CurrentPage,Mode=TwoWay}"
 							  Total="{Binding Total}"/>
-
-		<!--<StackPanel Visibility="{Binding IsNextPageVisibled,Converter={StaticResource BooleanToVisibility}}"
-					Grid.Row="3" 
-					Margin="10">
-			<Button Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=StackPanel}, Path=ActualWidth}"
-				    Command="{Binding NextPageCommand}"
-					Content="下一页" />
-		</StackPanel>-->
-
 	</Grid>
 </UserControl>

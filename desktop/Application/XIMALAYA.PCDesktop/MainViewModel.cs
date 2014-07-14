@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
-using System.Linq;
-using Microsoft.Practices.Prism.Modularity;
-using Microsoft.Practices.Prism.Events;
-using Microsoft.Practices.Prism.ViewModel;
-using XIMALAYA.PCDesktop.Tools.Themes;
-using XIMALAYA.PCDesktop.Events;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using Microsoft.Practices.Prism.Events;
+using Microsoft.Practices.Prism.Modularity;
+using Microsoft.Practices.Prism.ViewModel;
+using XIMALAYA.PCDesktop.Events;
+using XIMALAYA.PCDesktop.Tools.Themes;
 
 namespace XIMALAYA.PCDesktop
 {

@@ -58,3 +58,5 @@ E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.M
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.g.resources
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.dll
 E:\FENGXIAO\xima_desktop1\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\XIMALAYA.PCDesktop.Modules.AlbumListModule.pdb
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\Views\AlbumDetailView.baml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Presentation\XIMALAYA.PCDesktop.Modules.AlbumListModule\obj\Debug\Views\AlbumDetailView.g.cs

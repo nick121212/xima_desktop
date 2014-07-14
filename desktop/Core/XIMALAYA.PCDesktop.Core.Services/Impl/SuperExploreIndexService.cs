@@ -58,6 +58,7 @@ namespace XIMALAYA.PCDesktop.Core.Services
             this.Decoder = Json.DecoderFor<SuperExploreIndexResult>(config => config.DeriveFrom(result.Config));
 
             this.Responsitory.Fetch(WellKnownUrl.SuperExploreIndex, param.ToString(), GetDataCallBack);
+
         }
     }
 }

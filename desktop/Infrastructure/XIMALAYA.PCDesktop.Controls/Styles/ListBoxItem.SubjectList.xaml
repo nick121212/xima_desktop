@@ -32,7 +32,7 @@
 							   Margin="0" 
 							   Content="{Binding Title}" />
                     </Grid>
-                    <ControlTemplate.Triggers>
+                    <!--<ControlTemplate.Triggers>
                         <Trigger Property="Button.IsPressed"
                                  Value="True">
                             <Setter Property="RenderTransform">
@@ -44,7 +44,7 @@
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
-                    </ControlTemplate.Triggers>
+                    </ControlTemplate.Triggers>-->
                 </ControlTemplate>
             </Controls:Tile.Template>
         </Controls:Tile>

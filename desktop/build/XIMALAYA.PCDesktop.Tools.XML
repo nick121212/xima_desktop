@@ -59,9 +59,34 @@
             
             </summary>
         </member>
-        <member name="T:XIMALAYA.PCDesktop.Tools.CommandSingleton">
+        <member name="T:XIMALAYA.PCDesktop.Tools.CommandBaseSingleton">
             <summary>
             全局命令
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.CommandBaseSingleton.EventAggregator">
+            <summary>
+            事件管理器
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.CommandBaseSingleton.TrackID">
+            <summary>
+            当前播放的声音
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.CommandBaseSingleton.PlaySoundCommand">
+            <summary>
+            播放命令
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Tools.CommandBaseSingleton.AlbumDetailCommand">
+            <summary>
+            专辑详情页命令
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Tools.CommandSingleton">
+            <summary>
+            按钮
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Singleton`1">
@@ -73,16 +98,6 @@
         <member name="P:XIMALAYA.PCDesktop.Tools.Singleton`1.Instance">
             <summary>
             静态单例属性
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Tools.CommandSingleton.EventAggregator">
-            <summary>
-            事件管理器
-            </summary>
-        </member>
-        <member name="P:XIMALAYA.PCDesktop.Tools.CommandSingleton.PlaySoundCommand">
-            <summary>
-            播放命令
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Converter.MutiBoolConverter">

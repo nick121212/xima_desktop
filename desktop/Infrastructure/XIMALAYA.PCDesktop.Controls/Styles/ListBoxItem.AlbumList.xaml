@@ -79,31 +79,31 @@
 
     <DataTemplate x:Key="MetroAlbumItemTemplate" DataType="{x:Type ListBoxItem}">
         <Controls:Tile Background="Transparent" 
-                              Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-                              Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
-                              Margin="0"
-                              Command="{Binding Path=DataContext.ShowAlbumInfoCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}"
-                              CommandParameter="{Binding AlbumID}">
+                       Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
+                       Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
+                       Margin="0"
+                       Command="{Binding Path=AlbumDetailCommand,Source={x:Static tools:CommandSingleton.Instance}}"
+                       CommandParameter="{Binding AlbumID}">
             <Controls:Tile.Content>
                 <Grid>
 					<MControls:MyImage VerticalAlignment="Center" 
 									   Source="{Binding AlbumCoverUrl290}"
 									   DefaultSource="album.png"/>
 					<Label VerticalAlignment="Bottom" 
-							   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-							   HorizontalAlignment="Center"
-							   Background="#66000000"
-							   Foreground="White" 
-							   Margin="0" 
-							   Content="{Binding Title}" />
+						   Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
+						   HorizontalAlignment="Center"
+						   Background="#66000000"
+						   Foreground="White" 
+						   Margin="0" 
+						   Content="{Binding Title}" />
 				</Grid>
             </Controls:Tile.Content>
         </Controls:Tile>
     </DataTemplate>
     <Style x:Key="MetroAlbumListStyle" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="MControls:TilePanel.WidthPix" Value="45"/>
-        <Setter Property="MControls:TilePanel.HeightPix" Value="45"/>
+        <Setter Property="MControls:TilePanel.WidthPix" Value="1"/>
+        <Setter Property="MControls:TilePanel.HeightPix" Value="1"/>
         <Setter Property="ContentTemplate" Value="{StaticResource MetroAlbumItemTemplate}"/>
     </Style>
 

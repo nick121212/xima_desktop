@@ -113,10 +113,13 @@ namespace XIMALAYA.PCDesktop.Modules.DiscoverPage
             this.CategoryService.GetData(categories =>
             {
                 CategoryResult categoryResult = categories as CategoryResult;
+                int index = 0;
                 Application.Current.Dispatcher.InvokeAsync(() =>
                 {
                     foreach (CategoryData cd in categoryResult.List)
                     {
+                        cd.IsFirst = index == 0;
+                        index++;
                         DiscoverViewModel.CategoryList.Add(cd);
                     }
                 });

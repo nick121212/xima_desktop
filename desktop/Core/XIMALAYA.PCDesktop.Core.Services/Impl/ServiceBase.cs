@@ -1,18 +1,14 @@
-﻿using FluentJson;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using FluentJson;
 
 namespace XIMALAYA.PCDesktop.Core.Services
 {
     /// <summary>
     /// 
     /// </summary>
-    public class ServiceBase<T>
+    public class ServiceBase<T> : IDisposable
     {
         /// <summary>
         /// 
@@ -44,7 +40,21 @@ namespace XIMALAYA.PCDesktop.Core.Services
             response = null;
             responseStream = null;
             reader = null;
+        }
+
+        #region IDisposable 成员
+
+        /// <summary>
+        /// 销毁
+        /// </summary>
+        public void Dispose()
+        {
+            this.Act.EndInvoke(null);
+            this.Decoder = null;
+            this.Act = null;
             GC.Collect(0, GCCollectionMode.Forced);
         }
+
+        #endregion
     }
 }

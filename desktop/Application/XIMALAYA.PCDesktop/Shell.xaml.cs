@@ -1,28 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.ComponentModel.Composition.Hosting;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MahApps.Metro;
 using MahApps.Metro.Controls;
-using Microsoft.Practices.Prism.MefExtensions;
-using Microsoft.Practices.Prism.Modularity;
-using Microsoft.Practices.Prism.Regions;
-using XIMALAYA.PCDesktop.Tools;
-using System.Windows.Shell;
 using MahApps.Metro.Controls.Dialogs;
+using Microsoft.Practices.Prism.Regions;
 using XIMALAYA.PCDesktop.Tools.Untils;
 
 namespace XIMALAYA.PCDesktop
@@ -33,22 +15,37 @@ namespace XIMALAYA.PCDesktop
     [Export]
     public partial class Shell : IFlyoutFactory
     {
+        #region 属性
 
         [Import(AllowRecomposition = false)]
         private IRegionManager regionManager { get; set; }
+        [Import]
+        public MainViewModel MainViewModel
+        {
+            get { return this.DataContext as MainViewModel; }
+            set { this.DataContext = value; }
+        }
+        public int Count { get; set; }
+        private Flyout LastFlyout { get; set; }
+        private Flyout CurrentFlyout { get; set; }
 
+        #endregion
+
+        #region 构造
+
+        /// <summary>
+        /// 构造
+        /// </summary>
         public Shell()
         {
             InitializeComponent();
             this.Loaded += Shell_Loaded;
             this.Closed += Shell_Closed;
-            //this.SizeChanged += Shell_SizeChanged;
         }
 
-        void Shell_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (LastFlyout != null) this.ContainerGrid.Items.Remove(LastFlyout);
-        }
+        #endregion
+
+        #region 事件
 
         void Shell_Closed(object sender, EventArgs e)
         {
@@ -84,16 +81,7 @@ namespace XIMALAYA.PCDesktop
             //taskBar.ProgressValue = 0.4;
         }
 
-        [Import]
-        public MainViewModel MainViewModel
-        {
-            get { return this.DataContext as MainViewModel; }
-            set { this.DataContext = value; }
-        }
-
-        public int Count { get; set; }
-        private Flyout LastFlyout { get; set; }
-        private Flyout CurrentFlyout { get; set; }
+        #endregion
 
         #region IFlyoutFactory 成员
 

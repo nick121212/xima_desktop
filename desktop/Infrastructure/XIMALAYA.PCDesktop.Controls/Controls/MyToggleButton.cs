@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -15,7 +16,7 @@ namespace XIMALAYA.PCDesktop.Controls
     /// </summary>
     [TemplatePart(Name = "PART_CheckBorderAnimation", Type = typeof(ThicknessAnimation))]
     [TemplatePart(Name = "PART_BorderAnimation", Type = typeof(ThicknessAnimation))]
-    public class MyToggleButton : ToggleButton
+    public class MyToggleButton : CheckBox
     {
         private ThicknessAnimation BorderAnimation { get; set; }
         private ThicknessAnimation CheckBorderAnimation { get; set; }

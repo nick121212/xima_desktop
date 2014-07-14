@@ -71,7 +71,7 @@ namespace XIMALAYA.PCDesktop.Modules.SoundListModule
             {
                 throw new ArgumentNullException("EventAggregator");
             }
-            //标签点击事件，获取声音数据
+            //专辑点击事件，获取声音数据
             this.EventAggregator.GetEvent<SoundListEvent<AlbumData>>().Subscribe(e =>
             {
                 this.Album = e;

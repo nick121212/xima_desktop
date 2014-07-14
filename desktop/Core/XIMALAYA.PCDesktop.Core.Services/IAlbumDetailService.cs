@@ -13,7 +13,7 @@ namespace XIMALAYA.PCDesktop.Core.Services
     /// <summary>
     /// 专辑详情
     /// </summary>
-    public interface IAlbumInfoService
+    public interface IAlbumDetailService
     {
         /// <summary>
         /// 获取数据接口

@@ -32,7 +32,7 @@
 			<ColumnDefinition Width="Auto"/>
 			<ColumnDefinition Width="Auto"/>
 		</Grid.ColumnDefinitions>
-		
+
 		<!--控制按钮-->
 		<StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal">
 			<!--波形-->
@@ -70,7 +70,7 @@
                                   IconWidth="10"
                                   Height="20"
                                   Width="20"
-                                  IsSingle="True"
+								  IconDataChecked="{Binding MutedPath, Source={x:Static MControls:PathData.Instance}}"
                                   IconData="{Binding VolumePath, Source={x:Static MControls:PathData.Instance}}" >
 			</MControls:PathButton>
 			<Slider Margin="2"

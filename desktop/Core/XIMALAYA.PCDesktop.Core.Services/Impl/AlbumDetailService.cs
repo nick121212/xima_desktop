@@ -21,8 +21,8 @@ namespace XIMALAYA.PCDesktop.Core.Services
     /// <summary>
     /// 
     /// </summary>
-    [Export(typeof(IAlbumInfoService))]
-    public class AlbumInfoService : ServiceBase<AlbumInfoResult>, IAlbumInfoService
+    [Export(typeof(IAlbumDetailService))]
+    public class AlbumDetailService : ServiceBase<AlbumInfoResult>, IAlbumDetailService
     {
         /// <summary>
         /// 

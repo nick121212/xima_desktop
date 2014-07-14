@@ -5,29 +5,30 @@
                                  xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
                                  xmlns:MControls="clr-namespace:XIMALAYA.PCDesktop.Controls">
 
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/Converter.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/ListBoxItem.Common.xaml" />
-    </ResourceDictionary.MergedDictionaries>
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/Converter.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/ListBoxItem.Common.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/MyToggleButton.xaml" />
+	</ResourceDictionary.MergedDictionaries>
 
-    <!--声音列表 start-->
-    <DataTemplate x:Key="SoundItemTemplate" DataType="{x:Type ListBoxItem}">
-        <Controls:Tile Background="Transparent" 
+	<!--声音列表 start-->
+	<DataTemplate x:Key="SoundItemTemplate" DataType="{x:Type ListBoxItem}">
+		<Controls:Tile Background="Transparent" 
                        Height="220" 
                        Width="180"
                        Margin="5"
                        Command="{Binding PlaySoundCommand,Source={x:Static tools:CommandSingleton.Instance}}"
                        CommandParameter="{Binding TrackId}">
-            <Controls:Tile.Content>
-                <Label>
-                    <Label.Template>
-                        <ControlTemplate>
-                            <Border BorderThickness="1" Width="180" BorderBrush="{DynamicResource ControlBorderBrush}">
+			<Controls:Tile.Content>
+				<Label>
+					<Label.Template>
+						<ControlTemplate>
+							<Border BorderThickness="1" Width="180" BorderBrush="{DynamicResource ControlBorderBrush}">
 								<Grid >
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="180"/>
-                                        <RowDefinition Height="60"/>
-                                    </Grid.RowDefinitions>
+									<Grid.RowDefinitions>
+										<RowDefinition Height="180"/>
+										<RowDefinition Height="60"/>
+									</Grid.RowDefinitions>
 
 									<MControls:MyImage ToolTip="{Binding Title}" 
 													   Width="180" 
@@ -35,20 +36,85 @@
 													   Source="{Binding CoverLarge}"
 													   DefaultSource="track.jpg"/>
 									<WrapPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-                                        <TextBlock ToolTip="{Binding Title}" Width="180" TextWrapping="NoWrap" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding Title}" />
-                                    </WrapPanel>
-                                </Grid>
-                            </Border>
-                        </ControlTemplate>
-                    </Label.Template>
-                </Label>
-            </Controls:Tile.Content>
-        </Controls:Tile>
-    </DataTemplate>
-    <Style x:Key="SoundListStyle" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="ContentTemplate" Value="{StaticResource SoundItemTemplate}"/>
-    </Style>
-    <!--声音列表 end-->
+										<TextBlock ToolTip="{Binding Title}" Width="180" TextWrapping="NoWrap" TextAlignment="Center" HorizontalAlignment="Center" Text="{Binding Title}" />
+									</WrapPanel>
+								</Grid>
+							</Border>
+						</ControlTemplate>
+					</Label.Template>
+				</Label>
+			</Controls:Tile.Content>
+		</Controls:Tile>
+	</DataTemplate>
+	<Style x:Key="SoundListStyle" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="ContentTemplate" Value="{StaticResource SoundItemTemplate}"/>
+	</Style>
+	<!--声音列表 end-->
 
+	<!--热门声音 start-->
+
+	<DataTemplate x:Key="MetroHotSoundsItem1Template" DataType="{x:Type ListBoxItem}">
+		<MControls:MyToggleButton CommandParameter="{Binding TrackId}"
+								  Command="{Binding PlaySoundCommand,Source={x:Static tools:CommandSingleton.Instance}}"
+								  Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
+								  Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
+								  IconData="{Binding ToolbarPlayPath,Source={x:Static MControls:PathData.Instance}}"
+								  Style="{StaticResource MetroMyToggleButton}"
+								  BorderBrush="{DynamicResource AccentColorBrush}"
+								  IconMargin="2"
+								  Background="{DynamicResource WhiteBrush}"
+								  CheckedBorderThickness="2"
+								  SuperScriptSize="35"
+                                  BorderThickness="1">
+			<MControls:MyToggleButton.IsChecked>
+				<MultiBinding Converter="{StaticResource MutiBoolConverter}" Mode="OneWay">
+					<MultiBinding.Bindings>
+						<Binding Path="TrackId"/>
+						<Binding Path="TrackID" Source="{x:Static tools:CommandSingleton.Instance}"/>
+					</MultiBinding.Bindings>
+				</MultiBinding>
+			</MControls:MyToggleButton.IsChecked>
+			<MControls:MyToggleButton.Content>
+				<Grid Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
+					  Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"/>
+						<RowDefinition Height="30"/>
+					</Grid.RowDefinitions>
+
+					<MControls:MyImage VerticalAlignment="Center" 
+									   Grid.RowSpan="2"
+									   Margin="5 0"
+									   Height="60"
+									   Width="60"
+									   Source="{Binding CoverWebSmall}"
+									   DefaultSource="track.jpg"/>
+					<TextBlock Grid.Row="0" Grid.Column="1" Foreground="{DynamicResource BlackBrush}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Title}"/>
+					<Path Grid.Row="1" Grid.Column="1"
+                              Data="{Binding ToolbarPlayPath, Source={x:Static MControls:PathData.Instance}}" 
+                              Stretch="Uniform" 
+                              Fill="{DynamicResource AccentColorBrush}" 
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center"
+                              Width="10" 
+                              Height="10" 
+                              UseLayoutRounding="True"/>
+					<TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Foreground="{DynamicResource BlackBrush}" Margin="15 0 0 0" Text="{Binding PlayCount}"/>
+				</Grid>
+
+			</MControls:MyToggleButton.Content>
+		</MControls:MyToggleButton>
+	</DataTemplate>
+	<Style x:Key="MetroHotSounds1Style" TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource ListItemBaseTemp}">
+		<Setter Property="ContentTemplate" Value="{StaticResource MetroHotSoundsItem1Template}"/>
+		<Setter Property="MControls:TilePanel.WidthPix" Value="1"/>
+		<Setter Property="MControls:TilePanel.HeightPix" Value="1"/>
+	</Style>
+
+	<!--热门声音 end-->
 </ResourceDictionary>

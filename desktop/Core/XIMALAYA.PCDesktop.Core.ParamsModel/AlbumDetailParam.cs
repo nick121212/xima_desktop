@@ -10,7 +10,7 @@ namespace XIMALAYA.PCDesktop.Core.ParamsModel
     /// <summary>
     /// 请求专辑下的声音
     /// </summary>
-    public class AlbumInfoParam : BaseParam
+    public class AlbumDetailParam : BaseParam
     {
         /// <summary>
         /// 专辑ID

@@ -32,11 +32,11 @@ namespace XIMALAYA.PCDesktop.Modules.SoundListModule
         /// 专辑详情服务
         /// </summary>
         [Import]
-        private IAlbumInfoService AlbumInfoService { get; set; }
+        private IAlbumDetailService AlbumInfoService { get; set; }
         /// <summary>
         /// 当前参数
         /// </summary>
-        private AlbumInfoParam Params { get; set; }
+        private AlbumDetailParam Params { get; set; }
         /// <summary>
         /// 专辑下的声音数据
         /// </summary>
@@ -57,7 +57,7 @@ namespace XIMALAYA.PCDesktop.Modules.SoundListModule
             if (this.RegionManager != null)
             {
                 this.RegionManager.AddToRegion(regionName, view);
-                this.Params = new AlbumInfoParam
+                this.Params = new AlbumDetailParam
                 {
                     AlbumID = album.AlbumID
                 };

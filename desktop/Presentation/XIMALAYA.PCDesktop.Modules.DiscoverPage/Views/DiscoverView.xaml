@@ -56,10 +56,10 @@
                          ItemsSource="{x:Static local:DiscoverViewModel.CategoryList}">
 					<ListBox.ItemsPanel>
 						<ItemsPanelTemplate>
-							<MControls:TilePanel TileHeight="5" 
-                                                 TileWidth="5" 
+							<MControls:TilePanel TileHeight="88" 
+                                                 TileWidth="88" 
                                                  TileMargin="2"
-                                                 TileCount="60"/>
+                                                 TileCount="4"/>
 						</ItemsPanelTemplate>
 					</ListBox.ItemsPanel>
 				</ListBox>
@@ -92,10 +92,10 @@
                          ItemsSource="{Binding AlbumList}">
 					<ListBox.ItemsPanel>
 						<ItemsPanelTemplate>
-							<MControls:TilePanel TileHeight="5" 
-                                                 TileWidth="5" 
+							<MControls:TilePanel TileHeight="110" 
+                                                 TileWidth="220" 
                                                  TileMargin="3"
-                                                 TileCount="90"/>
+                                                 TileCount="1"/>
 						</ItemsPanelTemplate>
 					</ListBox.ItemsPanel>
 				</ListBox>

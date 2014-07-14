@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Threading;
@@ -231,13 +226,17 @@ namespace XIMALAYA.PCDesktop.Tools.Player
         {
             get
             {
-                return _Volume;
+                if (this.IsMuted)
+                    return 0;
+                else
+                    return _Volume;
             }
             set
             {
                 if (value != _Volume)
                 {
                     _Volume = value;
+                    this.IsMuted = _Volume == 0;
                     this.SetVolume();
                     this.RaisePropertyChanged(() => this.Volume);
                 }
@@ -259,6 +258,7 @@ namespace XIMALAYA.PCDesktop.Tools.Player
                     _IsMuted = value;
                     this.SetVolume();
                     this.RaisePropertyChanged(() => this.IsMuted);
+                    this.RaisePropertyChanged(() => this.Volume);
                 }
             }
         }
@@ -300,7 +300,6 @@ namespace XIMALAYA.PCDesktop.Tools.Player
                 }
             }
         }
-
 
         #endregion
 
@@ -622,8 +621,9 @@ namespace XIMALAYA.PCDesktop.Tools.Player
         {
             Application.Current.Dispatcher.BeginInvoke(new Action(() =>
             {
-                //this.Pause();
-                this.Stop();
+                this.Pause();
+                this.CurrentTime = TimeSpan.Zero;
+                //this.Stop();
             }));
         }
         #endregion
