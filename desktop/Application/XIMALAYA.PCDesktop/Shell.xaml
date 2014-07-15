@@ -1,7 +1,7 @@
 ﻿<Controls:MetroWindow x:Class="XIMALAYA.PCDesktop.Shell"
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
                       xmlns:lc="http://ximalaya.com/xaml/controls"
                       xmlns:cal="http://www.codeplex.com/prism"
                       xmlns:tools="http://ximalaya.com/xaml/tools"

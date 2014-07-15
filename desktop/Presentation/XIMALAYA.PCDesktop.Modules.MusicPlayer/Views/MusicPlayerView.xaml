@@ -64,23 +64,18 @@
 			</sound:SpectrumAnalyzer>
 
 			<MControls:MyToggleButton Width="30" 
-								  Height="30"
-								  IsChecked="{Binding BassEngine.IsMuted}"
-								  BorderType="Ellipse"
-								  Background="{DynamicResource AccentColorBrush2}"
-								  BorderBrush="{DynamicResource AccentColorBrush}"
-								  BorderThickness="1">
+								      Height="30"
+								      IsChecked="{Binding BassEngine.IsMuted}"
+								      BorderType="Ellipse"
+								      Background="{DynamicResource AccentColorBrush2}"
+                                      Foreground="{DynamicResource AccentColorBrush}"
+								      BorderBrush="{DynamicResource AccentColorBrush}"
+								      BorderThickness="1">
 				<MControls:MyToggleButton.Content>
-					<Path Data="{Binding VolumePath, Source={x:Static MControls:PathData.Instance}}" 
-						  Style="{StaticResource PathStyle}"
-						  Fill="{Binding Background,RelativeSource={RelativeSource AncestorType=MControls:MyToggleButton}}" >
-					</Path>
+					1
 				</MControls:MyToggleButton.Content>
 				<MControls:MyToggleButton.ContentChecked>
-					<Path Data="{Binding MutedPath, Source={x:Static MControls:PathData.Instance}}"
-						  Style="{StaticResource PathStyle}"
-						  Fill="White" >
-					</Path>
+					2
 				</MControls:MyToggleButton.ContentChecked>
 			</MControls:MyToggleButton>
 

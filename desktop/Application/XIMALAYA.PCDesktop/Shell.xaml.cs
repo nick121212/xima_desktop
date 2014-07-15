@@ -104,7 +104,7 @@ namespace XIMALAYA.PCDesktop
             Binding binding = null;
             RelativeSource rs;
 
-            this.ContainerGrid.Items.Add(this.CurrentFlyout);
+            
             this.CurrentFlyout.AnimateOnPositionChange = true;
             this.CurrentFlyout.Theme = FlyoutTheme.Adapt;
             this.CurrentFlyout.Header = header;
@@ -115,11 +115,11 @@ namespace XIMALAYA.PCDesktop
             binding.RelativeSource = rs;
             this.CurrentFlyout.SetBinding(Flyout.WidthProperty, binding);
             RegionManager.SetRegionName(this.CurrentFlyout, regionName);
+            RegionManager.SetRegionManager(this.CurrentFlyout, this.regionManager);
+            this.Flyouts.Items.Add(this.CurrentFlyout);
             this.CurrentFlyout.ApplyTemplate();
             this.CurrentFlyout.IsOpenChanged += flyout_IsOpenChanged;
             this.CurrentFlyout.Position = Position.Right;
-            //this.regionManager.Regions.Add(regionName, new Region());
-            //this.CurrentFlyout.IsOpen = true;
 
             return regionName;
         }
