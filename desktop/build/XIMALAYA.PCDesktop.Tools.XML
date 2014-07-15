@@ -100,6 +100,11 @@
             静态单例属性
             </summary>
         </member>
+        <member name="T:XIMALAYA.PCDesktop.Tools.Converter.HalfValueConverter">
+            <summary>
+            值得一半转换
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Tools.Converter.MutiBoolConverter">
             <summary>
             

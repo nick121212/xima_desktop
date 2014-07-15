@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XIMALAYA.PCDesktop.Modules.SoundListModule</name>
+    </assembly>
+    <members>
+        <member name="T:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel">
+            <summary>
+            mvvm model
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel.DoInit(XIMALAYA.PCDesktop.Core.Models.Album.AlbumData,System.String,XIMALAYA.PCDesktop.Modules.SoundListModule.Views.AlbumSoundsView)">
+            <summary>
+            初始化
+            </summary>
+            <param name="album"></param>
+            <param name="regionName"></param>
+            <param name="view"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel.GetData(System.Boolean)">
+            <summary>
+            获取声音数据
+            </summary>
+            <param name="isClear"></param>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel.AlbumInfoService">
+            <summary>
+            专辑详情服务
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel.Params">
+            <summary>
+            当前参数
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.SoundListModule.AlbumSoundsViewModel.Sounds">
+            <summary>
+            专辑下的声音数据
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Modules.SoundListModule.SoundListModule">
+            <summary>
+            声音列表模块
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.SoundListModule.SoundListModule.OnAlbumChanged">
+            <summary>
+            当前专辑数据更改
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.SoundListModule.SoundListModule.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.SoundListModule.SoundListModule.Album">
+            <summary>
+            当前专辑数据
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Modules.SoundListModule.Views.AlbumSoundsView">
+            <summary>
+            SoundListView.xaml 的交互逻辑
+            </summary>
+            <summary>
+            AlbumSoundsView
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.SoundListModule.Views.AlbumSoundsView.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.SoundListModule.Views.AlbumSoundsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.SoundListModule.Views.AlbumSoundsView.ViewModel">
+            <summary>
+            mvvm model
+            </summary>
+        </member>
+    </members>
+</doc>

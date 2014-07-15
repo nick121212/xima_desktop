@@ -111,7 +111,6 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls.g.resources
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls.dll
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls.pdb
-E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyToggleButton.baml
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyRadioButton.baml
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Controls.XML
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\build\XIMALAYA.PCDesktop.Controls.dll
@@ -190,6 +189,9 @@ E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyImage.baml
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\Pagination.baml
 E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyRadioButton.baml
-E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyToggleButton.baml
-E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls.csprojResolveAssemblyReference.cache
 D:\喜马拉雅\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyToggleButton.baml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\MyCheckboxButton.baml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyCheckboxButton.baml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\XIMALAYA.PCDesktop.Controls.csprojResolveAssemblyReference.cache
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Themes\MyToggleButton.baml
+E:\FENGXIAO\xima_desktop\xima_desktop\desktop\Infrastructure\XIMALAYA.PCDesktop.Controls\obj\Debug\Styles\Path.baml

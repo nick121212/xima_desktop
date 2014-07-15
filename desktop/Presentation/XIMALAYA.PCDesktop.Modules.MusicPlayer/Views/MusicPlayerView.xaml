@@ -62,10 +62,34 @@
 					</Style>
 				</sound:SpectrumAnalyzer.PeakStyle>
 			</sound:SpectrumAnalyzer>
+
+			<MControls:MyToggleButton Width="30" 
+								  Height="30"
+								  IsChecked="{Binding BassEngine.IsMuted}"
+								  BorderType="Ellipse"
+								  Background="{DynamicResource AccentColorBrush2}"
+								  BorderBrush="{DynamicResource AccentColorBrush}"
+								  BorderThickness="1">
+				<MControls:MyToggleButton.Content>
+					<Path Data="{Binding VolumePath, Source={x:Static MControls:PathData.Instance}}" 
+						  Style="{StaticResource PathStyle}"
+						  Fill="{Binding Background,RelativeSource={RelativeSource AncestorType=MControls:MyToggleButton}}" >
+					</Path>
+				</MControls:MyToggleButton.Content>
+				<MControls:MyToggleButton.ContentChecked>
+					<Path Data="{Binding MutedPath, Source={x:Static MControls:PathData.Instance}}"
+						  Style="{StaticResource PathStyle}"
+						  Fill="White" >
+					</Path>
+				</MControls:MyToggleButton.ContentChecked>
+			</MControls:MyToggleButton>
+
+
+
 			<MControls:PathButton IsChecked="{Binding BassEngine.IsMuted}"
                                   Fill="White"
                                   Margin="5 0"
-                                  Background="{DynamicResource AccentColorBrush4}"
+                                  Background="{DynamicResource AccentColorBrush}"
                                   IconHeight="10"
                                   IconWidth="10"
                                   Height="20"
@@ -85,7 +109,7 @@
 			<MControls:PathButton IsChecked="False"
                                   Fill="White"
                                   Margin="5 0"
-                                  Background="{DynamicResource AccentColorBrush4}"
+                                  Background="{DynamicResource AccentColorBrush}"
                                   IconHeight="15"
                                   IconWidth="15"
                                   Height="30"
@@ -96,7 +120,7 @@
 			<MControls:PathButton Fill="White"
                                   Margin="5 0"
 								  IconMargin="10 0 5 0"
-                                  Background="{DynamicResource AccentColorBrush4}"
+                                  Background="{DynamicResource AccentColorBrush}"
                                   IsChecked="{Binding BassEngine.IsPlaying,Mode=OneWay}"
                                   Command="{Binding BassEngine.PlayCommand}"
                                   CommandParameter="{Binding Source={RelativeSource Self},Path=IsChecked}"
@@ -110,7 +134,7 @@
 			<MControls:PathButton IsChecked="False"
                                   Fill="White"
                                   Margin="5 0"
-                                  Background="{DynamicResource AccentColorBrush4}"
+								  Background="{DynamicResource AccentColorBrush}"
                                   IconHeight="15"
                                   IconWidth="15"
                                   Height="30"

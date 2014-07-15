@@ -82,10 +82,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\MyImage.cs" />
+    <Compile Include="Controls\MyToggleButton.cs" />
     <Compile Include="Controls\Pagination.cs" />
     <Compile Include="Controls\VirtualizingTilePanel.cs" />
     <Compile Include="Controls\MyRadioButton.cs" />
-    <Compile Include="Controls\MyToggleButton.cs" />
+    <Compile Include="Controls\MyCheckboxButton.cs" />
     <Compile Include="PathData.cs" />
     <Compile Include="Controls\MetroSlider.cs" />
     <Compile Include="Controls\PathButton.cs" />
@@ -148,7 +149,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\MyToggleButton.xaml">
+    <Page Include="Styles\MyCheckboxButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -156,11 +157,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\Path.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ScrollViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\MyCheckboxButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

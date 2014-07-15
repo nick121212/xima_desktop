@@ -8,109 +8,157 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Shapes;
 
 namespace XIMALAYA.PCDesktop.Controls
 {
     /// <summary>
-    /// 带角标的toggle按钮
+    /// 边框类型
     /// </summary>
-    [TemplatePart(Name = "PART_CheckBorderAnimation", Type = typeof(ThicknessAnimation))]
-    [TemplatePart(Name = "PART_BorderAnimation", Type = typeof(ThicknessAnimation))]
-    public class MyToggleButton : CheckBox
+    public enum BorderType
     {
-        private ThicknessAnimation BorderAnimation { get; set; }
-        private ThicknessAnimation CheckBorderAnimation { get; set; }
         /// <summary>
-        /// 角标的尺寸
+        /// 
         /// </summary>
-        public double SuperScriptSize
+        None,
+        /// <summary>
+        /// 
+        /// </summary>
+        Rectangle,
+        /// <summary>
+        /// 
+        /// </summary>
+        Ellipse
+    }
+
+    /// <summary>
+    /// 带边框的ToggleButton
+    /// </summary>
+    [TemplatePart(Name = "PART_Border", Type = typeof(Border))]
+    [TemplatePart(Name = "PART_Fill", Type = typeof(Rectangle))]
+    [TemplatePart(Name = "Part_Scale", Type = typeof(ScaleTransform))]
+    [TemplatePart(Name = "Part_ColorAnimation", Type = typeof(ColorAnimation))]
+    public class MyToggleButton : ToggleButton
+    {
+        /// <summary>
+        /// 边框类型
+        /// </summary>
+        public BorderType BorderType
         {
-            get { return (double)GetValue(SuperScriptSizeProperty); }
-            set { SetValue(SuperScriptSizeProperty, value); }
+            get { return (BorderType)GetValue(BorderTypeProperty); }
+            set { SetValue(BorderTypeProperty, value); }
         }
         /// <summary>
-        /// 角标的尺寸
+        /// 边框类型
         /// </summary>
-        public static readonly DependencyProperty SuperScriptSizeProperty =
-            DependencyProperty.Register("SuperScriptSize", typeof(double), typeof(MyToggleButton), new PropertyMetadata(10D));
+        public static readonly DependencyProperty BorderTypeProperty =
+            DependencyProperty.Register("BorderType", typeof(BorderType), typeof(MyToggleButton), new PropertyMetadata(BorderType.None, OnBorderTypeChanged));
         /// <summary>
-        /// 图标的path
+        /// 边框圆角
         /// </summary>
-        public Geometry IconData
+        public CornerRadius CornerRadius
         {
-            get { return (Geometry)GetValue(IconDataProperty); }
-            set { SetValue(IconDataProperty, value); }
+            get { return (CornerRadius)GetValue(CornerRadiusProperty); }
+            set { SetValue(CornerRadiusProperty, value); }
         }
         /// <summary>
-        /// 图标的path
+        /// 边框圆角
         /// </summary>
-        public static readonly DependencyProperty IconDataProperty =
-            DependencyProperty.Register("IconData", typeof(Geometry), typeof(MyToggleButton), new PropertyMetadata(null));
+        public static readonly DependencyProperty CornerRadiusProperty =
+            DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(MyToggleButton), new PropertyMetadata(new CornerRadius()));
         /// <summary>
-        /// 图表的宽度
+        /// 是否显示边框
         /// </summary>
-        public double IconWidth
+        public bool IsShowBorder
         {
-            get { return (double)GetValue(IconWidthProperty); }
-            set { SetValue(IconWidthProperty, value); }
+            get { return (bool)GetValue(IsShowBorderProperty); }
+            set { SetValue(IsShowBorderProperty, value); }
         }
         /// <summary>
-        /// 图标的宽度
+        /// 是否显示边框
         /// </summary>
-        public static readonly DependencyProperty IconWidthProperty =
-            DependencyProperty.Register("IconWidth", typeof(double), typeof(MyToggleButton), new PropertyMetadata(15D));
+        public static readonly DependencyProperty IsShowBorderProperty =
+            DependencyProperty.Register("IsShowBorder", typeof(bool), typeof(MyToggleButton), new PropertyMetadata(false));
         /// <summary>
-        /// 图标的高度
+        /// 矩形的圆角
         /// </summary>
-        public double IconHeight
+        public double RadiusSize
         {
-            get { return (double)GetValue(IconHeightProperty); }
-            set { SetValue(IconHeightProperty, value); }
+            get { return (double)GetValue(RadiusSizeProperty); }
+            set { SetValue(RadiusSizeProperty, value); }
         }
         /// <summary>
-        /// 图标的高度
+        /// 矩形的圆角
         /// </summary>
-        public static readonly DependencyProperty IconHeightProperty =
-            DependencyProperty.Register("IconHeight", typeof(double), typeof(MyToggleButton), new PropertyMetadata(15D));
+        public static readonly DependencyProperty RadiusSizeProperty =
+            DependencyProperty.Register("RadiusSize", typeof(double), typeof(MyToggleButton), new PropertyMetadata(0D));
         /// <summary>
-        /// 图标margin值
+        /// 选中后的背景色
         /// </summary>
-        public Thickness IconMargin
+        public Color BackgroundChecked
         {
-            get { return (Thickness)GetValue(IconMarginProperty); }
-            set { SetValue(IconMarginProperty, value); }
+            get { return (Color)GetValue(BackgroundCheckedProperty); }
+            set { SetValue(BackgroundCheckedProperty, value); }
         }
         /// <summary>
-        /// 图标margin值
+        /// 选中后的背景色
         /// </summary>
-        public static readonly DependencyProperty IconMarginProperty =
-            DependencyProperty.Register("IconMargin", typeof(Thickness), typeof(MyToggleButton), new PropertyMetadata(new Thickness(5)));
+        public static readonly DependencyProperty BackgroundCheckedProperty =
+            DependencyProperty.Register("BackgroundChecked", typeof(Color), typeof(MyToggleButton), new PropertyMetadata(Colors.Transparent));
         /// <summary>
-        /// 图标的填充色
+        /// 选中后的前景色
         /// </summary>
-        public Brush IconFill
+        public Brush ForegroundChecked
         {
-            get { return (Brush)GetValue(IconFillProperty); }
-            set { SetValue(IconFillProperty, value); }
+            get { return (Brush)GetValue(ForegroundCheckedProperty); }
+            set { SetValue(ForegroundCheckedProperty, value); }
         }
         /// <summary>
-        /// 图标的填充色
+        /// 选中后的前景色
         /// </summary>
-        public static readonly DependencyProperty IconFillProperty =
-            DependencyProperty.Register("IconFill", typeof(Brush), typeof(MyToggleButton), new PropertyMetadata(new SolidColorBrush()));
+        public static readonly DependencyProperty ForegroundCheckedProperty =
+            DependencyProperty.Register("ForegroundChecked", typeof(Brush), typeof(MyToggleButton), new PropertyMetadata(new SolidColorBrush()));
         /// <summary>
-        /// 选中后的边框尺寸
+        /// 选中后的内容
         /// </summary>
-        public Thickness CheckedBorderThickness
+        public object ContentChecked
         {
-            get { return (Thickness)GetValue(CheckedBorderThicknessProperty); }
-            set { SetValue(CheckedBorderThicknessProperty, value); }
+            get { return (object)GetValue(ContentCheckedProperty); }
+            set { SetValue(ContentCheckedProperty, value); }
         }
         /// <summary>
-        /// 选中后的边框尺寸
+        /// 选中后的内容
         /// </summary>
-        public static readonly DependencyProperty CheckedBorderThicknessProperty =
-            DependencyProperty.Register("CheckedBorderThickness", typeof(Thickness), typeof(MyToggleButton), new PropertyMetadata(new Thickness(1)));
+        public static readonly DependencyProperty ContentCheckedProperty =
+            DependencyProperty.Register("ContentChecked", typeof(object), typeof(MyToggleButton), new PropertyMetadata(null));
+
+        private static void OnBorderTypeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var myToggleButton = d as MyToggleButton;
+
+            switch ((BorderType)e.NewValue)
+            {
+                case BorderType.None:
+                    myToggleButton.IsShowBorder = false;
+                    break;
+                case BorderType.Ellipse:
+                    myToggleButton.IsShowBorder = true;
+                    myToggleButton.CornerRadius = new CornerRadius(myToggleButton.Width / 2);
+                    myToggleButton.RadiusSize = myToggleButton.Width / 2;
+                    break;
+                case BorderType.Rectangle:
+                    myToggleButton.IsShowBorder = true;
+                    myToggleButton.CornerRadius = new CornerRadius();
+                    myToggleButton.RadiusSize = 0;
+                    break;
+            }
+        }
+
+        private Border Border { get; set; }
+        private Rectangle Rectangle { get; set; }
+        private ScaleTransform ScaleTransform { get; set; }
+
+        private ColorAnimation ColorAnimation { get; set; }
 
         /// <summary>
         /// 应用模板
@@ -118,15 +166,15 @@ namespace XIMALAYA.PCDesktop.Controls
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            this.BorderAnimation = GetTemplateChild("PART_BorderAnimation") as ThicknessAnimation;
-            this.CheckBorderAnimation = GetTemplateChild("PART_CheckBorderAnimation") as ThicknessAnimation;
-            this.BorderAnimation.To = this.BorderThickness;
-            this.CheckBorderAnimation.To = this.CheckedBorderThickness;
-        }
 
-        static MyToggleButton()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(MyToggleButton), new FrameworkPropertyMetadata(typeof(MyToggleButton)));
+            this.Border = GetTemplateChild("PART_Border") as Border;
+            this.Rectangle = GetTemplateChild("PART_Fill") as Rectangle;
+            this.ScaleTransform = GetTemplateChild("Part_Scale") as ScaleTransform;
+            this.ColorAnimation = GetTemplateChild("Part_ColorAnimation") as ColorAnimation;
+            if (this.ColorAnimation != null)
+            {
+                this.ColorAnimation.To = this.BackgroundChecked;
+            }
         }
     }
 }

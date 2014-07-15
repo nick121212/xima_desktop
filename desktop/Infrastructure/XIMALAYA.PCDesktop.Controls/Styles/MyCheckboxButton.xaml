@@ -3,10 +3,10 @@
                     xmlns:MControls="clr-namespace:XIMALAYA.PCDesktop.Controls">
 
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Themes/MyToggleButton.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Themes/MyCheckboxButton.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 	
-	<Style x:Key="MetroMyToggleButton" TargetType="MControls:MyToggleButton" BasedOn="{StaticResource {x:Type MControls:MyToggleButton}}">
+	<Style x:Key="MetroMyToggleButton" TargetType="MControls:MyCheckboxButton" BasedOn="{StaticResource {x:Type MControls:MyCheckboxButton}}">
 		<Setter Property="BorderBrush" Value="{DynamicResource AccentColorBrush}" />
 		<Setter Property="IconFill" Value="White" />
 		<Setter Property="SuperScriptSize" Value="50"/>

@@ -34,6 +34,106 @@
             图片的默认路径
             </summary>
         </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.BorderType">
+            <summary>
+            边框类型
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.BorderType.None">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.BorderType.Rectangle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.BorderType.Ellipse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Controls.MyToggleButton">
+            <summary>
+            带边框的ToggleButton
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.BorderTypeProperty">
+            <summary>
+            边框类型
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.CornerRadiusProperty">
+            <summary>
+            边框圆角
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.IsShowBorderProperty">
+            <summary>
+            是否显示边框
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.RadiusSizeProperty">
+            <summary>
+            矩形的圆角
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.BackgroundCheckedProperty">
+            <summary>
+            选中后的背景色
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.ForegroundCheckedProperty">
+            <summary>
+            选中后的前景色
+            </summary>
+        </member>
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.ContentCheckedProperty">
+            <summary>
+            选中后的内容
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Controls.MyToggleButton.OnApplyTemplate">
+            <summary>
+            应用模板
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.BorderType">
+            <summary>
+            边框类型
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.CornerRadius">
+            <summary>
+            边框圆角
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IsShowBorder">
+            <summary>
+            是否显示边框
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.RadiusSize">
+            <summary>
+            矩形的圆角
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.BackgroundChecked">
+            <summary>
+            选中后的背景色
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.ForegroundChecked">
+            <summary>
+            选中后的前景色
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.ContentChecked">
+            <summary>
+            选中后的内容
+            </summary>
+        </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.CurrentPageChangedArgs">
             <summary>
             当前页码修改事件参数
@@ -548,82 +648,82 @@
             选中后的边框尺寸
             </summary>
         </member>
-        <member name="T:XIMALAYA.PCDesktop.Controls.MyToggleButton">
+        <member name="T:XIMALAYA.PCDesktop.Controls.MyCheckboxButton">
             <summary>
             带角标的toggle按钮
             </summary>
         </member>
-        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.SuperScriptSizeProperty">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.SuperScriptSizeProperty">
             <summary>
             角标的尺寸
             </summary>
         </member>
-        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconDataProperty">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconDataProperty">
             <summary>
             图标的path
             </summary>
         </member>
-        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconWidthProperty">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconWidthProperty">
             <summary>
             图标的宽度
             </summary>
         </member>
-        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconHeightProperty">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconHeightProperty">
             <summary>
             图标的高度
             </summary>
         </member>
-        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconMarginProperty">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconMarginProperty">
             <summary>
             图标margin值
             </summary>
         </member>
-        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconFillProperty">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconFillProperty">
             <summary>
             图标的填充色
             </summary>
         </member>
-        <member name="F:XIMALAYA.PCDesktop.Controls.MyToggleButton.CheckedBorderThicknessProperty">
+        <member name="F:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.CheckedBorderThicknessProperty">
             <summary>
             选中后的边框尺寸
             </summary>
         </member>
-        <member name="M:XIMALAYA.PCDesktop.Controls.MyToggleButton.OnApplyTemplate">
+        <member name="M:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.OnApplyTemplate">
             <summary>
             应用模板
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.SuperScriptSize">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.SuperScriptSize">
             <summary>
             角标的尺寸
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconData">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconData">
             <summary>
             图标的path
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconWidth">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconWidth">
             <summary>
             图表的宽度
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconHeight">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconHeight">
             <summary>
             图标的高度
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconMargin">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconMargin">
             <summary>
             图标margin值
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.IconFill">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.IconFill">
             <summary>
             图标的填充色
             </summary>
         </member>
-        <member name="P:XIMALAYA.PCDesktop.Controls.MyToggleButton.CheckedBorderThickness">
+        <member name="P:XIMALAYA.PCDesktop.Controls.MyCheckboxButton.CheckedBorderThickness">
             <summary>
             选中后的边框尺寸
             </summary>
@@ -666,6 +766,21 @@
         <member name="P:XIMALAYA.PCDesktop.Controls.PathData.MutedPath">
             <summary>
             静音按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.VistorUserPath">
+            <summary>
+            访问用户按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.TrackCountPath">
+            <summary>
+            声音数按钮
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.SubscribeAlbumPath">
+            <summary>
+            订阅专辑按钮
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Controls.MetroSlider">
@@ -1266,6 +1381,36 @@
             </summary>
             <param name="obj"></param>
             <param name="e"></param>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
         </member>
     </members>
 </doc>

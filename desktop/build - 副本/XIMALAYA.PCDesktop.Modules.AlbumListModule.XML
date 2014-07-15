@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XIMALAYA.PCDesktop.Modules.AlbumListModule</name>
+    </assembly>
+    <members>
+        <member name="T:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel">
+            <summary>
+            专辑详情页
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.DoInit(System.Int64,System.String,XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumDetailView)">
+            <summary>
+            初始化
+            </summary>
+            <param name="albumID">专辑ID</param>
+            <param name="regionName"></param>
+            <param name="view"></param>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.AlbumDetailService">
+            <summary>
+            专辑详情服务
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.AlbumData">
+            <summary>
+            专辑数据
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.Params">
+            <summary>
+            参数类
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel">
+            <summary>
+            专辑model
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.PreNextData">
+            <summary>
+            下一页事件之前准备
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.GetData(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="isClear"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.DoInit(XIMALAYA.PCDesktop.Core.ParamsModel.CategoryTagAlbums,System.String,XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumView)">
+            <summary>
+            初始化
+            </summary>
+            <param name="param"></param>
+            <param name="regionName"></param>
+            <param name="view"></param>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.Albums">
+            <summary>
+            专辑数据
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.CategoryTagAlbumsService">
+            <summary>
+            标签下的专辑服务
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.StatusList">
+            <summary>
+            状态列表
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.ShowAlbumInfoCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.IsShowStatus">
+            <summary>
+            属性描述
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.Condition">
+            <summary>
+            属性描述
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.ConditionCommand">
+            <summary>
+            排序条件
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel.Status">
+            <summary>
+            属性描述
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumListModule">
+            <summary>
+            声音列表模块
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumListModule.OnAlbumDetailEvent(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="albumID"></param>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumListModule.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumListModule.CategoryTagAlbumsService">
+            <summary>
+            标签下的声音服务
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumListModule.TagEventArgument">
+            <summary>
+            属性描述
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumDetailView">
+            <summary>
+            AlbumDetailView.xaml 的交互逻辑
+            </summary>
+            <summary>
+            AlbumDetailView
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumDetailView.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumDetailView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumDetailView.ViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumView">
+            <summary>
+            AlbumListView.xaml 的交互逻辑
+            </summary>
+            <summary>
+            AlbumView
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumView.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumView.AlbumViewModel">
+            <summary>
+            mvvm model
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -78,6 +78,7 @@
     <Compile Include="Attributes\ParamConvertAttribute.cs" />
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Command\Commands.cs" />
+    <Compile Include="Converter\HalfValueConverter.cs" />
     <Compile Include="Converter\MutiBoolConverter.cs" />
     <Compile Include="FlyoutVisible.cs" />
     <Compile Include="Player.cs" />

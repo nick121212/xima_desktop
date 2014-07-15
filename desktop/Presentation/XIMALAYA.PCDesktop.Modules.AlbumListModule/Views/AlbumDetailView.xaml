@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:MControls="http://ximalaya.com/xaml/controls"
              xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls">
+	
 	<Grid Margin=" 10">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto"/>
@@ -33,9 +34,81 @@
 			
 			<Label Grid.Column="1" 
 				   Grid.Row="0" 
+				   Margin="10 0 0 0"
+				   FontSize="16"
+				   FontWeight="Bold"
 				   HorizontalAlignment="Left"
 				   Content="{Binding AlbumData.Title}" />
 			
+			<StackPanel Orientation="Horizontal" 
+						Margin="10 0 0 0"
+						Grid.Column="1"
+						Grid.Row="1">
+				
+				<MControls:MyImage Source="{Binding AlbumData.AvatarPath}"
+								   Width="30"
+								   Height="30"
+								   DefaultSource="person.jpg"/>
+				<Label HorizontalAlignment="Left"
+					   Content="{Binding AlbumData.NickName,StringFormat='{}{0}创建'}" />
+
+				<MControls:PathButton IconData="{Binding TrackCountPath, Source={x:Static MControls:PathData.Instance}}"
+									  IsSingle="True"
+									  Fill="{DynamicResource AccentColorBrush}"
+									  BorderThickness="0"
+									  Foreground="Black"
+									  TextContent="{Binding AlbumData.TrackCount}"
+									  IconHeight="15"
+									  IconWidth="15"
+									  Height="20"
+									  Width="Auto" />
+				
+			</StackPanel>
+
+			<StackPanel Orientation="Horizontal" 
+						Margin="10 10 0 0"
+						Grid.Column="1"
+						Grid.Row="2">
+
+				<MControls:PathButton Background="{DynamicResource WhiteColorBrush}"
+									  Fill="{DynamicResource BlackColorBrush}"
+									  Margin="5 0"
+									  IconMargin="8 0 5 0"
+									  IsChecked="{Binding BassEngine.IsPlaying,Mode=OneWay}"
+									  Command="{Binding BassEngine.PlayCommand}"
+									  CommandParameter="{Binding Source={RelativeSource Self},Path=IsChecked}"
+									  IconHeight="15"
+									  IconWidth="15"
+									  Width="30"
+									  Height="30"
+									  IconDataChecked="{Binding ToolbarPausePath, Source={x:Static MControls:PathData.Instance}}"
+									  IconData="{Binding ToolbarPlayPath, Source={x:Static MControls:PathData.Instance}}">
+				</MControls:PathButton>
+
+				<MControls:PathButton Background="{DynamicResource WhiteColorBrush}"
+									  Fill="{DynamicResource BlackColorBrush}"
+									  IsSingle="True"
+									  Margin="5 0"
+									  IconHeight="15"
+									  IconWidth="15"
+									  Width="30"
+									  Height="30"
+									  IconData="{Binding VistorUserPath, Source={x:Static MControls:PathData.Instance}}">
+				</MControls:PathButton>
+
+				<MControls:PathButton Background="{DynamicResource WhiteColorBrush}"
+									  Fill="{DynamicResource BlackColorBrush}"
+									  IsSingle="True"
+									  Margin="5 0"
+									  IconHeight="15"
+									  IconWidth="15"
+									  Width="30"
+									  Height="30"
+									  IconData="{Binding SubscribeAlbumPath, Source={x:Static MControls:PathData.Instance}}">
+				</MControls:PathButton>
+
+			</StackPanel>
+
 		</Grid>
 	</Grid>
 </UserControl>
