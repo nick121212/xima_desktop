@@ -9,6 +9,7 @@
 		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/Converter.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/ListBoxItem.Common.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/MyCheckboxButton.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/XIMALAYA.PCDesktop.Controls;component/Styles/Path.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 
 	<!--声音列表 start-->
@@ -56,17 +57,17 @@
 
 	<DataTemplate x:Key="MetroHotSoundsItem1Template" DataType="{x:Type ListBoxItem}">
 		<MControls:MyCheckboxButton CommandParameter="{Binding TrackId}"
-								  Command="{Binding PlaySoundCommand,Source={x:Static tools:CommandSingleton.Instance}}"
-								  Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
-								  Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
-								  IconData="{Binding ToolbarPlayPath,Source={x:Static MControls:PathData.Instance}}"
-								  Style="{StaticResource MetroMyToggleButton}"
-								  BorderBrush="{DynamicResource AccentColorBrush}"
-								  IconMargin="2"
-								  Background="{DynamicResource WhiteBrush}"
-								  CheckedBorderThickness="2"
-								  SuperScriptSize="35"
-                                  BorderThickness="1">
+								    Command="{Binding PlaySoundCommand,Source={x:Static tools:CommandSingleton.Instance}}"
+								    Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualHeight}"
+								    Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=ListBoxItem}, Path=ActualWidth}"
+								    IconData="{Binding ToolbarPlayPath,Source={x:Static MControls:PathData.Instance}}"
+								    Style="{StaticResource MetroMyToggleButton}"
+								    BorderBrush="{DynamicResource AccentColorBrush}"
+								    IconMargin="2"
+								    Background="{DynamicResource WhiteBrush}"
+								    CheckedBorderThickness="2"
+								    SuperScriptSize="35"
+                                    BorderThickness="1">
 			<MControls:MyCheckboxButton.IsChecked>
 				<MultiBinding Converter="{StaticResource MutiBoolConverter}" Mode="OneWay">
 					<MultiBinding.Bindings>
@@ -96,7 +97,30 @@
 									   DefaultSource="track.jpg"/>
 					<TextBlock Grid.Row="0" Grid.Column="1" Foreground="{DynamicResource BlackBrush}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" TextWrapping="Wrap" Text="{Binding Title}"/>
 
-					<MControls:PathButton Grid.Row="1" 
+					<MControls:MyToggleButton Width="Auto" 
+											  Padding="0"
+											  HorizontalAlignment="Left"
+											  Grid.Row="1" 
+										      Grid.Column="1"
+										      IsEnabled="False"
+								              Foreground="White"
+										      HorizontalContentAlignment="Left"
+								              Background="{DynamicResource AccentColorBrush}">
+						<MControls:MyToggleButton.Content>
+							<Grid>
+								<Path Data="{Binding ToolbarPlayPath, Source={x:Static MControls:PathData.Instance}}" 
+								  Style="{StaticResource PathStyle}"
+								  HorizontalAlignment="Left"
+									  Width="10" Height="10"
+								  Fill="{Binding ForegroundChecked,RelativeSource={RelativeSource AncestorType={x:Type MControls:MyToggleButton}}}" >
+								</Path>
+								<Label Margin="12 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{Binding PlayCount}"/>
+							</Grid>
+
+						</MControls:MyToggleButton.Content>
+					</MControls:MyToggleButton>
+
+					<!--<MControls:PathButton Grid.Row="1" 
 										  Grid.Column="1"
 										  HorizontalAlignment="Left"
 										  IconData="{Binding ToolbarPlayPath, Source={x:Static MControls:PathData.Instance}}"
@@ -109,20 +133,8 @@
 									      IconHeight="10"
 									      IconWidth="10"
 									      Height="20"
-									      Width="Auto" />
-
-					<!--<Path Grid.Row="1" Grid.Column="1"
-                              Data="{Binding ToolbarPlayPath, Source={x:Static MControls:PathData.Instance}}" 
-                              Stretch="Uniform" 
-                              Fill="{DynamicResource AccentColorBrush}" 
-                              HorizontalAlignment="Left"
-                              VerticalAlignment="Center"
-                              Width="10" 
-                              Height="10" 
-                              UseLayoutRounding="True"/>
-					<TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Foreground="{DynamicResource BlackBrush}" Margin="15 0 0 0" Text="{Binding PlayCount}"/>-->
+									      Width="Auto" />-->
 				</Grid>
-
 			</MControls:MyCheckboxButton.Content>
 		</MControls:MyCheckboxButton>
 	</DataTemplate>

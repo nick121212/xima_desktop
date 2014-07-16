@@ -16,7 +16,7 @@
                        Height="220" 
                        Width="180"
                        Margin="5"
-                       Command="{Binding Path=DataContext.ShowAlbumInfoCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}}}"
+                       Command="{Binding Path=AlbumDetailCommand,Source={x:Static tools:CommandSingleton.Instance}}"
                        CommandParameter="{Binding AlbumID}">
             <Controls:Tile.Content>
                 <Label>

@@ -9,6 +9,8 @@ using Microsoft.Practices.Prism.Events;
 using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.ViewModel;
 using XIMALAYA.PCDesktop.Events;
+using XIMALAYA.PCDesktop.Tools;
+using XIMALAYA.PCDesktop.Tools.Player;
 using XIMALAYA.PCDesktop.Tools.Themes;
 
 namespace XIMALAYA.PCDesktop
@@ -72,6 +74,16 @@ namespace XIMALAYA.PCDesktop
         /// 是否关闭
         /// </summary>
         public bool IsShutDown { get; set; }
+        /// <summary>
+        /// 播放相关
+        /// </summary>
+        public BassEngine BassEngine
+        {
+            get
+            {
+                return PlayerSingleton.Instance;
+            }
+        }
 
         #endregion
 

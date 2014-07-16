@@ -9,6 +9,12 @@
             专辑详情页
             </summary>
         </member>
+        <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.GetData(System.Boolean)">
+            <summary>
+            获取数据
+            </summary>
+            <param name="isClear"></param>
+        </member>
         <member name="M:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.DoInit(System.Int64,System.String,XIMALAYA.PCDesktop.Modules.AlbumListModule.Views.AlbumDetailView)">
             <summary>
             初始化
@@ -30,6 +36,11 @@
         <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.Params">
             <summary>
             参数类
+            </summary>
+        </member>
+        <member name="P:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumDetailViewModel.Sounds">
+            <summary>
+            专辑下的声音数据
             </summary>
         </member>
         <member name="T:XIMALAYA.PCDesktop.Modules.AlbumListModule.AlbumViewModel">

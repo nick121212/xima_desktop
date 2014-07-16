@@ -733,6 +733,11 @@
             图片路径
             </summary>
         </member>
+        <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarSettings">
+            <summary>
+            设置按钮
+            </summary>
+        </member>
         <member name="P:XIMALAYA.PCDesktop.Controls.PathData.ToolbarNextPath">
             <summary>
             下一首

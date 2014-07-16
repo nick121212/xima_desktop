@@ -94,11 +94,6 @@ namespace XIMALAYA.PCDesktop.Modules.MusicPlayer
         public void Initialize()
         {
             this.BassEngine.CurrentSoundUrl = string.Empty;
-            this.ShowSpectrumAnalyzerCommand = new DelegateCommand<object>(o =>
-            {
-                this.ShowSpectrumAnalyzer = !this.ShowSpectrumAnalyzer;
-
-            });
             this.EventAggregator.GetEvent<PlayerEvent>().Subscribe((TrackId) =>
             {
                 if (this.SoundData != null && this.SoundData.TrackId == TrackId)

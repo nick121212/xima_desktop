@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/bass.dll")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/bass.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pause.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("play.ico")]
 
 

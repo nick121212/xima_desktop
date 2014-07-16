@@ -38,6 +38,7 @@ namespace XIMALAYA.PCDesktop.Controls
     [TemplatePart(Name = "PART_Fill", Type = typeof(Rectangle))]
     [TemplatePart(Name = "Part_Scale", Type = typeof(ScaleTransform))]
     [TemplatePart(Name = "Part_ColorAnimation", Type = typeof(ColorAnimation))]
+    [TemplatePart(Name = "Part_ColorCheckAnimation", Type = typeof(ColorAnimation))]
     public class MyToggleButton : ToggleButton
     {
         /// <summary>
@@ -95,16 +96,16 @@ namespace XIMALAYA.PCDesktop.Controls
         /// <summary>
         /// 选中后的背景色
         /// </summary>
-        public Color BackgroundChecked
+        public Brush BackgroundChecked
         {
-            get { return (Color)GetValue(BackgroundCheckedProperty); }
+            get { return (Brush)GetValue(BackgroundCheckedProperty); }
             set { SetValue(BackgroundCheckedProperty, value); }
         }
         /// <summary>
         /// 选中后的背景色
         /// </summary>
         public static readonly DependencyProperty BackgroundCheckedProperty =
-            DependencyProperty.Register("BackgroundChecked", typeof(Color), typeof(MyToggleButton), new PropertyMetadata(Colors.Transparent));
+            DependencyProperty.Register("BackgroundChecked", typeof(Brush), typeof(MyToggleButton), new PropertyMetadata(new SolidColorBrush()));
         /// <summary>
         /// 选中后的前景色
         /// </summary>
@@ -117,7 +118,7 @@ namespace XIMALAYA.PCDesktop.Controls
         /// 选中后的前景色
         /// </summary>
         public static readonly DependencyProperty ForegroundCheckedProperty =
-            DependencyProperty.Register("ForegroundChecked", typeof(Brush), typeof(MyToggleButton), new PropertyMetadata(new SolidColorBrush()));
+            DependencyProperty.Register("ForegroundChecked", typeof(Brush), typeof(MyToggleButton), new PropertyMetadata(new SolidColorBrush(Colors.Transparent)));
         /// <summary>
         /// 选中后的内容
         /// </summary>
@@ -160,6 +161,8 @@ namespace XIMALAYA.PCDesktop.Controls
 
         private ColorAnimation ColorAnimation { get; set; }
 
+        private ColorAnimation ColorCheckedAnimation { get; set; }
+
         /// <summary>
         /// 应用模板
         /// </summary>
@@ -171,9 +174,19 @@ namespace XIMALAYA.PCDesktop.Controls
             this.Rectangle = GetTemplateChild("PART_Fill") as Rectangle;
             this.ScaleTransform = GetTemplateChild("Part_Scale") as ScaleTransform;
             this.ColorAnimation = GetTemplateChild("Part_ColorAnimation") as ColorAnimation;
+            this.ColorCheckedAnimation = GetTemplateChild("Part_ColorCheckAnimation") as ColorAnimation;
+
+            if (this.ForegroundChecked == null ||  this.ForegroundChecked.GetType() != typeof( SolidColorBrush) || ((SolidColorBrush)this.ForegroundChecked).Color==null)
+            {
+                return;
+            }
             if (this.ColorAnimation != null)
             {
-                this.ColorAnimation.To = this.BackgroundChecked;
+                this.ColorAnimation.To = ((SolidColorBrush)this.ForegroundChecked).Color;
+            }
+            if (this.ColorCheckedAnimation != null)
+            {
+                this.ColorCheckedAnimation.To = ((SolidColorBrush)this.ForegroundChecked).Color;
             }
         }
     }

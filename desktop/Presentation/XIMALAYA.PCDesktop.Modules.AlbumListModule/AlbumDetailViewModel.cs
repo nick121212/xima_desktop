@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,9 @@ using System.Windows;
 using System.Windows.Threading;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Regions;
+using XIMALAYA.PCDesktop.Cache;
 using XIMALAYA.PCDesktop.Core.Models.Album;
+using XIMALAYA.PCDesktop.Core.Models.Sound;
 using XIMALAYA.PCDesktop.Core.ParamsModel;
 using XIMALAYA.PCDesktop.Core.Services;
 using XIMALAYA.PCDesktop.Modules.AlbumListModule.Views;
@@ -73,11 +76,19 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                 }
             }
         }
+        /// <summary>
+        /// 专辑下的声音数据
+        /// </summary>
+        public ObservableCollection<SoundData> Sounds { get; set; }
 
         #endregion
 
         #region 方法
 
+        /// <summary>
+        /// 获取数据
+        /// </summary>
+        /// <param name="isClear"></param>
         protected override void GetData(bool isClear)
         {
             if (this.AlbumDetailService == null)
@@ -98,7 +109,16 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
                 Application.Current.Dispatcher.InvokeAsync(new Action(() =>
                 {
                     this.IsWaiting = false;
-                    this.AlbumData = albumInfo.Album;
+
+                    if (albumInfo.Ret == 0)
+                    {
+                        this.AlbumData = albumInfo.Album;
+                        SoundCache.Instance.SetData(albumInfo.SoundsResult.Sounds);
+                        foreach (SoundData sound in albumInfo.SoundsResult.Sounds)
+                        {
+                            this.Sounds.Add(sound);
+                        }
+                    }
 
                 }), DispatcherPriority.Background);
             }, this.Params);
@@ -113,6 +133,7 @@ namespace XIMALAYA.PCDesktop.Modules.AlbumListModule
         {
             if (this.RegionManager != null && this.RegionManager.Regions.ContainsRegionWithName(regionName))
             {
+                this.Sounds = new ObservableCollection<SoundData>();
                 this.RegionManager.AddToRegion(regionName, view);
                 this.Params = new AlbumDetailParam
                 {
